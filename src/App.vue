@@ -1,0 +1,77 @@
+<script>
+import Home from "./section/Home.vue";
+import AboutMe from "./section/AboutMe.vue";
+import Menu from "./components/Menu.vue";
+
+export default {
+  name: "App",
+  components: { Home, AboutMe, Menu },
+  data() {
+    return {
+      showMenu: false
+    };
+  }
+};
+</script>
+
+<template>
+  <header>
+    <transition name="menu-transition">
+      <Menu v-if="showMenu" class="menu-bar" v-on:close="showMenu = false" />
+    </transition>
+    <nav class="nav">
+      <img class="logo" src="./assets/logo.svg" alt="logo" />
+      <img class="menu" src="./assets/icons/menu.svg" alt="menu" @click="showMenu = true" />
+    </nav>
+  </header>
+
+  <main>
+    <Home />
+    <AboutMe />
+  </main>
+</template>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #1c1c1c;
+  color: white;
+}
+.logo,
+.logo,
+.menu {
+  width: 30px;
+  cursor: pointer;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  position: fixed;
+}
+.menu-bar {
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+}
+.menu-transition-enter-active {
+  transition: all 0.3s ease-out;
+}
+.menu-transition-leave-active {
+  transition: all 0.3s ease-in;
+}
+.menu-transition-enter,
+.menu-transition-leave-to {
+  transform: translateX(1000px);
+}
+h1 {
+  font-size: 72px;
+}
+</style>
