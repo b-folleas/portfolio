@@ -30,7 +30,8 @@ export default {
 nav {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #252525;
+  opacity: 0.8;
   width: 30vw;
   color: #1c1c1c;
 }
@@ -45,7 +46,7 @@ li {
   margin: 0.5em;
 }
 a {
-  color: #1c1c1c;
+  color: white;
   text-decoration: none;
 }
 a:hover {

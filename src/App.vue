@@ -1,35 +1,40 @@
-<script>
-import Home from "./section/Home.vue";
-import AboutMe from "./section/AboutMe.vue";
-import Menu from "./components/Menu.vue";
-
-export default {
-  name: "App",
-  components: { Home, AboutMe, Menu },
-  data() {
-    return {
-      showMenu: false
-    };
-  }
-};
-</script>
-
 <template>
-  <header>
+  <div id="app">
     <transition name="menu-transition">
       <Menu v-if="showMenu" class="menu-bar" v-on:close="showMenu = false" />
     </transition>
+    <transition name="hidden-div-transition">
+      <div @click="showMenu = false" class="hidden-div" v-if="showMenu"></div>
+    </transition>
     <nav class="nav">
       <img class="logo" src="./assets/logo.svg" alt="logo" />
-      <img class="menu" src="./assets/icons/menu.svg" alt="menu" @click="showMenu = true" />
+      <img
+        class="menu"
+        src="./assets/icons/menu.svg"
+        alt="menu"
+        @click="showMenu = true"
+      />
     </nav>
-  </header>
-
-  <main>
-    <Home />
-    <AboutMe />
-  </main>
+    <Home class="section"/>
+    <AboutMe class="section"/>
+  </div>
 </template>
+
+<script>
+import Home from "./section/Home.vue";
+import AboutMe from "./section/AboutMe.vue";
+
+import Menu from "./components/Menu.vue";
+export default {
+  name: "App",
+  components: { Home, Menu, AboutMe },
+  data() {
+    return {
+      showMenu: false,
+    };
+  },
+};
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
@@ -41,7 +46,6 @@ body {
   background-color: #1c1c1c;
   color: white;
 }
-.logo,
 .logo,
 .menu {
   width: 30px;
@@ -61,15 +65,35 @@ body {
   top: 0;
   height: 100vh;
 }
-.menu-transition-enter-active {
+.hidden-div {
+  backdrop-filter: blur(3px);
+  z-index: 9;
+  position: fixed;
+  width: 70vw;
+  left: 0;
+  top: 0;
+  height: 100vh;
+}
+.menu-transition-enter-active,
+.menu-transition-leave-active {
   transition: all 0.3s ease-out;
 }
-.menu-transition-leave-active {
-  transition: all 0.3s ease-in;
-}
-.menu-transition-enter,
+.menu-transition-enter-from,
 .menu-transition-leave-to {
-  transform: translateX(1000px);
+  transform: translateX(500px);
+}
+
+.hidden-div-transition-active,
+.hidden-div-transition-leave-active {
+  transition: all 0.3s ease;
+}
+.hidden-div-transition-enter,
+.hidden-div-transition-leave-to {
+  opacity: 0;
+}
+.section {
+  height: 100vh;
+  width: 100%;
 }
 h1 {
   font-size: 72px;

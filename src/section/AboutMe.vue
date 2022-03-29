@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>About Me</h1>
-    <Description />
+    <Description class="description" />
   </div>
 </template>
 
@@ -16,5 +16,14 @@ export default {
 <style scoped>
 h1 {
   text-align: center;
+}
+div {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-image: url("../assets/pattern/topography.svg");
+}
+.description {
+  width: 60vw;
 }
 </style>
