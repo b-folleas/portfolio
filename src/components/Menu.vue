@@ -4,17 +4,17 @@
       class="close"
       src="../assets/icons/close.svg"
       @click="$emit('close')"
-      alt="Close button"
+      alt="Close"
     />
-    <ul>
+    <ul @click="$emit('close')">
       <li>
-        <a href="#">Me</a>
+        <a href="#about-me">About Me</a>
       </li>
       <li>
-        <a href="#">Work</a>
+        <a href="#work">Work</a>
       </li>
       <li>
-        <a href="#">Find Me</a>
+        <a href="#find-me">Find Me</a>
       </li>
     </ul>
   </nav>

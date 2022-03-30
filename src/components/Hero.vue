@@ -7,9 +7,9 @@
         <h3>Web Designer</h3>
       </div>
     </div>
-    <aside class="hero-image">
+    <div class="hero-image">
       <img src="../assets/images/avatar.png" alt="Avatar" />
-    </aside>
+    </div>
   </main>
 </template>
 
@@ -55,5 +55,17 @@ img {
   background-color: white;
   color: #1c1c1c;
 }
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+  
+  .hero-image {
+    text-align: center;
+    margin-top: 5em;
+  }
+}
 </style>
-61
+

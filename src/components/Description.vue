@@ -1,6 +1,5 @@
 <template>
   <article>
-    <h2>About Me</h2>
     <p>
       Last year student in internship as a Full Stack developer, searching for a new
       job opportunity in Lyon, France. Through my studies, my three years work experience

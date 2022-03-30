@@ -15,19 +15,21 @@
         @click="showMenu = true"
       />
     </nav>
-    <Home class="section"/>
-    <AboutMe class="section"/>
+    <Home id="home" class="section" />
+    <AboutMe id="about-me" class="section" />
+    <FindMe id="find-me" class="section" />
   </div>
 </template>
 
 <script>
 import Home from "./section/Home.vue";
 import AboutMe from "./section/AboutMe.vue";
+import FindMe from "./section/FindMe.vue";
 
 import Menu from "./components/Menu.vue";
 export default {
   name: "App",
-  components: { Home, Menu, AboutMe },
+  components: { Home, Menu, AboutMe, FindMe },
   data() {
     return {
       showMenu: false,

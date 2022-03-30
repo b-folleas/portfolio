@@ -21,7 +21,7 @@ div {
   display: flex;
   flex-flow: column;
   align-items: center;
-  background-image: url("../assets/pattern/topography.svg");
+  background-image: url("../assets/background.svg");
 }
 .description {
   width: 60vw;
