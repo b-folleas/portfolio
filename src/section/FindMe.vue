@@ -1,4 +1,5 @@
 <template>
+  <div class="main-container">
     <h1>Find Me</h1>
     <div class="flex-container">
       <FindMeIcons
@@ -17,6 +18,7 @@
         link="https://github.com/b-folleas"
       />
     </div>
+  </div>
 </template>
 
 <script>
@@ -31,14 +33,14 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  text-align: center;
+}
 .main-container {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column;
   align-items: center;
-}
-h1 {
-  margin-top: 1em;
-  text-align: center;
+  background-image: url("../assets/backgrounds/endless-constellation.svg");
 }
 img {
   border: 12px solid white;
@@ -50,17 +52,17 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  background: none;
 }
-.flex-container>* {
-    flex-basis: 100%;
-    margin: 2em;
-  }
+.flex-container > * {
+  flex-basis: 100%;
+  margin: 2em 2em 0 2em;
+}
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
+@media (max-width: 992px) {
   .flex-container {
     flex-direction: column;
   }
-  
 }
 </style>

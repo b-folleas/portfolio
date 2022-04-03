@@ -15,9 +15,10 @@
         @click="showMenu = true"
       />
     </nav>
-    <Home id="home" class="section" />
-    <AboutMe id="about-me" class="section" />
-    <FindMe id="find-me" class="section" />
+    <Home id="home" name="home" class="section" />
+    <AboutMe id="about-me" name="about-me" class="section" />
+    <FindMe id="find-me" name="find-me" class="section" />
+    <Footer class="footer" />
   </div>
 </template>
 
@@ -25,11 +26,12 @@
 import Home from "./section/Home.vue";
 import AboutMe from "./section/AboutMe.vue";
 import FindMe from "./section/FindMe.vue";
+import Footer from "./section/Footer.vue";
 
 import Menu from "./components/Menu.vue";
 export default {
   name: "App",
-  components: { Home, Menu, AboutMe, FindMe },
+  components: { Home, Menu, AboutMe, FindMe, Footer },
   data() {
     return {
       showMenu: false,
@@ -45,6 +47,8 @@ export default {
   font-family: "Roboto", sans-serif;
 }
 body {
+  margin: 0;
+  padding: 0;
   background-color: #1c1c1c;
   color: white;
 }
@@ -99,5 +103,9 @@ body {
 }
 h1 {
   font-size: 72px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
 }
 </style>

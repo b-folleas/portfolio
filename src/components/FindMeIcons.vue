@@ -49,6 +49,7 @@ export default {
   background-color: #111111;
   border-radius: 20px;
   transition: all 0.2s ease-in-out;
+  min-width: 250px;
 }
 
 .find-me-icons-main-container:hover {
