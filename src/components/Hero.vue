@@ -4,7 +4,7 @@
       <h1>Hi I'm</h1>
       <h2>Brice.</h2>
       <div class="title-wrapper">
-        <h3>Web Designer</h3>
+        <h3>Full Stack Developer</h3>
       </div>
     </div>
     <div class="hero-image">
