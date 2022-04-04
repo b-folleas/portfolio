@@ -11,7 +11,7 @@
         <a href="#about-me">About Me</a>
       </li>
       <li>
-        <a href="#work">Work</a>
+        <a href="#my-work">My work</a>
       </li>
       <li>
         <a href="#find-me">Find Me</a>

@@ -1,13 +1,13 @@
 <template>
   <main>
-    <div class="hero-text">
+    <div class="profile-text">
       <h1>Hi I'm</h1>
       <h2>Brice.</h2>
       <div class="title-wrapper">
         <h3>Full Stack Developer</h3>
       </div>
     </div>
-    <div class="hero-image">
+    <div class="profile-image">
       <img src="../assets/images/avatar.png" alt="Avatar" />
     </div>
   </main>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "Hero",
+  name: "Profile",
 };
 </script>
 
@@ -62,7 +62,7 @@ img {
     flex-direction: column;
   }
   
-  .hero-image {
+  .profile-image {
     text-align: center;
     margin-top: 5em;
   }

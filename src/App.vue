@@ -7,7 +7,12 @@
       <div @click="showMenu = false" class="hidden-div" v-if="showMenu"></div>
     </transition>
     <nav class="nav">
-      <img class="logo" src="./assets/logo.svg" alt="logo" />
+      <img
+        class="logo"
+        src="./assets/logo.svg"
+        alt="logo"
+        @click="scrollToTop"
+      />
       <img
         class="menu"
         src="./assets/icons/menu.svg"
@@ -17,6 +22,7 @@
     </nav>
     <Home id="home" name="home" class="section" />
     <AboutMe id="about-me" name="about-me" class="section" />
+    <MyWork id="my-work" name="my-work" class="section" />
     <FindMe id="find-me" name="find-me" class="section" />
     <Footer class="footer" />
   </div>
@@ -25,17 +31,27 @@
 <script>
 import Home from "./section/Home.vue";
 import AboutMe from "./section/AboutMe.vue";
+import MyWork from "./section/MyWork.vue";
 import FindMe from "./section/FindMe.vue";
 import Footer from "./section/Footer.vue";
 
 import Menu from "./components/Menu.vue";
 export default {
   name: "App",
-  components: { Home, Menu, AboutMe, FindMe, Footer },
+  components: { Home, Menu, AboutMe, MyWork, FindMe, Footer },
   data() {
     return {
       showMenu: false,
     };
+  },
+  methods: {
+    scrollToTop() {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
   },
 };
 </script>

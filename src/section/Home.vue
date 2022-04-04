@@ -1,14 +1,14 @@
 <template>
   <div>
-    <Hero />
+    <Profile />
   </div>
 </template>
 
 <script>
-import Hero from "../components/Hero.vue";
+import Profile from "../components/Profile.vue";
 export default {
   name: "Home",
-  components: { Hero }
+  components: { Profile }
 };
 </script>
 
