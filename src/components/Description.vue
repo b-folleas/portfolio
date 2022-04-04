@@ -7,19 +7,46 @@
       websites using many frameworks such as VueJs, Symfony or Spring boot.
     </p>
     <div class="flex-icons">
-      <img class="icon-img" src="../assets/icons/js.svg" alt="JavaScript" />
-      <img class="icon-img" src="../assets/icons/vue.svg" alt="Vue" />
-      <img class="icon-img" src="../assets/icons/symfony.svg" alt="Symfony" />
-      <img class="icon-img" src="../assets/icons/python.svg" alt="Python" />
       <img
         class="icon-img"
+        title="JavaScript"
+        src="../assets/icons/js.svg"
+        alt="JavaScript"
+      />
+      <img
+        class="icon-img"
+        title="Vue.js"
+        src="../assets/icons/vue.svg"
+        alt="Vue.js"
+      />
+      <img
+        class="icon-img"
+        title="Symfony Framework"
+        src="../assets/icons/symfony.svg"
+        alt="Symfony"
+      />
+      <img
+        class="icon-img"
+        title="Python"
+        src="../assets/icons/python.svg"
+        alt="Python"
+      />
+      <img
+        class="icon-img"
+        title="Spring Boot Framework"
         src="../assets/icons/spring-boot.svg"
         alt="Spring Boot"
       />
-      <img class="icon-img" src="../assets/icons/docker.svg" alt="Docker" />
-      <a class="btn-download" href="/public/cv.pdf" download="cv.pdf"
-        ><i class="fa fa-download"></i>&nbsp;Download my resume</a
-      >
+      <img
+        class="icon-img"
+        title="Docker"
+        src="../assets/icons/docker.svg"
+        alt="Docker"
+      />
+      <a class="btn-download" href="/public/cv.pdf" download="cv-folleas-brice.pdf">
+        <i class="fa fa-download"></i>
+        Download my resume
+      </a>
     </div>
   </article>
 </template>
@@ -66,7 +93,10 @@ h2 {
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
   color: #111111;
 }
-img:hover {
+.btn-download > i {
+  margin-right: 8px;
+}
+.icon-img:hover {
   filter: none;
 }
 .flex-icons {
