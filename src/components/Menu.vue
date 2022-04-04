@@ -41,7 +41,7 @@ ul {
   flex-flow: column nowrap;
 }
 li {
-  font-size: 72px;
+  font-size: clamp(42px, 5vw, 60px);
   font-weight: 700;
   margin: 0.5em;
 }

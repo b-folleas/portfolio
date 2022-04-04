@@ -63,7 +63,7 @@ p {
   color: #9d9d9d;
 }
 h2 {
-  font-size: 40px;
+  font-size: clamp(24px, 3vw, 48px);
   font-weight: 300;
   margin: 0;
 }

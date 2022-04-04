@@ -30,16 +30,16 @@ main {
 h1 {
   margin: 0;
   font-weight: 300;
-  font-size: 60px;
+  font-size: clamp(42px, 5vw, 60px);
 }
 h2 {
   margin: 0;
-  font-size: 144px;
+  font-size: clamp(72px, 10vw, 144px);
   font-weight: 900;
 }
 h3 {
   text-align: center;
-  font-size: 48px;
+  font-size: clamp(24px, 3vw, 48px);
   margin: 0;
   font-weight: 700;
 }

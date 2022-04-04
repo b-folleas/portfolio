@@ -58,6 +58,9 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+html {
+  scroll-behavior: smooth !important;
+}
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;

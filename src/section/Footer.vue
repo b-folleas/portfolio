@@ -50,10 +50,10 @@ img {
 h1 {
   color: #1c1c1c;
   margin: 0;
-  font-size: 48px;
+  font-size: clamp(24px, 3vw, 48px);
 }
 h4 {
   color: #1c1c1c;
-  font-size: 14px;
+  font-size: clamp(8px, 1.5vw, 14px);
 }
 </style>
