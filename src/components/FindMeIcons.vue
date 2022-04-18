@@ -51,20 +51,16 @@ export default {
   transition: all 0.2s ease-in-out;
   min-width: 250px;
 }
-
 .find-me-icons-main-container:hover {
   background-color: #1c1c1c;
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
 }
-
 .find-me-icons-main-container:hover img {
   opacity: 0.9;
 }
-
 .find-me-icons-main-container:hover strong {
   opacity: 0.9;
 }
-
 .find-me-icons-main-container:hover p {
   opacity: 0.9;
 }
@@ -89,7 +85,6 @@ p {
   flex-flow: row nowrap;
   align-items: center;
 }
-
 .find-me-icons-header * {
   margin: 1em;
 }

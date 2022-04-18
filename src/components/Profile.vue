@@ -51,9 +51,10 @@ img {
 }
 .title-wrapper {
   margin-top: 1em;
-  padding: 1em;
+  padding: 1em 4em;
   background-color: white;
   color: #1c1c1c;
+  border-radius: 40px;
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
@@ -61,11 +62,10 @@ img {
   main {
     flex-direction: column;
   }
-  
+
   .profile-image {
     text-align: center;
     margin-top: 5em;
   }
 }
 </style>
-

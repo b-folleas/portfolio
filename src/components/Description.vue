@@ -43,7 +43,7 @@
         src="../assets/icons/docker.svg"
         alt="Docker"
       />
-      <a class="btn-download" href="/public/cv.pdf" download="cv-folleas-brice.pdf">
+      <a class="btn-download" href="/cv.pdf" download="cv-folleas-brice.pdf">
         <i class="fa fa-download"></i>
         Download my resume
       </a>
@@ -77,22 +77,38 @@ h2 {
   border: none;
   text-align: center;
   padding: 10px 20px;
+  font-weight: 600;
   margin: 1.5em 2em 2em 2em;
   height: fit-content;
   border-radius: 15px;
   cursor: pointer;
-  background-color: #111111;
-  color: white;
+  background-color: white;
+  color: #1c1c1c;
+  border: 4px solid #1c1c1c;
   border-radius: 20px;
   transition: all 0.2s ease-in-out;
   height: fit-content;
   text-decoration: none;
+  outline: none;
 }
 .btn-download:hover {
-  background-color: white;
+  background-color: #1c1c1c;
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
-  color: #111111;
+  border: 4px solid white;
+  color: white;
 }
+/* .btn-download {
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.4em;
+  border-radius: 15px;
+  padding: 0.5em;
+  bottom: 0;
+  left: 50%;
+  transition: all 0.2s ease-in-out;
+}
+.btn-download:hover {
+} */
 .btn-download > i {
   margin-right: 8px;
 }

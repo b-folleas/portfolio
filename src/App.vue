@@ -22,7 +22,7 @@
     </nav>
     <Home id="home" name="home" class="section" />
     <AboutMe id="about-me" name="about-me" class="section" />
-    <MyWork id="my-work" name="my-work" class="section" />
+    <MyWork id="my-work" name="my-work" />
     <FindMe id="find-me" name="find-me" class="section" />
     <Footer class="footer" />
   </div>
