@@ -6,7 +6,7 @@
         <a :href="url" target="_blank" rel="noopener">
           <img
             class="preview-platform-icons"
-            :src="`/src/assets/icons/github-black.svg`"
+            src="../assets/icons/github-black.svg"
             :alt="`Link for Github`"
           />
         </a>
@@ -65,7 +65,9 @@ export default {
   background-color: white;
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
 }
-.project-container:hover p, .project-container:hover em, .project-container:hover h2 {
+.project-container:hover p,
+.project-container:hover em,
+.project-container:hover h2 {
   opacity: 0.9;
 }
 .project-module-header {

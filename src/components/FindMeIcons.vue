@@ -1,7 +1,7 @@
 <template>
   <div class="find-me-icons-main-container" @click="openLink">
     <div class="find-me-icons-header">
-      <img :src="`/src/assets/icons/${title}.svg`" :alt="title" />
+      <img :src="getImageUrl(title)" :alt="title" />
       <div class="horizontal-divider"></div>
       <strong> {{ title }} </strong>
     </div>
@@ -29,6 +29,17 @@ export default {
   methods: {
     openLink() {
       window.open(this.link, "_blank", "noopener");
+    },
+    // Must use a switch to specify the path of the icon as template literals not working
+    getImageUrl(name) {
+      switch (name) {
+      case 'email':
+        return new URL('../assets/icons/email.svg', import.meta.url).href
+      case 'linkedin':
+        return new URL('../assets/icons/linkedin.svg', import.meta.url).href
+      case 'github':
+        return new URL('../assets/icons/github.svg', import.meta.url).href
+      }
     }
   }
 };
