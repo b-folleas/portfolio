@@ -97,18 +97,6 @@ h2 {
   border: 4px solid white;
   color: white;
 }
-/* .btn-download {
-  cursor: pointer;
-  position: absolute;
-  font-size: 1.4em;
-  border-radius: 15px;
-  padding: 0.5em;
-  bottom: 0;
-  left: 50%;
-  transition: all 0.2s ease-in-out;
-}
-.btn-download:hover {
-} */
 .btn-download > i {
   margin-right: 8px;
 }

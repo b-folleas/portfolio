@@ -14,6 +14,7 @@
       <em v-if="language"> <i class="fa fa-code"></i> {{ language }}</em>
     </div>
     <p>{{ description }}</p>
+    <p>{{ topics }}</p>
     <button @click="readMore" class="more">Read More...</button>
   </article>
 </template>
@@ -39,6 +40,10 @@ export default {
       type: String,
       required: false,
     },
+    topics: {
+      type: Array,
+      required: false,
+    }
   },
   methods: {
     readMore() {

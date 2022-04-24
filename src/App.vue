@@ -34,7 +34,6 @@ import AboutMe from "./section/AboutMe.vue";
 import MyWork from "./section/MyWork.vue";
 import FindMe from "./section/FindMe.vue";
 import Footer from "./section/Footer.vue";
-
 import Menu from "./components/Menu.vue";
 export default {
   name: "App",

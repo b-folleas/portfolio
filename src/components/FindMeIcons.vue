@@ -30,16 +30,8 @@ export default {
     openLink() {
       window.open(this.link, "_blank", "noopener");
     },
-    // Must use a switch to specify the path of the icon as template literals not working
     getImageUrl(name) {
-      switch (name) {
-      case 'email':
-        return new URL('../assets/icons/email.svg', import.meta.url).href
-      case 'linkedin':
-        return new URL('../assets/icons/linkedin.svg', import.meta.url).href
-      case 'github':
-        return new URL('../assets/icons/github.svg', import.meta.url).href
-      }
+      return new URL(`../assets/icons/${name}.svg`, import.meta.url).href
     }
   }
 };
