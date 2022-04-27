@@ -2,7 +2,7 @@
   <div>
     <h1>My Work</h1>
     <ProjectModule
-      v-for="project in projects"
+      v-for="project in paginatedProjects"
       :key="project.id"
       :name="project.name"
       :description="project.description"
@@ -11,22 +11,25 @@
       :topics="project.topics"
       class="module"
     />
-      <img class="wip" title="Work In Progress" src="../assets/icons/person-digging-solid.svg" alt="person-digging-solid.svg" />
-
+    <img
+      class="wip"
+      title="Work In Progress"
+      src="../assets/icons/person-digging-solid.svg"
+      alt="person-digging-solid.svg"
+    />
     <pagination
-      class="pagination"
-      v-model="page"
-      :records="10"
-      :per-page="3"
-      @paginate="myCallback"
+      :totalPages="10"
+      :perPage="perPage"
+      :currentPage="currentPage"
+      @pagechanged="onPageChange"
     />
   </div>
 </template>
 
 <script>
-import API from "@/api";
+// import API from "@/api";
 import ProjectModule from "../components/ProjectModule.vue";
-import Pagination from "v-pagination-3";
+import Pagination from "../components/Pagination.vue";
 export default {
   name: "MyWork",
   components: {
@@ -35,11 +38,33 @@ export default {
   },
   data: () => ({
     projects: [],
-    page: 0,
+    paginatedProjects: [],
+    currentPage: 1,
+    perPage: 3,
+    totalPages: 10,
   }),
   async created() {
-    this.projects = await API.getProjects();
+    // this.projects = await API.getAllProjects();
+    // this.paginatedProjects = await API.getProjectsByPage(
+    //   this.currentPage,
+    //   this.perPage
+    // );
+    console.log(this.paginatedProjects);
+    this.totalPages = Math.floor(this.projects.length / this.perPage) + 1;
+    console.log("this.totalPages", this.totalPages);
     console.log(this.projects);
+    console.log("length", this.projects.length);
+  },
+  methods: {
+    async onPageChange(page) {
+      console.log(page);
+      this.currentPage = page;
+      // this.paginatedProjects = await API.getProjectsByPage(
+      //   this.currentPage,
+      //   this.perPage
+      // );
+      console.log(this.paginatedProjects);
+    },
   },
 };
 </script>
