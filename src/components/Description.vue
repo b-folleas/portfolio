@@ -45,7 +45,7 @@
       />
       <a
         class="btn-download"
-        href="assets/cv.pdf"
+        :href="cvUrl"
         download="cv-folleas-brice.pdf"
       >
         <i class="fa fa-download"></i>
@@ -58,9 +58,10 @@
 <script>
 export default {
   name: "Description",
-  methods: {
-    f1() {
-      window.open("/assets/images/blabla.png", "_blank");
+  computed: {
+    cvUrl() {
+      const imgUrl = new URL("../assets/cv.pdf", import.meta.url).href;
+      return imgUrl;
     },
   },
 };
