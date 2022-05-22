@@ -1,14 +1,14 @@
 <template>
   <main>
-    <div class="profile-text">
+    <div v-if="avatar">
+      <img class="profile-img fade-in-top" :src="avatar" alt="Avatar" ref="img" />
+    </div>
+    <div class="profile-text fade-in-top" >
       <h1>Hi I'm</h1>
-      <h2>Brice.</h2>
+      <h2>Brice</h2>
       <div class="title-wrapper">
         <h3>Full Stack Developer</h3>
       </div>
-    </div>
-    <div class="profile-image">
-      <img :src="avatar" alt="Avatar" />
     </div>
   </main>
 </template>
@@ -17,10 +17,15 @@
 export default {
   name: "Profile",
   computed: {
-    avatar () {
-      return import.meta.env.VITE_GITHUB_HOST + '/' + import.meta.env.VITE_USERNAME + '.png'
-    }
-  }
+    avatar() {
+      return (
+        import.meta.env.VITE_GITHUB_HOST +
+        "/" +
+        import.meta.env.VITE_USERNAME +
+        ".png"
+      );
+    },
+  },
 };
 </script>
 
@@ -49,7 +54,7 @@ h3 {
   font-weight: 700;
 }
 img {
-  border: 12px solid white;
+  border: 10px solid white;
   border-radius: 50%;
   width: 300px;
   height: 300px;
@@ -62,15 +67,18 @@ img {
   border-radius: 40px;
 }
 
+.profile-text {
+  text-align: end;
+}
+
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 992px) {
   main {
     flex-direction: column;
   }
 
-  .profile-image {
-    text-align: center;
-    margin-top: 5em;
+  .profile-img {
+    margin-bottom: 50px;
   }
 }
 </style>

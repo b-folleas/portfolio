@@ -13,6 +13,7 @@
         class="module"
       />
       <pagination
+        class="pagination"
         :totalPages="totalPages"
         :perPage="perPage"
         :currentPage="currentPage"
@@ -73,19 +74,6 @@ div {
   margin-bottom: 10em;
 }
 .pagination {
-  display: inline-block;
-}
-
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.pagination a.active {
-  background-color: #4caf50;
-  color: white;
+  margin-bottom: 50px;
 }
 </style>

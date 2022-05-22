@@ -144,7 +144,9 @@ p {
   font-size: 12px;
   line-height: 32px;
   border-radius: 25px;
-  background-color: lightgray;
+  font: bold;
+  color: #58A6FF;
+  background-color: rgba(56,139,253,0.15);
 }
 
 .chip:not(:first-child) {

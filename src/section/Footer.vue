@@ -7,7 +7,7 @@
         <h1>Brice</h1>
       </div>
       <div>
-        <h4>© 2022</h4>
+        <h4 class="mt-1">© 2022</h4>
       </div>
     </footer>
   </div>
