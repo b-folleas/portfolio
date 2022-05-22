@@ -47,6 +47,7 @@
         class="btn-download"
         target="_blank"
         href="assets/cv.pdf"
+        download="cv-folleas-brice.pdf"
       >
         <i class="fa fa-download"></i>
         Download my resume
