@@ -14,7 +14,11 @@
       <em v-if="language"> <i class="fa fa-code"></i> {{ language }}</em>
     </div>
     <p>{{ description }}</p>
-    <p>{{ topics }}</p>
+    <div v-if="topics.length > 0">
+      <p class="chip" v-for="topic in topics" :key="topic">
+        {{ topic }}
+      </p>
+    </div>
     <button @click="readMore" class="more">Read More...</button>
   </article>
 </template>
@@ -43,7 +47,7 @@ export default {
     topics: {
       type: Array,
       required: false,
-    }
+    },
   },
   methods: {
     readMore() {
@@ -132,5 +136,18 @@ p {
 }
 .preview-platform-icons:hover {
   opacity: 1;
+}
+.chip {
+  display: inline-block;
+  padding: 0 16px;
+  height: 32px;
+  font-size: 12px;
+  line-height: 32px;
+  border-radius: 25px;
+  background-color: lightgray;
+}
+
+.chip:not(:first-child) {
+  margin-left: 8px;
 }
 </style>

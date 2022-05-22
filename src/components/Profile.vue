@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="profile-image">
-      <img src="../assets/images/avatar.png" alt="Avatar" />
+      <img :src="avatar" alt="Avatar" />
     </div>
   </main>
 </template>
@@ -16,6 +16,11 @@
 <script>
 export default {
   name: "Profile",
+  computed: {
+    avatar () {
+      return import.meta.env.VITE_GITHUB_HOST + '/' + import.meta.env.VITE_USERNAME + '.png'
+    }
+  }
 };
 </script>
 

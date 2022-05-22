@@ -1,33 +1,29 @@
 <template>
   <div>
     <h1>My Work</h1>
-    <ProjectModule
-      v-for="project in paginatedProjects"
-      :key="project.id"
-      :name="project.name"
-      :description="project.description"
-      :url="project.svn_url"
-      :language="project.language"
-      :topics="project.topics"
-      class="module"
-    />
-    <img
-      class="wip"
-      title="Work In Progress"
-      src="../assets/icons/person-digging-solid.svg"
-      alt="person-digging-solid.svg"
-    />
-    <pagination
-      :totalPages="10"
-      :perPage="perPage"
-      :currentPage="currentPage"
-      @pagechanged="onPageChange"
-    />
+    <div class="mt-3">
+      <ProjectModule
+        v-for="project in paginatedProjects"
+        :key="project.id"
+        :name="project.name"
+        :description="project.description"
+        :url="project.svn_url"
+        :language="project.language"
+        :topics="project.topics"
+        class="module"
+      />
+      <pagination
+        :totalPages="totalPages"
+        :perPage="perPage"
+        :currentPage="currentPage"
+        @pagechanged="onPageChange"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-// import API from "@/api";
+import API from "@/api";
 import ProjectModule from "../components/ProjectModule.vue";
 import Pagination from "../components/Pagination.vue";
 export default {
@@ -44,26 +40,20 @@ export default {
     totalPages: 10,
   }),
   async created() {
-    // this.projects = await API.getAllProjects();
-    // this.paginatedProjects = await API.getProjectsByPage(
-    //   this.currentPage,
-    //   this.perPage
-    // );
-    console.log(this.paginatedProjects);
+    this.projects = await API.getAllProjects();
+    this.paginatedProjects = await API.getProjectsByPage(
+      this.currentPage,
+      this.perPage
+    );
     this.totalPages = Math.floor(this.projects.length / this.perPage) + 1;
-    console.log("this.totalPages", this.totalPages);
-    console.log(this.projects);
-    console.log("length", this.projects.length);
   },
   methods: {
     async onPageChange(page) {
-      console.log(page);
       this.currentPage = page;
-      // this.paginatedProjects = await API.getProjectsByPage(
-      //   this.currentPage,
-      //   this.perPage
-      // );
-      console.log(this.paginatedProjects);
+      this.paginatedProjects = await API.getProjectsByPage(
+        this.currentPage,
+        this.perPage
+      );
     },
   },
 };

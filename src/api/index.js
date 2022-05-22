@@ -1,5 +1,5 @@
-const username = 'b-folleas'
-const host = "https://api.github.com";
+const username = import.meta.env.VITE_USERNAME
+const host = import.meta.env.VITE_GITHUB_HOST_API
 
 export default {
   async getAllProjects() {
