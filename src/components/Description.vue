@@ -43,7 +43,11 @@
         src="../assets/icons/docker.svg"
         alt="Docker"
       />
-      <a class="btn-download" href="/cv.pdf" download="cv-folleas-brice.pdf">
+      <a
+        class="btn-download"
+        target="_blank"
+        href="assets/cv.pdf"
+      >
         <i class="fa fa-download"></i>
         Download my resume
       </a>
@@ -54,6 +58,11 @@
 <script>
 export default {
   name: "Description",
+  methods: {
+    f1() {
+      window.open("/assets/images/blabla.png", "_blank");
+    },
+  },
 };
 </script>
 
