@@ -1,23 +1,20 @@
 <template>
   <div id="app">
-    <transition name="menu-transition">
-      <Menu v-if="showMenu" class="menu-bar" v-on:close="showMenu = false" />
-    </transition>
-    <transition name="hidden-div-transition">
-      <div @click="showMenu = false" class="hidden-div" v-if="showMenu"></div>
-    </transition>
-    <nav class="nav">
+    <nav class="nav" v-bind:class="{ 'background-active': showMenu }">
       <img
         class="logo"
         src="./assets/logo.svg"
         alt="logo"
         @click="scrollToTop"
       />
+      <Transition>
+        <Menu v-if="showMenu" v-on:close="toggleMenu" />
+      </Transition>
       <img
         class="menu"
         src="./assets/icons/menu.svg"
         alt="menu"
-        @click="showMenu = true"
+        @click="toggleMenu"
       />
     </nav>
     <Home id="home" name="home" class="section" />
@@ -51,6 +48,9 @@ export default {
         behavior: "smooth",
       });
     },
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    },
   },
 };
 </script>
@@ -60,70 +60,63 @@ export default {
 html {
   scroll-behavior: smooth !important;
 }
+
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
 body {
   margin: 0;
   padding: 0;
   background-color: #1c1c1c;
   color: white;
 }
+
 .logo,
 .menu {
   width: 30px;
   cursor: pointer;
 }
+
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 2em;
   position: fixed;
-}
-.menu-bar {
-  z-index: 10;
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100vh;
-}
-.hidden-div {
-  backdrop-filter: blur(3px);
-  z-index: 9;
-  position: fixed;
-  width: 70vw;
-  left: 0;
-  top: 0;
-  height: 100vh;
-}
-.menu-transition-enter-active,
-.menu-transition-leave-active {
-  transition: all 0.3s ease-out;
-}
-.menu-transition-enter-from,
-.menu-transition-leave-to {
-  transform: translateX(500px);
+  z-index: 1;
 }
 
-.hidden-div-transition-active,
-.hidden-div-transition-leave-active {
-  transition: all 0.3s ease;
+.background-active {
+  background-color: #1c1c1c;
 }
-.hidden-div-transition-enter,
-.hidden-div-transition-leave-to {
-  opacity: 0;
-}
+
 .section {
   height: 100vh;
   width: 100%;
 }
+
 h1 {
   font-size: 72px;
 }
+
 .footer {
   display: flex;
   justify-content: center;
+}
+</style>
+
+<style scoped>
+
+/* Menu transition */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

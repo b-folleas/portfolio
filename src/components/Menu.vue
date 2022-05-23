@@ -1,63 +1,102 @@
 <template>
-  <nav>
-    <img
-      class="close"
-      src="../assets/icons/close.svg"
-      @click="$emit('close')"
-      alt="Close"
-    />
-    <ul @click="$emit('close')">
+  <div>
+    <ul class="snip1217">
       <li>
-        <a href="#about-me">About Me</a>
+        <a @click="$emit('close')" href="#about-me">About Me</a>
       </li>
       <li>
-        <a href="#my-work">My work</a>
+        <a @click="$emit('close')" href="#my-work">My work</a>
       </li>
       <li>
-        <a href="#find-me">Find Me</a>
+        <a @click="$emit('close')" href="#find-me">Find Me</a>
       </li>
     </ul>
-  </nav>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Menu",
+  emits: ["close"],
 };
 </script>
 
 <style scoped>
-nav {
-  display: flex;
-  align-items: center;
-  background-color: #252525;
-  opacity: 0.8;
-  width: 30vw;
-  color: #1c1c1c;
-}
 ul {
   list-style-type: none;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row;
+  margin-right: 3em;
+  margin-bottom: 0;
+  padding: 0;
+  line-height: 30px;
 }
+
 li {
-  font-size: clamp(42px, 5vw, 60px);
+  font-size: clamp(16px, 2vw, 24px);
   font-weight: 700;
-  margin: 0.5em;
+  margin: 0 0.5em;
 }
-a {
-  color: white;
-  text-decoration: none;
-}
-a:hover {
-  background-color: #1c1c1c;
-  color: #59ff9c;
-}
+
 .close {
-  top: 2.5em;
-  right: 1.8em;
+  right: 30px;
   width: 30px;
   cursor: pointer;
   position: absolute;
+  z-index: 1;
+}
+
+/* Adapted from www.littlesnippets.net - All rights reserved */
+.snip1217 {
+  font-family: "Roboto", Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.snip1217 * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+}
+.snip1217 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  padding: 0;
+}
+.snip1217 a {
+  padding: 0.3em 0;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  text-decoration: none;
+}
+.snip1217 a:before,
+.snip1217 a:after {
+  height: 3px;
+  position: absolute;
+  content: "";
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background-color: #9b59b6;
+  width: 0;
+}
+.snip1217 a:before {
+  top: 0;
+  left: 0;
+}
+.snip1217 a:after {
+  bottom: 0;
+  right: 0;
+}
+.snip1217 a:hover,
+.snip1217 .current a {
+  color: #ffffff;
+}
+.snip1217 a:hover:before,
+.snip1217 .current a:before,
+.snip1217 a:hover:after,
+.snip1217 .current a:after {
+  width: 100%;
 }
 </style>

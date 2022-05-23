@@ -62,7 +62,7 @@ export default {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  padding: 2em 2em 4em 2em;
+  padding: 2em 2em 2em 2em;
   width: 80vw;
   background-color: whitesmoke;
   color: #111111;

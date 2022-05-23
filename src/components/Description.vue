@@ -1,10 +1,15 @@
 <template>
   <article>
     <p>
-      Last year student in internship as a Full Stack developer, searching for a
-      new job opportunity in Lyon, France. Through my studies, my three years
-      work experience and personal projects, I deepened my skills in creating
-      websites using many frameworks such as VueJs, Symfony or Spring boot.
+      Last year student in internship as a Full Stack developer, based in Lyon,
+      France. Through my studies, my three years work experience and personal
+      projects, I deepened my skills in creating websites using frameworks such
+      as
+      <span class="emphasis-txt">Vue.js, Symfony or Spring boot</span>.
+      <br>
+      In my free time, I try to discover new technologies. Currently, I'm working on a personal project using <span class="emphasis-txt">Django and Docker</span>.
+      <br>
+      I'm looking for a new job oppotunity in <span class="emphasis-txt">Yokohama / Tokyo, Japan</span>.
     </p>
     <div class="flex-icons">
       <img
@@ -43,11 +48,7 @@
         src="../assets/icons/docker.svg"
         alt="Docker"
       />
-      <a
-        class="btn-download"
-        :href="cvUrl"
-        download="cv-folleas-brice.pdf"
-      >
+      <a class="btn-download" :href="cvUrl" download="cv-folleas-brice.pdf">
         <i class="fa fa-download"></i>
         Download my resume
       </a>
@@ -69,7 +70,7 @@ export default {
 
 <style scoped>
 p {
-  line-height: 2.2;
+  font-size: clamp(16px,1.2vw,1.2vw);
   color: #9d9d9d;
 }
 h2 {
@@ -117,5 +118,20 @@ h2 {
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+}
+
+.emphasis-txt {
+  padding: 0.35em;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  background-color: #141414;
+  color: #8d8d8d;
+}
+
+.emphasis-txt:hover {
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  background-color: #1a1a1a;
+  color: white;
 }
 </style>
