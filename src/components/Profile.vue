@@ -1,14 +1,17 @@
 <template>
   <main>
-    <div v-if="avatar">
-      <img class="profile-img fade-in-top" :src="avatar" alt="Avatar" ref="img" />
+    <div v-if="avatar" class="noselect">
+      <img
+        class="profile-img fade-in-top noselect"
+        :src="avatar"
+        alt="Avatar"
+        ref="img"
+      />
     </div>
-    <div class="profile-text fade-in-top" >
+    <div class="profile-text fade-in-top">
       <h1>Hi I'm</h1>
       <h2>Brice</h2>
-      <div class="title-wrapper">
-        <h3>Full Stack Developer</h3>
-      </div>
+      <h3 class="emphasis-txt">Full Stack Developer</h3>
     </div>
   </main>
 </template>
@@ -54,17 +57,15 @@ h3 {
   font-weight: 700;
 }
 img {
-  border: 10px solid white;
+  border: 6px solid var(--color-background-reverse);
   border-radius: 50%;
   width: 300px;
   height: 300px;
+  transition: transform 0.2s;
 }
-.title-wrapper {
-  margin-top: 1em;
-  padding: 1em 4em;
-  background-color: white;
-  color: #1c1c1c;
-  border-radius: 40px;
+
+img:hover {
+  transform: scale(1.1);
 }
 
 .profile-text {
@@ -72,7 +73,7 @@ img {
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   main {
     flex-direction: column;
   }

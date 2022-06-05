@@ -40,10 +40,9 @@ h1 {
   display: flex;
   flex-flow: column;
   align-items: center;
-  background-image: url("../assets/backgrounds/endless-constellation.svg");
 }
 img {
-  border: 12px solid white;
+  border: 6px solid var(--color-background-reverse);
   border-radius: 50%;
   width: 300px;
   height: 300px;
@@ -60,7 +59,7 @@ img {
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .flex-container {
     flex-direction: column;
   }

@@ -165,11 +165,11 @@ export default {
 }
 
 .fa-solid {
-  color: white;
+  color: var(--color-text);
 }
 
 .active {
-  background-color: #007BFF;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--vt-c-white);
 }
 </style>

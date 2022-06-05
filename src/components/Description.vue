@@ -6,10 +6,13 @@
       projects, I deepened my skills in creating websites using frameworks such
       as
       <span class="emphasis-txt">Vue.js, Symfony or Spring boot</span>.
-      <br>
-      In my free time, I try to discover new technologies. Currently, I'm working on a personal project using <span class="emphasis-txt">Django and Docker</span>.
-      <br>
-      I'm looking for a new job oppotunity in <span class="emphasis-txt">Yokohama / Tokyo, Japan</span>.
+      <br />
+      In my free time, I try to discover new technologies. Currently, I'm
+      working on a personal project using
+      <span class="emphasis-txt">Django and Docker</span>.
+      <br />
+      I'm looking for a new job oppotunity in
+      <span class="emphasis-txt">Yokohama / Tokyo, Japan</span>.
     </p>
     <div class="flex-icons">
       <img
@@ -61,8 +64,7 @@ export default {
   name: "Description",
   computed: {
     cvUrl() {
-      const imgUrl = new URL("../assets/cv.pdf", import.meta.url).href;
-      return imgUrl;
+      return new URL("../assets/cv.pdf", import.meta.url).href;
     },
   },
 };
@@ -70,8 +72,8 @@ export default {
 
 <style scoped>
 p {
-  font-size: clamp(16px,1.2vw,1.2vw);
-  color: #9d9d9d;
+  font-size: clamp(16px, 1.2vw, 1.2vw);
+  color: var(--color-text);
 }
 h2 {
   font-size: clamp(24px, 3vw, 48px);
@@ -93,9 +95,9 @@ h2 {
   height: fit-content;
   border-radius: 15px;
   cursor: pointer;
-  background-color: white;
-  color: #1c1c1c;
-  border: 4px solid #1c1c1c;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: 2px solid var(--color-background-reverse);
   border-radius: 20px;
   transition: all 0.2s ease-in-out;
   height: fit-content;
@@ -103,10 +105,10 @@ h2 {
   outline: none;
 }
 .btn-download:hover {
-  background-color: #1c1c1c;
+  background-color: var(--color-primary);
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
-  border: 4px solid white;
-  color: white;
+  border: 2px solid var(--color-primary);
+  color: var(--vt-c-white);
 }
 .btn-download > i {
   margin-right: 8px;
@@ -118,20 +120,5 @@ h2 {
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-}
-
-.emphasis-txt {
-  padding: 0.35em;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  background-color: #141414;
-  color: #8d8d8d;
-}
-
-.emphasis-txt:hover {
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  background-color: #1a1a1a;
-  color: white;
 }
 </style>

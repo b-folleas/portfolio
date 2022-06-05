@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <nav class="nav" v-bind:class="{ 'background-active': showMenu }">
+    <nav class="nav noselect" v-bind:class="{ 'background-active': showMenu }">
       <img
-        class="logo"
-        src="./assets/logo.svg"
+        id="appLogo"
+        class="logo noselect"
+        :src="getImageUrl(assetsSrc.logo)"
         alt="logo"
         @click="scrollToTop"
       />
@@ -11,8 +12,8 @@
         <Menu v-if="showMenu" v-on:close="toggleMenu" />
       </Transition>
       <img
-        class="menu"
-        src="./assets/icons/menu.svg"
+        class="menu noselect"
+        :src="getImageUrl(assetsSrc.menu)"
         alt="menu"
         @click="toggleMenu"
       />
@@ -21,11 +22,12 @@
     <AboutMe id="about-me" name="about-me" class="section" />
     <MyWork id="my-work" name="my-work" />
     <FindMe id="find-me" name="find-me" class="section" />
-    <Footer class="footer" />
+    <Footer class="footer" :src="assetsSrc.footer" />
   </div>
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
 import Home from "./section/Home.vue";
 import AboutMe from "./section/AboutMe.vue";
 import MyWork from "./section/MyWork.vue";
@@ -38,9 +40,37 @@ export default {
   data() {
     return {
       showMenu: false,
+      initUserTheme: "",
     };
   },
+  computed: {
+    ...mapState("theme", ["userTheme"]),
+    assetsSrc() {
+      const result = {};
+      if (this.userTheme == "dark-theme") {
+        result.logo = "logo";
+        result.menu = "icons/menu";
+        result.footer = "logo-dark";
+      } else {
+        result.logo = "logo-dark";
+        result.menu = "icons/menu-dark";
+        result.footer = "logo";
+      }
+      return result;
+    },
+  },
+  async created() {
+    const initUserTheme =
+      (await this.getLocalStorageTheme()) || this.getMediaPreference();
+    document.documentElement.className = initUserTheme;
+    this.setUserTheme(initUserTheme);
+    // Here call ThemeButton component method setTheme for initUserTheme
+  },
   methods: {
+    ...mapActions("theme", ["getLocalStorageTheme", "setUserTheme"]),
+    getImageUrl(name) {
+      return new URL(`./assets/${name}.svg`, import.meta.url).href;
+    },
     scrollToTop() {
       window.scroll({
         top: 0,
@@ -50,6 +80,16 @@ export default {
     },
     toggleMenu() {
       this.showMenu = !this.showMenu;
+    },
+    getMediaPreference() {
+      const hasDarkPreference = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      if (hasDarkPreference) {
+        return "dark-theme";
+      } else {
+        return "light-theme";
+      }
     },
   },
 };
@@ -69,8 +109,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #1c1c1c;
-  color: white;
+  color: var(--color-text);
 }
 
 .logo,
@@ -89,11 +128,11 @@ body {
 }
 
 .background-active {
-  background-color: #1c1c1c;
+  background-color: var(--color-background);
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -108,7 +147,6 @@ h1 {
 </style>
 
 <style scoped>
-
 /* Menu transition */
 .v-enter-active,
 .v-leave-active {

@@ -1,7 +1,7 @@
 <template>
   <div class="find-me-icons-main-container" @click="openLink">
     <div class="find-me-icons-header">
-      <img :src="getImageUrl(title)" :alt="title" />
+      <img :src="getImageUrl('icons/' + assetsSrc[title])" :alt="title" />
       <div class="horizontal-divider"></div>
       <strong> {{ title }} </strong>
     </div>
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "FindMeIcons",
   props: {
@@ -26,12 +27,28 @@ export default {
       required: false
     }
   },
+  computed:  {
+  ...mapState("theme", ["userTheme"]),
+    assetsSrc() {
+      const result = {};
+      if (this.userTheme == "dark-theme") {
+        result.email = "email";
+        result.linkedin = "linkedin";
+        result.github = "github";
+      } else {
+        result.email = "email-dark";
+        result.linkedin = "linkedin-dark";
+        result.github = "github-dark";
+      }
+      return result;
+    },
+  },
   methods: {
     openLink() {
       window.open(this.link, "_blank", "noopener");
     },
     getImageUrl(name) {
-      return new URL(`../assets/icons/${name}.svg`, import.meta.url).href
+      return new URL(`../assets/${name}.svg`, import.meta.url).href
     }
   }
 };
@@ -40,7 +57,7 @@ export default {
 <style scoped>
 .horizontal-divider {
   width: 1px;
-  background-color: #313131;
+  background-color: var(--color-background-soft);
   height: 30px;
 }
 .find-me-icons-main-container {
@@ -49,13 +66,15 @@ export default {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #111111;
+  background-color: var(--color-background-soft);
   border-radius: 20px;
+  border: 2px solid var(--color-background-soft);
   transition: all 0.2s ease-in-out;
-  min-width: 250px;
+  min-width: 200px;
 }
 .find-me-icons-main-container:hover {
-  background-color: #1c1c1c;
+  background-color: var(--color-background-hover);
+  border: 2px solid var(--color-primary);
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
 }
 .find-me-icons-main-container:hover img {

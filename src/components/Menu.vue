@@ -10,13 +10,18 @@
       <li>
         <a @click="$emit('close')" href="#find-me">Find Me</a>
       </li>
+      <li id="themeBtn">
+        <ThemeButton />
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
+import ThemeButton from "../components/ThemeButton.vue";
 export default {
   name: "Menu",
+  components: { ThemeButton },
   emits: ["close"],
 };
 </script>
@@ -26,7 +31,7 @@ ul {
   list-style-type: none;
   display: flex;
   flex-flow: row;
-  margin-right: 3em;
+  margin: 0 3em;
   margin-bottom: 0;
   padding: 0;
   line-height: 30px;
@@ -64,10 +69,11 @@ li {
   list-style: outside none none;
   margin: 0 1.5em;
   padding: 0;
+  height: 30px;
 }
 .snip1217 a {
   padding: 0.3em 0;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text);
   position: relative;
   text-decoration: none;
 }
@@ -78,7 +84,7 @@ li {
   content: "";
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
-  background-color: #9b59b6;
+  background-color: var(--color-primary);
   width: 0;
 }
 .snip1217 a:before {
@@ -91,12 +97,30 @@ li {
 }
 .snip1217 a:hover,
 .snip1217 .current a {
-  color: #ffffff;
+  color: var(--color-text-hover);
 }
 .snip1217 a:hover:before,
 .snip1217 .current a:before,
 .snip1217 a:hover:after,
 .snip1217 .current a:after {
   width: 100%;
+}
+
+#themeBtn {
+  align-self: center;
+}
+
+/* Responsive layout - makes a one column layout for menu items */
+@media (max-width: 768px) {
+  .snip1217 {
+    flex-flow: column nowrap;
+  }
+
+  #themeBtn {
+    margin-top: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
 }
 </style>

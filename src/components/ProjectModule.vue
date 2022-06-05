@@ -6,7 +6,7 @@
         <a :href="url" target="_blank" rel="noopener">
           <img
             class="preview-platform-icons"
-            src="../assets/icons/github-black.svg"
+            :src="getImageUrl('icons/' + assetsSrc)"
             :alt="`Link for Github`"
           />
         </a>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "ProjectModule",
   props: {
@@ -49,9 +50,24 @@ export default {
       required: false,
     },
   },
+  computed: {
+    ...mapState("theme", ["userTheme"]),
+    assetsSrc() {
+      let result;
+      if (this.userTheme == "dark-theme") {
+        result = "github";
+      } else {
+        result = "github-dark";
+      }
+      return result;
+    },
+  },
   methods: {
     readMore() {
       window.open(this.url, "_blank", "noopener");
+    },
+    getImageUrl(name) {
+      return new URL(`../assets/${name}.svg`, import.meta.url).href;
     },
   },
 };
@@ -64,14 +80,16 @@ export default {
   flex-flow: column nowrap;
   padding: 2em 2em 2em 2em;
   width: 80vw;
-  background-color: whitesmoke;
-  color: #111111;
+  background-color: var(--color-background-soft);
+  border: 2px solid var(--color-background-soft);
+  color: var(--color-text);
   border-radius: 20px;
   transition: all 0.2s ease-in-out;
 }
 
 .project-container:hover {
-  background-color: white;
+  background-color: var(--color-background);
+  border: 2px solid var(--color-primary);
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
 }
 .project-container:hover p,
@@ -110,10 +128,10 @@ p {
   position: absolute;
   font-size: 1.4em;
   font-weight: 600;
-  background-color: white;
-  color: #1c1c1c;
+  background-color: var(--color-background);
+  color: var(--color-text);
   border-radius: 15px;
-  border: 4px solid #1c1c1c;
+  border: 2px solid var(--color-background-reverse);
   padding: 0.5em;
   bottom: 0;
   left: 50%;
@@ -122,17 +140,16 @@ p {
   outline: none;
 }
 .more:hover {
-  background-color: #1c1c1c;
-  color: white;
-  border: 4px solid white;
+  background-color: var(--color-primary);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
+  color: var(--vt-c-white);
+  border: 2px solid var(--color-primary);
 }
 .preview-platform-icons {
   width: 30px;
   font-weight: 600;
   margin-left: 2em;
-  opacity: 0.6;
-  fill: #111111;
-  transition: opacity 0.2 ease-in-out;
+  opacity: 0.8;
 }
 .preview-platform-icons:hover {
   opacity: 1;
@@ -145,8 +162,8 @@ p {
   line-height: 32px;
   border-radius: 25px;
   font: bold;
-  color: #58A6FF;
-  background-color: rgba(56,139,253,0.15);
+  color: var(--color-tag-text);
+  background-color: var(--color-tag-background);
 }
 
 .chip:not(:first-child) {

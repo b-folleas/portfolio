@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="myWork">
     <h1>My Work</h1>
     <div class="mt-3">
       <ProjectModule
@@ -60,15 +60,10 @@ export default {
 };
 </script>
 <style scoped>
-.wip {
-  margin-bottom: 1em;
-  width: 30px;
-}
 div {
   display: flex;
   flex-flow: column;
   align-items: center;
-  background-image: url("../assets/backgrounds/topography.svg");
 }
 .module {
   margin-bottom: 10em;
