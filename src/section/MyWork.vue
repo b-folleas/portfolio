@@ -46,7 +46,7 @@ export default {
       this.currentPage,
       this.perPage
     );
-    this.totalPages = Math.floor(this.projects.length / this.perPage) + 1;
+    this.totalPages = this.projects?.length ? Math.floor(this.projects.length / this.perPage) + 1 : 0;
   },
   methods: {
     async onPageChange(page) {

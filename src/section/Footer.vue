@@ -2,7 +2,7 @@
   <div>
     <footer>
       <div class="main-footer">
-        <img :src="getImageUrl(src)" alt="logo" />
+        <img :src="src" alt="logo" />
         <div class="vertical-divider noselect"></div>
         <h1>Brice</h1>
       </div>
@@ -21,11 +21,6 @@ export default {
       type: String,
       required: true
     },
-  },
-  methods: {
-    getImageUrl(name) {
-      return new URL(`../assets/${name}.svg`, import.meta.url).href
-    }
   }
 };
 </script>

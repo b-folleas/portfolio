@@ -6,7 +6,7 @@
         <a :href="url" target="_blank" rel="noopener">
           <img
             class="preview-platform-icons"
-            :src="getImageUrl('icons/' + assetsSrc)"
+            :src="assetsSrc"
             :alt="`Link for Github`"
           />
         </a>
@@ -14,7 +14,7 @@
       <em v-if="language"> <i class="fa fa-code"></i> {{ language }}</em>
     </div>
     <p>{{ description }}</p>
-    <div v-if="topics.length > 0">
+    <div v-if="topics?.length > 0">
       <p class="chip" v-for="topic in topics" :key="topic">
         {{ topic }}
       </p>
@@ -27,6 +27,7 @@
 import { mapState } from "vuex";
 export default {
   name: "ProjectModule",
+  inject: ['$func'],
   props: {
     name: {
       type: String,
@@ -53,21 +54,16 @@ export default {
   computed: {
     ...mapState("theme", ["userTheme"]),
     assetsSrc() {
-      let result;
       if (this.userTheme == "dark-theme") {
-        result = "github";
+        return this.$func.getIconImgUrl("github");
       } else {
-        result = "github-dark";
+        return this.$func.getIconImgUrl("github-dark");
       }
-      return result;
     },
   },
   methods: {
     readMore() {
       window.open(this.url, "_blank", "noopener");
-    },
-    getImageUrl(name) {
-      return new URL(`../assets/${name}.svg`, import.meta.url).href;
     },
   },
 };

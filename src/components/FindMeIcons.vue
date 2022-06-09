@@ -1,7 +1,7 @@
 <template>
   <div class="find-me-icons-main-container" @click="openLink">
     <div class="find-me-icons-header">
-      <img :src="getImageUrl('icons/' + assetsSrc[title])" :alt="title" />
+      <img :src="assetsSrc[title]" :alt="title" />
       <div class="horizontal-divider"></div>
       <strong> {{ title }} </strong>
     </div>
@@ -13,6 +13,7 @@
 import { mapState } from "vuex";
 export default {
   name: "FindMeIcons",
+  inject: ['$func'],
   props: {
     title: {
       type: String,
@@ -32,13 +33,13 @@ export default {
     assetsSrc() {
       const result = {};
       if (this.userTheme == "dark-theme") {
-        result.email = "email";
-        result.linkedin = "linkedin";
-        result.github = "github";
+        result.email = this.$func.getIconImgUrl("email");
+        result.linkedin = this.$func.getIconImgUrl("linkedin");
+        result.github = this.$func.getIconImgUrl("github");
       } else {
-        result.email = "email-dark";
-        result.linkedin = "linkedin-dark";
-        result.github = "github-dark";
+        result.email = this.$func.getIconImgUrl("email-dark");
+        result.linkedin = this.$func.getIconImgUrl("linkedin-dark");
+        result.github = this.$func.getIconImgUrl("github-dark");
       }
       return result;
     },
@@ -47,8 +48,8 @@ export default {
     openLink() {
       window.open(this.link, "_blank", "noopener");
     },
-    getImageUrl(name) {
-      return new URL(`../assets/${name}.svg`, import.meta.url).href
+    getIconImgUrl(name) {
+      return new URL(`../assets/icons/${name}.svg`, import.meta.url).href
     }
   }
 };

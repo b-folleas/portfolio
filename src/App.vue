@@ -4,7 +4,7 @@
       <img
         id="appLogo"
         class="logo noselect"
-        :src="getImageUrl(assetsSrc.logo)"
+        :src="assetsSrc.logo"
         alt="logo"
         @click="scrollToTop"
       />
@@ -13,7 +13,7 @@
       </Transition>
       <img
         class="menu noselect"
-        :src="getImageUrl(assetsSrc.menu)"
+        :src="assetsSrc.menu"
         alt="menu"
         @click="toggleMenu"
       />
@@ -36,6 +36,7 @@ import Footer from "./section/Footer.vue";
 import Menu from "./components/Menu.vue";
 export default {
   name: "App",
+  inject: ['$func'],
   components: { Home, Menu, AboutMe, MyWork, FindMe, Footer },
   data() {
     return {
@@ -48,13 +49,13 @@ export default {
     assetsSrc() {
       const result = {};
       if (this.userTheme == "dark-theme") {
-        result.logo = "logo";
-        result.menu = "icons/menu";
-        result.footer = "logo-dark";
+        result.logo = this.$func.getImgUrl("logo");
+        result.menu = this.$func.getIconImgUrl("menu");
+        result.footer = this.$func.getImgUrl("logo-dark");
       } else {
-        result.logo = "logo-dark";
-        result.menu = "icons/menu-dark";
-        result.footer = "logo";
+        result.logo = this.$func.getImgUrl("logo-dark");
+        result.menu = this.$func.getIconImgUrl("menu-dark");
+        result.footer = this.$func.getImgUrl("logo");
       }
       return result;
     },
@@ -68,9 +69,6 @@ export default {
   },
   methods: {
     ...mapActions("theme", ["getLocalStorageTheme", "setUserTheme"]),
-    getImageUrl(name) {
-      return new URL(`./assets/${name}.svg`, import.meta.url).href;
-    },
     scrollToTop() {
       window.scroll({
         top: 0,
