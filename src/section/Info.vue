@@ -1,6 +1,6 @@
 <template>
   <div class="main-container">
-    <h1>Find Me</h1>
+    <h1>{{ $t("info") }}</h1>
     <div class="flex-container">
       <FindMeIcons
         title="email"

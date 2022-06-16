@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>About Me</h1>
+    <h1>{{ $t("about") }}</h1>
     <Description class="description" />
   </div>
 </template>
@@ -8,7 +8,7 @@
 <script>
 import Description from "../components/Description.vue";
 export default {
-  name: "AboutMe",
+  name: "AboutSection",
   components: { Description },
 };
 </script>

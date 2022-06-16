@@ -5,14 +5,14 @@
       France. Through my studies, my three years work experience and personal
       projects, I deepened my skills in creating websites using frameworks such
       as
-      <span class="emphasis-txt">Vue.js, Symfony or Spring boot</span>.
+      <span class="emphasis-txt">{{ $t("vue_symfo_springboot") }}</span>.
       <br />
       In my free time, I try to discover new technologies. Currently, I'm
       working on a personal project using
-      <span class="emphasis-txt">Django and Docker</span>.
+      <span class="emphasis-txt">{{ $t("django_and_docker") }}</span>.
       <br />
       I'm looking for a new job oppotunity in
-      <span class="emphasis-txt">Yokohama / Tokyo, Japan</span>.
+      <span class="emphasis-txt">{{ $t("yokohama_tokyo_japan") }}</span>.
     </p>
     <div class="flex-icons">
       <img
@@ -53,7 +53,7 @@
       />
       <a class="btn-download" :href="cvUrl" download="cv-folleas-brice.pdf">
         <i class="fa fa-download"></i>
-        Download my resume
+        {{ $t("download_resume") }}
       </a>
     </div>
   </article>
@@ -87,7 +87,6 @@ h2 {
   transition: filter 0.2s ease-in-out;
 }
 .btn-download {
-  border: none;
   text-align: center;
   padding: 10px 20px;
   font-weight: 600;

@@ -1,6 +1,6 @@
 <template>
-  <div id="myWork">
-    <h1>My Work</h1>
+  <div id="works">
+    <h1>{{ $t("works") }}</h1>
     <div class="mt-3">
       <ProjectModule
         v-for="project in paginatedProjects"
@@ -10,6 +10,7 @@
         :url="project.svn_url"
         :language="project.language"
         :topics="project.topics"
+        :date="project.updated_at"
         class="module"
       />
       <pagination
@@ -28,7 +29,7 @@ import API from "@/api";
 import ProjectModule from "../components/ProjectModule.vue";
 import Pagination from "../components/Pagination.vue";
 export default {
-  name: "MyWork",
+  name: "WorksSection",
   components: {
     ProjectModule,
     Pagination,

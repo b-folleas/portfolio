@@ -3,6 +3,7 @@
     <div class="project-module-header">
       <div class="project-module-title">
         <h2>{{ name }}</h2>
+        <p>{{ date }}</p>
         <a :href="url" target="_blank" rel="noopener">
           <img
             class="preview-platform-icons"
@@ -19,7 +20,7 @@
         {{ topic }}
       </p>
     </div>
-    <button @click="readMore" class="more">Read More...</button>
+    <button @click="readMore" class="more">{{ $t("read_more") }}</button>
   </article>
 </template>
 
@@ -27,7 +28,7 @@
 import { mapState } from "vuex";
 export default {
   name: "ProjectModule",
-  inject: ['$func'],
+  inject: ["$func"],
   props: {
     name: {
       type: String,
@@ -48,6 +49,10 @@ export default {
     },
     topics: {
       type: Array,
+      required: false,
+    },
+    date: {
+      type: String,
       required: false,
     },
   },

@@ -1,0 +1,17 @@
+{
+    "hello": "Bonjour, je suis",
+    "i_m_brice": "Brice",
+    "brice": "Brice",
+    "full_stack_engineer": "Ingénieur Full Stack",
+    "vue_symfo_springboot": "Vue.js, Symfony & Spring boot",
+    "django_and_docker": "Django & Docker",
+    "yokohama_tokyo_japan": "Yokohama / Tokyo Japan",
+    "download_resume": "Télécharger mon CV",
+    "about": "À propos",
+    "works": "Projets",
+    "info": "Infos",
+    "english": "EN",
+    "french": "FR",
+    "japanese": "JA",
+    "read_more": "Voir plus..."
+}

@@ -4,7 +4,7 @@
       <div class="main-footer">
         <img :src="src" alt="logo" />
         <div class="vertical-divider noselect"></div>
-        <h1>Brice</h1>
+        <h1>{{ $t("brice") }}</h1>
       </div>
       <div>
         <h4 class="mt-1 bg-color">© 2022</h4>

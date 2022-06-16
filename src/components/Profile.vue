@@ -9,16 +9,16 @@
       />
     </div>
     <div class="profile-text fade-in-top">
-      <h1>Hi I'm</h1>
-      <h2>Brice</h2>
-      <h3 class="emphasis-txt">Full Stack Developer</h3>
+      <h1>{{ $t("hello") }}</h1>
+      <h2>{{ $t("i_m_brice") }}</h2>
+      <h3 class="emphasis-txt">{{ $t("full_stack_engineer") }}</h3>
     </div>
   </main>
 </template>
 
 <script>
 export default {
-  name: "Profile",
+  name: "ProfileComponent",
   computed: {
     avatar() {
       return (
@@ -47,7 +47,7 @@ h1 {
 }
 h2 {
   margin: 0;
-  font-size: clamp(72px, 10vw, 144px);
+  font-size: clamp(52px, 8vw, 100px);
   font-weight: 900;
 }
 h3 {

@@ -56,7 +56,7 @@ export default {
   height: calc(var(--element-size) * 0.4);
   position: relative;
   padding: calc(var(--element-size) * 0.025);
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease-in-out;
   justify-content: space-between;
   width: var(--element-size);
   z-index: 1;
@@ -71,7 +71,7 @@ export default {
   height: calc(var(--element-size) * 0.3);
   width: calc(var(--element-size) * 0.3);
   transform: translateX(1);
-  transition: transform 0.3s ease, background-color 0.5s ease;
+  transition: transform 0.2s ease, background-color 0.5s ease;
 }
 
 .switch-toggle-checked {

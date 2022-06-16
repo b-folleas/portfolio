@@ -132,7 +132,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 .pagination {
   list-style-type: none;
 }
@@ -147,7 +147,7 @@ export default {
   font-weight: 600;
   height: fit-content;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease-in-out;
   height: fit-content;
   text-decoration: none;
   outline: none;

@@ -1,27 +1,29 @@
 <template>
-  <div>
     <ul class="snip1217">
       <li>
-        <a @click="$emit('close')" href="#about-me">About Me</a>
+        <a @click="$emit('close')" href="#about">{{ $t("about") }}</a>
       </li>
       <li>
-        <a @click="$emit('close')" href="#my-work">My work</a>
+        <a @click="$emit('close')" href="#works">{{ $t("works") }}</a>
       </li>
       <li>
-        <a @click="$emit('close')" href="#find-me">Find Me</a>
+        <a @click="$emit('close')" href="#info">{{ $t("info") }}</a>
       </li>
       <li id="themeBtn">
         <ThemeButton />
       </li>
+      <li id="selectBtn">
+        <SelectButton />
+      </li>
     </ul>
-  </div>
 </template>
 
 <script>
 import ThemeButton from "../components/ThemeButton.vue";
+import SelectButton from "../components/SelectButton.vue";
 export default {
-  name: "Menu",
-  components: { ThemeButton },
+  name: "MenuComponent",
+  components: { ThemeButton, SelectButton },
   emits: ["close"],
 };
 </script>
@@ -31,8 +33,7 @@ ul {
   list-style-type: none;
   display: flex;
   flex-flow: row;
-  margin: 0 3em;
-  margin-bottom: 0;
+  margin: 0 auto;
   padding: 0;
   line-height: 30px;
 }
@@ -61,8 +62,8 @@ li {
 .snip1217 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  transition: all 0.35s ease;
-  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
 }
 .snip1217 li {
   display: inline-block;
@@ -82,8 +83,8 @@ li {
   height: 3px;
   position: absolute;
   content: "";
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
   background-color: var(--color-primary);
   width: 0;
 }
@@ -122,5 +123,9 @@ li {
     margin-right: auto;
     margin-bottom: 0;
   }
+/* 
+  #selectBtn {
+    position: relative;
+  } */
 }
 </style>

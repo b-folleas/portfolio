@@ -19,9 +19,9 @@
       />
     </nav>
     <Home id="home" name="home" class="section" />
-    <AboutMe id="about-me" name="about-me" class="section" />
-    <MyWork id="my-work" name="my-work" />
-    <FindMe id="find-me" name="find-me" class="section" />
+    <About id="about" name="about" class="section" />
+    <Works id="works" name="works" />
+    <Info id="info" name="info" class="section" />
     <Footer class="footer" :src="assetsSrc.footer" />
   </div>
 </template>
@@ -29,15 +29,15 @@
 <script>
 import { mapState, mapActions } from "vuex";
 import Home from "./section/Home.vue";
-import AboutMe from "./section/AboutMe.vue";
-import MyWork from "./section/MyWork.vue";
-import FindMe from "./section/FindMe.vue";
+import About from "./section/About.vue";
+import Works from "./section/Works.vue";
+import Info from "./section/Info.vue";
 import Footer from "./section/Footer.vue";
 import Menu from "./components/Menu.vue";
 export default {
   name: "App",
-  inject: ['$func'],
-  components: { Home, Menu, AboutMe, MyWork, FindMe, Footer },
+  inject: ["$func"],
+  components: { Home, Menu, About, Works, Info, Footer },
   data() {
     return {
       showMenu: false,
@@ -114,6 +114,15 @@ body {
 .menu {
   width: 30px;
   cursor: pointer;
+  position: absolute;
+  top: 30px;
+}
+
+.logo {
+  left: 30px;
+}
+.menu {
+  right: 30px;
 }
 
 .nav {
@@ -148,7 +157,7 @@ h1 {
 /* Menu transition */
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .v-enter-from,
