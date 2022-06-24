@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
 export default {
+  name: "SelectButtonComponent",
   data() {
     return {
       languages: [
@@ -19,24 +19,8 @@ export default {
     }
   },
   computed: {
-    ...mapState("theme", ["userTheme"]),
     currentLanguage () {
       return this.$i18n.locale
-    }
-  },
-  methods: {
-    ...mapActions("theme", ["setUserTheme"]),
-    toggleTheme() {
-      const activeTheme = localStorage.getItem("user-theme");
-      if (activeTheme === "light-theme") {
-        this.setTheme("dark-theme");
-      } else {
-        this.setTheme("light-theme");
-      }
-    },
-    setTheme(theme) {
-      document.documentElement.className = theme;
-      this.setUserTheme(theme);
     }
   },
 };

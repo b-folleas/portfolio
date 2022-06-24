@@ -3,6 +3,7 @@
 :root {
     --vt-c-white: #ffffff;
     --vt-c-white-soft: #FFF5EE;
+    --vt-c-grey: #aeaeae;
     --vt-c-black: #14151c;
     --vt-c-black-soft: #1d1e27;
     --vt-c-text-light-1: var(--vt-c-indigo);
@@ -159,7 +160,7 @@ body {
 }
 
 .emphasis-txt {
-    padding: 0.5em;
+    padding: 0.35em;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     background-color: var(--color-background-soft);

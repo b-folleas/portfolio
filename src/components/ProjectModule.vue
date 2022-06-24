@@ -3,14 +3,16 @@
     <div class="project-module-header">
       <div class="project-module-title">
         <h2>{{ name }}</h2>
-        <p>{{ date }}</p>
-        <a :href="url" target="_blank" rel="noopener">
-          <img
-            class="preview-platform-icons"
-            :src="assetsSrc"
-            :alt="`Link for Github`"
-          />
-        </a>
+        <div class="project-module-date">
+          <p>{{ formatedDate }}</p>
+          <a :href="url" target="_blank" rel="noopener">
+            <img
+              class="preview-platform-icons"
+              :src="assetsSrc"
+              :alt="`Link for Github`"
+            />
+          </a>
+        </div>
       </div>
       <em v-if="language"> <i class="fa fa-code"></i> {{ language }}</em>
     </div>
@@ -26,8 +28,10 @@
 
 <script>
 import { mapState } from "vuex";
+import * as moment_ from 'moment';
+const moment = moment_; // workaround Cf. https://stackoverflow.com/questions/59735280/angular-8-moment-error-cannot-call-a-namespace-moment
 export default {
-  name: "ProjectModule",
+  name: "ProjectModuleComponent",
   inject: ["$func"],
   props: {
     name: {
@@ -64,6 +68,9 @@ export default {
       } else {
         return this.$func.getIconImgUrl("github-dark");
       }
+    },
+    formatedDate() {
+      return moment(this.date).format("MMM Do YY");
     },
   },
   methods: {
@@ -107,6 +114,14 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
+.project-module-date {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: end;
+}
+.project-module-date > p {
+  margin: 0;
+}
 h2 {
   font-size: clamp(24px, 3vw, 48px);
   opacity: 0.5;
@@ -149,7 +164,7 @@ p {
 .preview-platform-icons {
   width: 30px;
   font-weight: 600;
-  margin-left: 2em;
+  margin-left: 1em;
   opacity: 0.8;
 }
 .preview-platform-icons:hover {

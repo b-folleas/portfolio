@@ -25,7 +25,7 @@
 import FindMeIcons from "../components/FindMeIcons.vue";
 
 export default {
-  name: "FindMe",
+  name: "InfoSection",
   components: {
     FindMeIcons,
   },

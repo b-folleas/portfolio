@@ -12,7 +12,7 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  name: "FindMeIcons",
+  name: "FindMeIconsComponent",
   inject: ['$func'],
   props: {
     title: {

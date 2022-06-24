@@ -53,6 +53,7 @@
 
 <script>
 export default {
+  name: "PaginationComponent",
   props: {
     maxVisibleButtons: {
       type: Number,
@@ -152,6 +153,10 @@ export default {
   text-decoration: none;
   outline: none;
   padding: 0 1em;
+}
+
+.pagination-item > button:hover:enabled {
+  background-color: var(--vt-c-grey);
 }
 
 .pagination-item:first-of-type > button {

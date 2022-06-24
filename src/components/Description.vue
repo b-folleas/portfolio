@@ -1,18 +1,18 @@
 <template>
   <article>
-    <p>
-      Last year student in internship as a Full Stack developer, based in Lyon,
-      France. Through my studies, my three years work experience and personal
-      projects, I deepened my skills in creating websites using frameworks such
-      as
-      <span class="emphasis-txt">{{ $t("vue_symfo_springboot") }}</span>.
-      <br />
-      In my free time, I try to discover new technologies. Currently, I'm
-      working on a personal project using
-      <span class="emphasis-txt">{{ $t("django_and_docker") }}</span>.
-      <br />
-      I'm looking for a new job oppotunity in
-      <span class="emphasis-txt">{{ $t("yokohama_tokyo_japan") }}</span>.
+    <p class="mb-0">
+      {{ $t("description.paragraph_one") }}
+      <span class="emphasis-txt">{{ $t("description.vue_symfo_springboot") }}</span>.
+    </p>
+    <br />
+    <p class="mb-0">
+      {{ $t("description.paragraph_two") }}
+      <span class="emphasis-txt">{{ $t("description.django_and_docker") }}</span>.
+    </p>
+    <br />
+    <p class="mb-0">
+      {{ $t("description.paragraph_three") }}
+      <span class="emphasis-txt">{{ $t("description.yokohama_tokyo_japan") }}</span>.
     </p>
     <div class="flex-icons">
       <img
@@ -61,7 +61,7 @@
 
 <script>
 export default {
-  name: "Description",
+  name: "DescriptionComponent",
   computed: {
     cvUrl() {
       return new URL("../assets/cv.pdf", import.meta.url).href;
