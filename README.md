@@ -1,4 +1,4 @@
-# portfolio
+# portfolio [![Build Status](https://app.travis-ci.com/b-folleas/portfolio.svg?branch=master)](https://app.travis-ci.com/b-folleas/portfolio)
 
 This template should help get you started developing with Vue 3 in Vite.
 
