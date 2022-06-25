@@ -28,8 +28,9 @@
 
 <script>
 import { mapState } from "vuex";
-import * as moment_ from 'moment';
-const moment = moment_; // workaround Cf. https://stackoverflow.com/questions/59735280/angular-8-moment-error-cannot-call-a-namespace-moment
+// TODO
+// import * as moment_ from 'moment';
+// const moment = moment_; // workaround Cf. https://stackoverflow.com/questions/59735280/angular-8-moment-error-cannot-call-a-namespace-moment
 export default {
   name: "ProjectModuleComponent",
   inject: ["$func"],
@@ -70,7 +71,8 @@ export default {
       }
     },
     formatedDate() {
-      return moment(this.date).format("MMM Do YY");
+      // TODO return moment(this.date).format("MMM Do YY");
+      return this.date;
     },
   },
   methods: {

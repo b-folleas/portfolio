@@ -12,7 +12,8 @@ export default defineConfig({
         vueI18n({
             // eslint-disable-next-line no-undef
             include: path.resolve(__dirname, './i18n/locales/**'),
-            compositionOnly: false
+            compositionOnly: false,
+            runtimeOnly: false
         })
     ],
     resolve: {
