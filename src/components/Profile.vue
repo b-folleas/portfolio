@@ -10,7 +10,7 @@
     </div>
     <div class="profile-text fade-in-top">
       <h1>{{ $t("hello") }}</h1>
-      <h2>{{ $t("i_m_brice") }}</h2>
+      <h1 class="smaller">{{ $t("i_m_brice") }}</h1>
       <h3 class="emphasis-txt">{{ $t("full_stack_engineer") }}</h3>
     </div>
   </main>
@@ -45,7 +45,7 @@ h1 {
   font-weight: 300;
   font-size: clamp(42px, 5vw, 60px);
 }
-h2 {
+h1.smaller {
   margin: 0;
   font-size: clamp(52px, 8vw, 100px);
   font-weight: 900;

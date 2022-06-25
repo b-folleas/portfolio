@@ -4,7 +4,7 @@
       <div class="main-footer">
         <img :src="src" alt="logo" />
         <div class="vertical-divider noselect"></div>
-        <h2>{{ $t("brice") }}</h2>
+        <h3>{{ $t("brice") }}</h3>
       </div>
       <div>
         <h4 class="mt-1 bg-color">© 2022</h4>
@@ -54,7 +54,7 @@ footer > div {
 img {
   width: 48px;
 }
-h2 {
+h3 {
   color: var(--color-text);
   margin: 0;
   font-size: clamp(24px, 3vw, 48px);

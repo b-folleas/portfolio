@@ -1,6 +1,6 @@
 <template>
   <div id="works">
-    <h1>{{ $t("works") }}</h1>
+    <h2 class="h-center">{{ $t("works") }}</h2>
     <div class="mt-3">
       <ProjectModule
         v-for="project in paginatedProjects"

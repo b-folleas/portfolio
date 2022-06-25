@@ -20,7 +20,7 @@
     </nav>
     <Home id="home" name="home" class="section" />
     <About id="about" name="about" class="section" />
-    <Works id="works" name="works" />
+    <Works id="works" name="works" class="section"/>
     <Info id="info" name="info" class="section" />
     <Footer class="footer" :src="assetsSrc.footer" />
   </div>
@@ -115,7 +115,7 @@ body {
   width: 30px;
   cursor: pointer;
   position: absolute;
-  top: 30px;
+  top: 5vh;
 }
 
 .logo {

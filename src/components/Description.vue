@@ -75,11 +75,6 @@ p {
   font-size: clamp(16px, 1.2vw, 1.2vw);
   color: var(--color-text);
 }
-h2 {
-  font-size: clamp(24px, 3vw, 48px);
-  font-weight: 300;
-  margin: 0;
-}
 .icon-img {
   margin: 2em;
   height: 30px;

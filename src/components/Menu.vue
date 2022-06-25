@@ -1,21 +1,21 @@
 <template>
-    <ul class="snip1217">
-      <li>
-        <a @click="$emit('close')" href="#about">{{ $t("about") }}</a>
-      </li>
-      <li>
-        <a @click="$emit('close')" href="#works">{{ $t("works") }}</a>
-      </li>
-      <li>
-        <a @click="$emit('close')" href="#info">{{ $t("info") }}</a>
-      </li>
-      <li id="themeBtn">
-        <ThemeButton />
-      </li>
-      <li id="selectBtn">
-        <SelectButton />
-      </li>
-    </ul>
+  <ul class="snip1217">
+    <li>
+      <a @click="$emit('close')" href="#about">{{ $t("about") }}</a>
+    </li>
+    <li>
+      <a @click="$emit('close')" href="#works">{{ $t("works") }}</a>
+    </li>
+    <li>
+      <a @click="$emit('close')" href="#info">{{ $t("info") }}</a>
+    </li>
+    <li id="themeBtn">
+      <ThemeButton />
+    </li>
+    <li id="selectBtn">
+      <SelectButton />
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -68,7 +68,8 @@ li {
 .snip1217 li {
   display: inline-block;
   list-style: outside none none;
-  margin: 0 1.5em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
   padding: 0;
   height: 30px;
 }
@@ -115,17 +116,10 @@ li {
 @media (max-width: 768px) {
   .snip1217 {
     flex-flow: column nowrap;
+    height: 95vh;
   }
-
-  #themeBtn {
-    margin-top: 0.3em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
+  .snip1217 * {
+    margin: auto;
   }
-/* 
-  #selectBtn {
-    position: relative;
-  } */
 }
 </style>

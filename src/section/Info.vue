@@ -1,6 +1,6 @@
 <template>
   <div class="main-container">
-    <h1>{{ $t("info") }}</h1>
+    <h2 class="h-center">{{ $t("info") }}</h2>
     <div class="flex-container">
       <FindMeIcons
         title="email"
@@ -33,9 +33,6 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  text-align: center;
-}
 .main-container {
   display: flex;
   flex-flow: column;

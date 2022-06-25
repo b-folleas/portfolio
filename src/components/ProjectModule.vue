@@ -2,7 +2,7 @@
   <article class="project-container">
     <div class="project-module-header">
       <div class="project-module-title">
-        <h2>{{ name }}</h2>
+        <h3>{{ name }}</h3>
         <div class="project-module-date">
           <p>{{ formatedDate }}</p>
           <a :href="url" target="_blank" rel="noopener">
@@ -104,7 +104,7 @@ export default {
 }
 .project-container:hover p,
 .project-container:hover em,
-.project-container:hover h2 {
+.project-container:hover h3 {
   opacity: 0.9;
 }
 .project-module-header {
@@ -124,7 +124,7 @@ export default {
 .project-module-date > p {
   margin: 0;
 }
-h2 {
+h3 {
   font-size: clamp(24px, 3vw, 48px);
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out;

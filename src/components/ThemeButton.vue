@@ -67,8 +67,6 @@ export default {
   position: absolute;
   background-color: var(--color-primary);
   border-radius: 50%;
-  /* top: calc(var(--element-size) * 0.6); */
-  /* left: calc(var(--element-size) * 0.6); */
   height: calc(var(--element-size) * 0.3);
   width: calc(var(--element-size) * 0.3);
   transform: translateX(1);

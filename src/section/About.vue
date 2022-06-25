@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ $t("about") }}</h1>
+    <h2 class="h-center">{{ $t("about") }}</h2>
     <Description class="description" />
   </div>
 </template>
@@ -14,15 +14,12 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  text-align: center;
-}
 div {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 .description {
-  width: 60vw;
+  width: 80vw;
 }
 </style>
