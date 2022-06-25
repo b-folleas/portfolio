@@ -10,7 +10,8 @@ import functions from './plugins/functions.js'
 library.add(fas)
 dom.watch();
 
-createApp(App).use(store)
+createApp(App)
+    .use(store)
     .use(i18n)
     .component("font-awesome-icon", FontAwesomeIcon)
     .provide('$func', functions) // Providing to all components during app creation

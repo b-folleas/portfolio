@@ -1,4 +1,5 @@
 import { createI18n } from 'vue-i18n'
+
 /*
  * The i18n resources in the path specified in the plugin `include` option can be read
  * as vue-i18n optimized locale messages using the import syntax
@@ -11,6 +12,7 @@ const i18n = createI18n({
     legacy: true,
     globalInjection: true,
     locale: 'en',
+    fallbackLocale: "en", // set fallback locale
     messages: {
         en,
         fr,
@@ -18,4 +20,4 @@ const i18n = createI18n({
     }
 })
 
-export default i18n
+export default i18n;

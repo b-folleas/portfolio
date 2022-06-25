@@ -13,7 +13,7 @@
 import { mapState } from "vuex";
 export default {
   name: "FindMeIconsComponent",
-  inject: ['$func'],
+  inject: ["$func"],
   props: {
     title: {
       type: String,

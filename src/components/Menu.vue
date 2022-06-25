@@ -60,10 +60,10 @@ li {
   letter-spacing: 1px;
 }
 .snip1217 * {
-  box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  transition: all 0.35s ease-in-out;
+  box-sizing: border-box;
   -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 .snip1217 li {
   display: inline-block;
@@ -83,8 +83,8 @@ li {
   height: 3px;
   position: absolute;
   content: "";
-  transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
   background-color: var(--color-primary);
   width: 0;
 }
