@@ -52,7 +52,7 @@
         alt="Docker"
       />
       <a class="action-btn" :href="cvUrl" download="cv-folleas-brice.pdf">
-        <i class="fa fa-download"></i>
+        <i class="mr-1 fa fa-download"></i>
         {{ $t("download_resume") }}
       </a>
     </div>
@@ -80,9 +80,6 @@ p {
   height: 30px;
   filter: grayscale();
   transition: filter 0.2s ease-in-out;
-}
-.action-btn > i {
-  margin-right: 8px;
 }
 .icon-img:hover {
   filter: none;

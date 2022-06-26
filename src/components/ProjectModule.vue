@@ -18,7 +18,7 @@
     <div class="project-module-link">
       <a href="url" class="action-btn smaller-btn">
         {{ $t("read_more") }}
-        <i class="fa fa-arrow-up-right-from-square"></i>
+        <i class="ml-1 fa fa-arrow-up-right-from-square"></i>
       </a>
     </div>
   </article>
@@ -26,9 +26,9 @@
 
 <script>
 import { mapState } from "vuex";
-// TODO
-// import * as moment_ from 'moment';
-// const moment = moment_; // workaround Cf. https://stackoverflow.com/questions/59735280/angular-8-moment-error-cannot-call-a-namespace-moment
+import moment from "moment";
+import "moment/dist/locale/fr";
+import "moment/dist/locale/ja";
 export default {
   name: "ProjectModuleComponent",
   inject: ["$func"],
@@ -69,8 +69,8 @@ export default {
       }
     },
     formatedDate() {
-      // TODO return moment(this.date).format("MMM Do YY");
-      return this.date;
+      moment.locale(this.$i18n.locale);
+      return this.$i18n.locale === 'en' ? moment(this.date).format("MMM Do YY") : moment(this.date).format("ll");
     },
   },
 };
@@ -113,6 +113,7 @@ export default {
   display: flex;
   flex-flow: row nowrap;
   align-items: end;
+  text-align: right;  
 }
 .project-module-date > p {
   margin: 0;
@@ -142,10 +143,6 @@ p {
 
 .smaller-btn {
   margin: 0;
-}
-
-.action-btn > i {
-  margin-left: 8px;
 }
 
 .preview-platform-icons {

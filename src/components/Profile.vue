@@ -8,7 +8,7 @@
         ref="img"
       />
     </div>
-    <div class="profile-text fade-in-top">
+    <div class="profile-text fade-in-top" :class="{ smaller: $i18n.locale === 'ja' }">
       <h1>{{ $t("hello") }}</h1>
       <h1 class="smaller">{{ $t("i_m_brice") }}</h1>
       <h3 class="emphasis-txt">{{ $t("full_stack_engineer") }}</h3>
@@ -79,7 +79,17 @@ img:hover {
   }
 
   .profile-img {
-    margin: 50px 0;
+    margin: 25px 0 25px 0;
+  }
+
+  .smaller h1 {
+  font-size: clamp(36px, 4vw, 48px);
+  }
+  .smaller h1.smaller {
+    font-size: clamp(44px, 7vw, 60px);
+  }
+  .smaller h3 {
+    font-size: clamp(20px, 3vw, 38px);
   }
 }
 </style>
