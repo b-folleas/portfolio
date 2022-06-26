@@ -51,7 +51,7 @@
         src="../assets/icons/docker.svg"
         alt="Docker"
       />
-      <a class="btn-download" :href="cvUrl" download="cv-folleas-brice.pdf">
+      <a class="action-btn" :href="cvUrl" download="cv-folleas-brice.pdf">
         <i class="fa fa-download"></i>
         {{ $t("download_resume") }}
       </a>
@@ -81,30 +81,7 @@ p {
   filter: grayscale();
   transition: filter 0.2s ease-in-out;
 }
-.btn-download {
-  text-align: center;
-  padding: 10px 20px;
-  font-weight: 600;
-  margin: 1.5em 2em 2em 2em;
-  height: fit-content;
-  border-radius: 15px;
-  cursor: pointer;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  border: 2px solid var(--color-background-reverse);
-  border-radius: 20px;
-  transition: all 0.2s ease-in-out;
-  height: fit-content;
-  text-decoration: none;
-  outline: none;
-}
-.btn-download:hover {
-  background-color: var(--color-primary);
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
-  border: 2px solid var(--color-primary);
-  color: var(--vt-c-white);
-}
-.btn-download > i {
+.action-btn > i {
   margin-right: 8px;
 }
 .icon-img:hover {
@@ -114,5 +91,6 @@ p {
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  width: inherit;
 }
 </style>

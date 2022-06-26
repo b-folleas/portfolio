@@ -64,6 +64,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+/* Headings */
+
+h2.h-center {
+    text-align: center;
+}
+
+
+/* Fade in top animation */
+
 .fade-in-top {
     -webkit-animation: fadeintop 3s;
     /* Safari, Chrome and Opera > 12.1 */
@@ -143,6 +153,9 @@ body {
     }
 }
 
+
+/* No select element */
+
 .noselect {
     -webkit-touch-callout: none;
     /* iOS Safari */
@@ -158,6 +171,9 @@ body {
     /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
 }
+
+
+/* Emphasis text */
 
 .emphasis-txt {
     padding: 0.35em;
@@ -175,6 +191,28 @@ body {
     color: var(--color-background);
 }
 
-h2.h-center {
+
+/* Action Button */
+
+.action-btn {
+    background-color: var(--color-background);
+    border: 2px solid var(--color-background-reverse);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--color-text);
+    font-weight: 600;
+    height: fit-content;
+    margin: 1.5em 2em 2em 2em;
+    outline: none;
+    padding: 10px 20px;
     text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.action-btn:hover {
+    background-color: var(--color-primary);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--color-primary);
+    color: var(--vt-c-white);
+    text-decoration: none;
 }

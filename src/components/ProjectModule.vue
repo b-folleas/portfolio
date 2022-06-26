@@ -22,7 +22,12 @@
         {{ topic }}
       </p>
     </div>
-    <button @click="readMore" class="more">{{ $t("read_more") }}</button>
+    <div class="project-module-link">
+      <a href="url" class="action-btn smaller-btn">
+        {{ $t("read_more") }}
+        <i class="fa fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
   </article>
 </template>
 
@@ -75,11 +80,6 @@ export default {
       return this.date;
     },
   },
-  methods: {
-    readMore() {
-      window.open(this.url, "_blank", "noopener");
-    },
-  },
 };
 </script>
 
@@ -124,6 +124,11 @@ export default {
 .project-module-date > p {
   margin: 0;
 }
+.project-module-link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+}
 h3 {
   font-size: clamp(24px, 3vw, 48px);
   opacity: 0.5;
@@ -141,28 +146,15 @@ p {
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out;
 }
-.more {
-  cursor: pointer;
-  position: absolute;
-  font-size: 1.4em;
-  font-weight: 600;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  border-radius: 15px;
-  border: 2px solid var(--color-background-reverse);
-  padding: 0.5em;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  transition: all 0.2s ease-in-out;
-  outline: none;
+
+.smaller-btn {
+  margin: 0;
 }
-.more:hover {
-  background-color: var(--color-primary);
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
-  color: var(--vt-c-white);
-  border: 2px solid var(--color-primary);
+
+.action-btn > i {
+  margin-left: 8px;
 }
+
 .preview-platform-icons {
   width: 30px;
   font-weight: 600;
