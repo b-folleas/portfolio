@@ -14,6 +14,8 @@
         :date="project.updated_at"
         class="module"
       />
+      <span>{{ projectsNumbers }} / {{ projects.length }} {{ $t('projects') }}</span>
+      <br>
       <pagination
         class="pagination"
         :totalPages="totalPages"
@@ -42,6 +44,12 @@ export default {
     perPage: 3,
     totalPages: 10,
   }),
+  computed: {
+    projectsNumbers () {
+      const currentProject = ((this.currentPage - 1) * 3) + 1
+      return this.currentPage === this.totalPages ? (currentProject === this.projects.length ? currentProject : (currentProject + ' - ' + this.projects.length)) : (currentProject + ' - ' + (currentProject + 2))
+    }
+  },
   async created() {
     this.projects = await API.getAllProjects();
     this.paginatedProjects = await API.getProjectsByPage(
@@ -52,6 +60,7 @@ export default {
   },
   methods: {
     async onPageChange(page) {
+      document.getElementById('works').scrollIntoView();
       this.currentPage = page;
       this.paginatedProjects = await API.getProjectsByPage(
         this.currentPage,
