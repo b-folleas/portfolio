@@ -5,13 +5,6 @@
         <h3>{{ name }}</h3>
         <div class="project-module-date">
           <p>{{ formatedDate }}</p>
-          <a :href="url" target="_blank" rel="noopener">
-            <img
-              class="preview-platform-icons"
-              :src="assetsSrc"
-              :alt="`Link for Github`"
-            />
-          </a>
         </div>
       </div>
       <em v-if="language"> <i class="fa fa-code"></i> {{ language }}</em>

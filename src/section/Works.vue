@@ -1,5 +1,6 @@
 <template>
-  <div id="works">
+  <div>
+    <span id="works" class="mb-60"></span>
     <h2 class="h-center">{{ $t("works") }}</h2>
     <div class="mt-3">
       <ProjectModule
@@ -67,7 +68,7 @@ div {
   align-items: center;
 }
 .module {
-  margin-bottom: 10em;
+  margin-bottom: 10vh;
 }
 .pagination {
   margin-bottom: 50px;

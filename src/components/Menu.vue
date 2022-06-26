@@ -34,8 +34,7 @@ ul {
   display: flex;
   flex-flow: row;
   margin: 0 auto;
-  padding: 0;
-  line-height: 30px;
+  padding: 1em;
 }
 
 li {
@@ -62,8 +61,6 @@ li {
 .snip1217 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
 }
 .snip1217 li {
   display: inline-block;

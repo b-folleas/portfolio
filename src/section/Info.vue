@@ -1,5 +1,6 @@
 <template>
   <div class="main-container">
+    <span id="info" class="mb-60"></span>
     <h2 class="h-center">{{ $t("info") }}</h2>
     <div class="flex-container">
       <FindMeIcons

@@ -59,8 +59,8 @@ h3 {
 img {
   border: 6px solid var(--color-background-reverse);
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   transition: transform 0.2s;
 }
 
@@ -79,7 +79,7 @@ img:hover {
   }
 
   .profile-img {
-    margin-bottom: 50px;
+    margin: 50px 0;
   }
 }
 </style>

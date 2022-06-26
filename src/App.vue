@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="nav noselect" v-bind:class="{ 'background-active': showMenu }">
+    <nav class="nav noselect">
       <img
         id="appLogo"
         class="logo noselect"
@@ -18,10 +18,10 @@
         @click="toggleMenu"
       />
     </nav>
-    <Home id="home" name="home" class="section" />
-    <About id="about" name="about" class="section" />
-    <Works id="works" name="works" class="section"/>
-    <Info id="info" name="info" class="section" />
+    <Home name="home" class="section" />
+    <About name="about" class="section" />
+    <Works name="works" class="section"/>
+    <Info name="info" class="section" />
     <Footer class="footer" :src="assetsSrc.footer" />
   </div>
 </template>
@@ -115,26 +115,23 @@ body {
   width: 30px;
   cursor: pointer;
   position: absolute;
-  top: 5vh;
+  top: 2.5vh;
 }
 
 .logo {
-  left: 30px;
+  left: 2.5vh;
 }
 .menu {
-  right: 30px;
+  right: 2.5vh;
 }
 
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  min-height: 60px;
   position: fixed;
   z-index: 1;
-}
-
-.background-active {
   background-color: var(--color-background);
 }
 
@@ -163,5 +160,12 @@ h1 {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
+}
+
+/* Responsive layout  */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+  }
 }
 </style>

@@ -32,6 +32,7 @@ export default {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
+  padding: 0;
 }
 .snip1135 * {
   box-sizing: border-box;

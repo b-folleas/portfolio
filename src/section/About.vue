@@ -1,5 +1,6 @@
 <template>
   <div>
+    <span id="about" class="mb-60"></span>
     <h2 class="h-center">{{ $t("about") }}</h2>
     <Description class="description" />
   </div>
