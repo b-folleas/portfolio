@@ -8,17 +8,23 @@
         ref="img"
       />
     </div>
-    <div class="profile-text fade-in-top" :class="{ smaller: $i18n.locale === 'ja' }">
+    <div
+      class="profile-text fade-in-top"
+      :class="{ smaller: $i18n.locale === 'ja' }"
+    >
       <h1>{{ $t("hello") }}</h1>
       <h1 class="smaller">{{ $t("i_m_brice") }}</h1>
       <h3 class="emphasis-txt">{{ $t("full_stack_engineer") }}</h3>
+      <ScrollDown />
     </div>
   </main>
 </template>
 
 <script>
+import ScrollDown from "./ScrollDown.vue";
 export default {
   name: "ProfileComponent",
+  components: { ScrollDown },
   computed: {
     avatar() {
       return (
@@ -59,12 +65,16 @@ h3 {
 img {
   border: 6px solid var(--color-background-reverse);
   border-radius: 50%;
-  width: 260px;
-  height: 260px;
   transition: transform 0.2s;
 }
 
-img:hover {
+.profile-img {
+  width: 50vh;
+  height: 50vh;
+  margin-top: 25px;
+}
+
+.profile-img:hover {
   transform: scale(1.1);
 }
 
@@ -79,11 +89,13 @@ img:hover {
   }
 
   .profile-img {
-    margin: 25px 0 25px 0;
+    width: 40vh;
+    height: 40vh;
+    margin-top: 25px;
   }
 
   .smaller h1 {
-  font-size: clamp(36px, 4vw, 48px);
+    font-size: clamp(36px, 4vw, 48px);
   }
   .smaller h1.smaller {
     font-size: clamp(44px, 7vw, 60px);

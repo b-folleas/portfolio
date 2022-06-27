@@ -113,7 +113,7 @@ li {
 @media (max-width: 768px) {
   .snip1217 {
     flex-flow: column nowrap;
-    height: 95vh;
+    height: 100vh;
   }
   .snip1217 * {
     margin: auto;
