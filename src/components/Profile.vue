@@ -71,7 +71,6 @@ img {
 .profile-img {
   width: 50vh;
   height: 50vh;
-  margin-top: 25px;
 }
 
 .profile-img:hover {

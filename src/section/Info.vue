@@ -53,7 +53,7 @@ img {
 }
 .flex-container > * {
   flex-basis: 100%;
-  margin: 2em 2em 0 2em;
+  margin: 0 2em 2em 2em;
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */

@@ -12,7 +12,7 @@
         :language="project.language"
         :topics="project.topics"
         :date="project.updated_at"
-        class="module"
+        class="module" :class="{centersection : project !== paginatedProjects[0]}"
       />
       <span>{{ projectsNumbers }} / {{ projects.length }} {{ $t('projects') }}</span>
       <br>

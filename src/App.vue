@@ -20,9 +20,9 @@
     </nav>
     <Home name="home" class="section" />
     <About name="about" class="section" />
-    <Works name="works" class="section"/>
+    <Works name="works" class="section" />
     <Info name="info" class="section" />
-    <Footer class="footer" :src="assetsSrc.footer" />
+    <Footer id="footer" class="footer" :src="assetsSrc.footer" />
   </div>
 </template>
 
@@ -148,6 +148,27 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 425px) {
+  /* Smooth scrolling */
+  #app {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+
+  .section {
+    scroll-snap-align: start;
+  }
+
+  .centersection {
+    scroll-snap-align: center;
+  }
+
+  .nav {
+    position: absolute;
+  }
+}
 </style>
 
 <style scoped>
@@ -160,12 +181,5 @@ h1 {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-}
-
-/* Responsive layout  */
-@media (max-width: 768px) {
-  .nav {
-    position: absolute;
-  }
 }
 </style>

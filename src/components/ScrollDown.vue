@@ -1,56 +1,96 @@
 <template>
-  <div class="scroll-down">
-    <div class="mouse">
-      <div class="scroller"></div>
-    </div>
+  <div class="container">
+    <div class="chevron"></div>
+    <div class="chevron"></div>
+    <div class="chevron"></div>
   </div>
 </template>
 
 <style scoped>
-.scroll-down {
-  margin-top: 20vh;
+.container {
   display: flex;
   justify-content: center;
+  margin-top: 10vh;
 }
 
-.mouse {
-  width: 3px;
-  padding: 5px 7.5px;
-  height: 18px;
-  border: 2px solid var(--color-background-reverse);
-  border-radius: 25px;
-  opacity: 0.75;
-  box-sizing: content-box;
-}
-
-.scroller {
-  width: 3px;
+.chevron {
+  position: absolute;
+  width: 28px;
   height: 8px;
-  border-radius: 25%;
-  background-color: var(--color-background-reverse);
-  animation-name: scroll;
-  animation-duration: 2s;
-  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
-  animation-iteration-count: infinite;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
 }
 
-@keyframes scroll {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    transform: translateY(0);
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
     opacity: 1;
   }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
   100% {
-    transform: translateY(10px);
     opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
   }
 }
 
 @media (max-width: 768px) {
-  .scroll-down {
-    margin-top: 5vh;
+  .container {
+    margin-top: 7vh;
   }
 }
 </style>

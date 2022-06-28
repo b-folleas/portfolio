@@ -2,19 +2,26 @@
   <article>
     <p class="mb-0">
       {{ $t("description.paragraph_one") }}
-      <span class="emphasis-txt">{{ $t("description.vue_symfo_springboot") }}</span>.
+      <span class="emphasis-txt">{{
+        $t("description.vue_symfo_springboot")
+      }}</span
+      >.
     </p>
     <br />
     <p class="mb-0">
       {{ $t("description.paragraph_two") }}
-      <span class="emphasis-txt">{{ $t("description.django_and_docker") }}</span>.
+      <span class="emphasis-txt">{{ $t("description.django_and_docker") }}</span
+      >.
     </p>
     <br />
     <p class="mb-0">
       {{ $t("description.paragraph_three") }}
-      <span class="emphasis-txt">{{ $t("description.yokohama_tokyo_japan") }}</span>.
+      <span class="emphasis-txt">{{
+        $t("description.yokohama_tokyo_japan")
+      }}</span
+      >.
     </p>
-    <div class="flex-icons">
+    <div class="flex-icons centersection">
       <img
         class="icon-img"
         title="JavaScript"
