@@ -76,6 +76,10 @@ h2.h-center {
     margin-bottom: 60px;
 }
 
+.w-80 {
+    width: 80vw;
+}
+
 
 /* Fade in top animation */
 
@@ -220,4 +224,22 @@ h2.h-center {
     border: 2px solid var(--color-primary);
     color: var(--vt-c-white);
     text-decoration: none;
+}
+
+.action-link {
+    cursor: pointer;
+    color: var(--color-text);
+    /* outline: none; */
+    transition: all 0.2s ease-in-out;
+}
+
+.action-link:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+@media (max-width:768px) {
+    .mb-60 {
+        margin-bottom: 2vh;
+    }
 }

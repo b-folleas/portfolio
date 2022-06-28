@@ -58,7 +58,7 @@ export default {
     maxVisibleButtons: {
       type: Number,
       required: false,
-      default: 3,
+      default: 4,
     },
     totalPages: {
       type: Number,
@@ -176,5 +176,11 @@ export default {
 .active {
   background-color: var(--color-primary);
   color: var(--vt-c-white);
+}
+
+@media (max-width: 768px) {
+  .pagination-item > button {
+    padding: 0 4vw;
+  }
 }
 </style>

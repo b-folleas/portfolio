@@ -19,9 +19,13 @@
       />
     </nav>
     <Home name="home" class="section" />
-    <About name="about" class="section" />
+    <div id="about-skills" :class="{ section: !isInnerWidthSmall }">
+      <About name="about" :class="{ section: isInnerWidthSmall }" />
+      <Skills name="skills" :class="{ section: isInnerWidthSmall }" />
+    </div>
     <Works name="works" class="section" />
-    <Info name="info" class="section" />
+    <Info id="info-section" name="info" class="section" />
+    <p class="footer-top-info">Realised with Vite Build Tool</p>
     <Footer id="footer" class="footer" :src="assetsSrc.footer" />
   </div>
 </template>
@@ -30,6 +34,7 @@
 import { mapState, mapActions } from "vuex";
 import Home from "./section/Home.vue";
 import About from "./section/About.vue";
+import Skills from "./section/Skills.vue";
 import Works from "./section/Works.vue";
 import Info from "./section/Info.vue";
 import Footer from "./section/Footer.vue";
@@ -37,7 +42,7 @@ import Menu from "./components/Menu.vue";
 export default {
   name: "App",
   inject: ["$func"],
-  components: { Home, Menu, About, Works, Info, Footer },
+  components: { Home, Menu, About, Skills, Works, Info, Footer },
   data() {
     return {
       showMenu: false,
@@ -58,6 +63,9 @@ export default {
         result.footer = this.$func.getImgUrl("logo");
       }
       return result;
+    },
+    isInnerWidthSmall() {
+      return window.innerWidth <= 426;
     },
   },
   async created() {
@@ -140,6 +148,14 @@ body {
   width: 100%;
 }
 
+#info-section {
+  min-height: 75vh !important;
+}
+
+.footer-top-info {
+text-align: center;
+}
+
 h1 {
   font-size: 72px;
 }
@@ -149,7 +165,7 @@ h1 {
   justify-content: center;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   /* Smooth scrolling */
   #app {
     height: 100vh;

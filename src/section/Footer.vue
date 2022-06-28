@@ -27,6 +27,7 @@ export default {
 
 <style scoped>
 footer {
+  height: 50px;
   width: 100vw;
   display: flex;
   flex-flow: row wrap;

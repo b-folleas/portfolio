@@ -2,7 +2,7 @@
   <div>
     <span id="about" class="mb-60"></span>
     <h2 class="h-center">{{ $t("about") }}</h2>
-    <Description class="description" />
+    <Description class="w-80" />
   </div>
 </template>
 
@@ -19,8 +19,5 @@ div {
   display: flex;
   flex-flow: column;
   align-items: center;
-}
-.description {
-  width: 80vw;
 }
 </style>

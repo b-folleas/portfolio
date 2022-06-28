@@ -3,19 +3,25 @@
     <span id="works" class="mb-60"></span>
     <h2 class="h-center">{{ $t("works") }}</h2>
     <div class="mt-3">
-      <ProjectModule
-        v-for="project in paginatedProjects"
-        :key="project.id"
-        :name="project.name"
-        :description="project.description"
-        :url="project.svn_url"
-        :language="project.language"
-        :topics="project.topics"
-        :date="project.updated_at"
-        class="module" :class="{centersection : project !== paginatedProjects[0]}"
-      />
-      <span>{{ projectsNumbers }} / {{ projects.length }} {{ $t('projects') }}</span>
-      <br>
+      <div class="project-div">
+        <ProjectModule
+          v-for="project in paginatedProjects"
+          :key="project.id"
+          :name="project.name"
+          :description="project.description"
+          :url="project.svn_url"
+          :language="project.language"
+          :topics="project.topics"
+          :date="project.updated_at"
+          class="module"
+          :class="{ centersection: project !== paginatedProjects[0] }"
+        />
+      </div>
+      <span
+        >{{ projectsNumbers }} / {{ projects.length }}
+        {{ $t("projects") }}</span
+      >
+      <br />
       <pagination
         class="pagination"
         :totalPages="totalPages"
@@ -41,14 +47,18 @@ export default {
     projects: [],
     paginatedProjects: [],
     currentPage: 1,
-    perPage: 3,
+    perPage: 4,
     totalPages: 10,
   }),
   computed: {
-    projectsNumbers () {
-      const currentProject = ((this.currentPage - 1) * 3) + 1
-      return this.currentPage === this.totalPages ? (currentProject === this.projects.length ? currentProject : (currentProject + ' - ' + this.projects.length)) : (currentProject + ' - ' + (currentProject + 2))
-    }
+    projectsNumbers() {
+      const currentProject = (this.currentPage - 1) * 4 + 1;
+      return this.currentPage === this.totalPages
+        ? currentProject === this.projects.length
+          ? currentProject
+          : currentProject + " - " + this.projects.length
+        : currentProject + " - " + (currentProject + 3);
+    },
   },
   async created() {
     this.projects = await API.getAllProjects();
@@ -56,11 +66,13 @@ export default {
       this.currentPage,
       this.perPage
     );
-    this.totalPages = this.projects?.length ? Math.floor(this.projects.length / this.perPage) + 1 : 0;
+    this.totalPages = this.projects?.length
+      ? Math.floor(this.projects.length / this.perPage)
+      : 0;
   },
   methods: {
     async onPageChange(page) {
-      document.getElementById('works').scrollIntoView();
+      document.getElementById("works").scrollIntoView();
       this.currentPage = page;
       this.paginatedProjects = await API.getProjectsByPage(
         this.currentPage,
@@ -76,10 +88,19 @@ div {
   flex-flow: column;
   align-items: center;
 }
-.module {
+/* .module {
   margin-bottom: 10vh;
+} */
+
+.project-div {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
-.pagination {
-  margin-bottom: 50px;
+
+@media (max-width: 768px) {
+  .pagination {
+    margin-bottom: 20vh;
+  }
 }
 </style>

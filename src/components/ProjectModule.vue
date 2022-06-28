@@ -3,24 +3,25 @@
     <div class="project-module-header">
       <div class="project-module-title">
         <h3>{{ name }}</h3>
-        <div class="project-module-date">
-          <p>{{ formatedDate }}</p>
-        </div>
+        <a :href="url" class="round-btn">
+          <i class="fa fa-bold fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
       <em v-if="language"> <i class="fa fa-code"></i> {{ language }}</em>
     </div>
+    <p>{{ formatedDate }}</p>
     <p>{{ description }}</p>
     <div v-if="topics?.length > 0">
       <p class="chip" v-for="topic in topics" :key="topic">
         {{ topic }}
       </p>
     </div>
-    <div class="project-module-link">
+    <!-- <div class="project-module-link">
       <a href="url" class="action-btn smaller-btn">
         {{ $t("read_more") }}
         <i class="ml-1 fa fa-arrow-up-right-from-square"></i>
       </a>
-    </div>
+    </div> -->
   </article>
 </template>
 
@@ -70,7 +71,9 @@ export default {
     },
     formatedDate() {
       moment.locale(this.$i18n.locale);
-      return this.$i18n.locale === 'en' ? moment(this.date).format("MMM Do YY") : moment(this.date).format("ll");
+      return this.$i18n.locale === "en"
+        ? moment(this.date).format("MMM Do YY")
+        : moment(this.date).format("ll");
     },
   },
 };
@@ -78,11 +81,10 @@ export default {
 
 <style scoped>
 .project-container {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
   padding: 2em 2em 2em 2em;
-  width: 80vw;
+  margin: 2em;
+  width: 500px;
+  min-height: 250px;
   background-color: var(--color-background-soft);
   border: 2px solid var(--color-background-soft);
   color: var(--color-text);
@@ -109,15 +111,35 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.project-module-date {
+/* .project-module-date {
   display: flex;
   flex-flow: row nowrap;
-  align-items: end;
-  text-align: right;  
+  align-items: center;
 }
 .project-module-date > p {
   margin: 0;
+} */
+.round-btn {
+  margin: 0;
+  background-color: var(--color-background);
+  border: 2px solid var(--color-background-reverse);
+  color: var(--color-background-reverse);
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  outline: none;
+  padding: 5px 10px;
+  transition: all 0.2s ease-in-out;
 }
+
+.round-btn:hover {
+  background-color: var(--color-primary);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--color-primary);
+  color: var(--vt-c-white);
+  text-decoration: none;
+}
+
 .project-module-link {
   display: flex;
   flex-flow: row nowrap;
@@ -141,19 +163,6 @@ p {
   transition: opacity 0.2s ease-in-out;
 }
 
-.smaller-btn {
-  margin: 0;
-}
-
-.preview-platform-icons {
-  width: 30px;
-  font-weight: 600;
-  margin-left: 1em;
-  opacity: 0.8;
-}
-.preview-platform-icons:hover {
-  opacity: 1;
-}
 .chip {
   display: inline-block;
   padding: 0 16px;
@@ -168,5 +177,16 @@ p {
 
 .chip:not(:first-child) {
   margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+  .project-module-link {
+    justify-content: center;
+  }
+
+  .project-container {
+    width: 80vw;
+    min-height: 40vw;
+  }
 }
 </style>
