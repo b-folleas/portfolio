@@ -61,6 +61,7 @@ export default {
   justify-content: space-between;
   width: var(--element-size);
   z-index: 1;
+  margin-bottom: 0;
 }
 
 .switch-toggle {

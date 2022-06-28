@@ -68,7 +68,6 @@ li {
   margin-left: 1.5em;
   margin-right: 1.5em;
   padding: 0;
-  height: 30px;
 }
 .snip1217 a {
   padding: 0.3em 0;
@@ -105,7 +104,7 @@ li {
   width: 100%;
 }
 
-#themeBtn {
+#themeBtn, #selectBtn {
   align-self: center;
 }
 

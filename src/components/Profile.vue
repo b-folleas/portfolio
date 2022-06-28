@@ -90,7 +90,7 @@ img {
   .profile-img {
     width: 40vh;
     height: 40vh;
-    margin-top: 25px;
+    margin: 25px 0;
   }
 
   .smaller h1 {
