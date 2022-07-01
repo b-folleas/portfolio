@@ -82,7 +82,7 @@ export default {
 <style scoped>
 .project-container {
   padding: 2em 2em 2em 2em;
-  margin: 2em;
+  margin: 0 2em 2em 2em;
   width: 500px;
   min-height: 250px;
   background-color: var(--color-background-soft);

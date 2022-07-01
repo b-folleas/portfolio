@@ -1,10 +1,8 @@
 <template>
-  <div v-if="isInnerWidthSmall">
+  <div id="skillsDiv">
     <span id="skills" class="mb-60"></span>
     <h2 class="h-center">{{ $t("skills") }}</h2>
-    <Skills class="w-80" />
-  </div>
-  <div v-else>
+    <p class="mb-skills"></p>
     <Skills class="w-80" />
   </div>
 </template>
@@ -14,11 +12,6 @@ import Skills from "../components/Skills.vue";
 export default {
   name: "SkillsSection",
   components: { Skills },
-  computed: {
-    isInnerWidthSmall() {
-      return window.innerWidth <= 426;
-    },
-  },
 };
 </script>
 
@@ -27,5 +20,15 @@ div {
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+
+.mb-skills {
+  margin-bottom: 10vh;
+}
+
+@media (max-width: 426px) {
+  .mb-skills {
+    margin-bottom: 0;
+  }
 }
 </style>

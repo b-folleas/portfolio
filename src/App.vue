@@ -11,17 +11,16 @@
       <Transition>
         <Menu v-if="showMenu" v-on:close="toggleMenu" />
       </Transition>
-      <img
-        class="menu noselect"
-        :src="assetsSrc.menu"
-        alt="menu"
-        @click="toggleMenu"
+      <MenuButton
+        class="noselect"
+        :show-menu="showMenu"
+        @toggle-menu="toggleMenu"
       />
     </nav>
     <Home name="home" class="section" />
-    <div id="about-skills" :class="{ section: !isInnerWidthSmall }">
-      <About name="about" :class="{ section: isInnerWidthSmall }" />
-      <Skills name="skills" :class="{ section: isInnerWidthSmall }" />
+    <div id="about-skills" class="large-width-section">
+      <About name="about" class="small-width-section" />
+      <Skills name="skills" class="small-width-section" />
     </div>
     <Works name="works" class="section" />
     <Info id="info-section" name="info" class="section" />
@@ -39,10 +38,11 @@ import Works from "./section/Works.vue";
 import Info from "./section/Info.vue";
 import Footer from "./section/Footer.vue";
 import Menu from "./components/Menu.vue";
+import MenuButton from "./components/MenuButton.vue";
 export default {
   name: "App",
   inject: ["$func"],
-  components: { Home, Menu, About, Skills, Works, Info, Footer },
+  components: { Home, Menu, MenuButton, About, Skills, Works, Info, Footer },
   data() {
     return {
       showMenu: false,
@@ -63,9 +63,6 @@ export default {
         result.footer = this.$func.getImgUrl("logo");
       }
       return result;
-    },
-    isInnerWidthSmall() {
-      return window.innerWidth <= 426;
     },
   },
   async created() {
@@ -148,12 +145,29 @@ body {
   width: 100%;
 }
 
+.large-width-section {
+  min-height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.small-width-section {
+  min-height: auto;
+  width: auto;
+  scroll-snap-align: none;
+}
+
+#skillsDiv span,
+#skillsDiv h2 {
+  display: none;
+}
+
 #info-section {
   min-height: 75vh !important;
 }
 
 .footer-top-info {
-text-align: center;
+  text-align: center;
 }
 
 h1 {
@@ -175,6 +189,17 @@ h1 {
 
   .section {
     scroll-snap-align: start;
+  }
+
+  .small-width-section {
+    min-height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+  }
+
+  #skillsDiv span,
+  #skillsDiv h2 {
+    display: block;
   }
 
   .centersection {
