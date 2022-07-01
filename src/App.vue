@@ -24,7 +24,7 @@
     </div>
     <Works name="works" class="section" />
     <Info id="info-section" name="info" class="section" />
-    <p class="footer-top-info">Realised with Vite Build Tool</p>
+    <p class="footer-top-info">{{ $t("realised") }}</p>
     <Footer id="footer" class="footer" :src="assetsSrc.footer" />
   </div>
 </template>

@@ -20,5 +20,6 @@
     "french": "FR",
     "japanese": "JA",
     "read_more": "Read More",
-    "projects": "projects"
+    "projects": "projects",
+    "realised": "Realised with Vite Build Tool"
 }
