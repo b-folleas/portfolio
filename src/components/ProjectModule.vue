@@ -16,12 +16,6 @@
         {{ topic }}
       </p>
     </div>
-    <!-- <div class="project-module-link">
-      <a href="url" class="action-btn smaller-btn">
-        {{ $t("read_more") }}
-        <i class="ml-1 fa fa-arrow-up-right-from-square"></i>
-      </a>
-    </div> -->
   </article>
 </template>
 

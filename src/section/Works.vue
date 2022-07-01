@@ -5,7 +5,7 @@
     <div class="mt-3">
       <div class="project-div">
         <ProjectModule
-          v-for="project in paginatedProjects"
+          v-for="project in currentProjects"
           :key="project.id"
           :name="project.name"
           :description="project.description"
@@ -14,11 +14,11 @@
           :topics="project.topics"
           :date="project.updated_at"
           class="module"
-          :class="{ centersection: project !== paginatedProjects[0] }"
+          :class="{ centersection: project !== currentProjects[0] }"
         />
       </div>
       <span
-        >{{ projectsNumbers }} / {{ projects.length }}
+        >{{ projectsNumbers }} / {{ filteredProjects.length }}
         {{ $t("projects") }}</span
       >
       <br />
@@ -45,39 +45,46 @@ export default {
   },
   data: () => ({
     projects: [],
-    paginatedProjects: [],
+    filteredProjects: [],
+    currentProjects: [],
     currentPage: 1,
     perPage: 4,
     totalPages: 10,
   }),
   computed: {
     projectsNumbers() {
-      const currentProject = (this.currentPage - 1) * 4 + 1;
+      const currentProject = (this.currentPage - 1) * this.perPage + 1;
       return this.currentPage === this.totalPages
-        ? currentProject === this.projects.length
+        ? currentProject === this.filteredProjects.length
           ? currentProject
-          : currentProject + " - " + this.projects.length
-        : currentProject + " - " + (currentProject + 3);
+          : currentProject + " - " + this.filteredProjects.length
+        : currentProject + " - " + (currentProject + (this.perPage - 1));
     },
   },
   async created() {
     this.projects = await API.getAllProjects();
-    this.paginatedProjects = await API.getProjectsByPage(
+    this.filteredProjects = this.projects.filter((p) => !p.archived); // Keep only unarchived projects for display
+    this.currentProjects = this.currentProjects = this.getProjectsByPage(
       this.currentPage,
       this.perPage
     );
-    this.totalPages = this.projects?.length
-      ? Math.floor(this.projects.length / this.perPage)
+    this.totalPages = this.filteredProjects?.length
+      ? Math.floor(this.filteredProjects.length / this.perPage)
       : 0;
+      this.totalPages += (this.filteredProjects.length / this.perPage) !== 0 ? 1 : 0 
   },
   methods: {
     async onPageChange(page) {
       document.getElementById("works").scrollIntoView();
       this.currentPage = page;
-      this.paginatedProjects = await API.getProjectsByPage(
+      this.currentProjects = this.getProjectsByPage(
         this.currentPage,
         this.perPage
       );
+    },
+    getProjectsByPage(currentPage, perPage) {
+      const currentIndex = (currentPage - 1) * perPage; // currentPage starts at one but index as 0
+      return this.filteredProjects.slice(currentIndex, currentIndex + perPage);
     },
   },
 };

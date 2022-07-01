@@ -82,7 +82,8 @@ export default {
 
       // When on the last page
       if (this.currentPage === this.totalPages) {
-        return this.totalPages - this.maxVisibleButtons + 1;
+        // if totalPages is divisible by currentPage then add 1 else add 2
+        return this.totalPages - this.maxVisibleButtons + (this.totalPages / this.currentPage === 0 ? 1 : 2);
       }
 
       // When inbetween
