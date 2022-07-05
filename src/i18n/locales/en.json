@@ -14,6 +14,14 @@
     "download_resume": "Download Resume",
     "about": "About",
     "skills": "Skills",
+    "history": "History",
+    "history-description": {
+        "fiducial": "Fiducial Staffing",
+        "cpe": "CPE",
+        "conity": "Conity",
+        "dawson": "Dawson College",
+        "iut": "Institute of Technology"
+    },
     "works": "Works",
     "info": "Info",
     "english": "EN",

@@ -9,7 +9,7 @@
       </div>
       <em v-if="language"> <i class="fa fa-code"></i> {{ language }}</em>
     </div>
-    <p>{{ formatedDate }}</p>
+    <p>{{ $func.formatDate(date) }}</p>
     <p>{{ description }}</p>
     <div v-if="topics?.length > 0">
       <p class="chip" v-for="topic in topics" :key="topic">
@@ -21,9 +21,6 @@
 
 <script>
 import { mapState } from "vuex";
-import moment from "moment";
-import "moment/dist/locale/fr";
-import "moment/dist/locale/ja";
 export default {
   name: "ProjectModuleComponent",
   inject: ["$func"],
@@ -62,13 +59,7 @@ export default {
       } else {
         return this.$func.getIconImgUrl("github-dark");
       }
-    },
-    formatedDate() {
-      moment.locale(this.$i18n.locale);
-      return this.$i18n.locale === "en"
-        ? moment(this.date).format("MMM Do YY")
-        : moment(this.date).format("ll");
-    },
+    }
   },
 };
 </script>

@@ -14,6 +14,14 @@
     "download_resume": "Télécharger mon CV",
     "about": "À propos",
     "skills": "Compétences",
+    "history": "Parcours",
+    "history-description": {
+        "fiducial": "Fiducial Staffing - Ingénieur Fullstack",
+        "cpe": "CPE Lyon - Ingénieur en informatique",
+        "conity": "Conity - Développeur & Assureur Qualité Web",
+        "dawson": "Dawson College",
+        "iut": "IUT Lyon 1 - Spécialité Mathématiques"
+    },
     "works": "Projets",
     "info": "Infos",
     "english": "EN",

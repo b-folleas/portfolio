@@ -95,9 +95,6 @@ div {
   flex-flow: column;
   align-items: center;
 }
-/* .module {
-  margin-bottom: 10vh;
-} */
 
 .project-div {
   display: inline-flex;
