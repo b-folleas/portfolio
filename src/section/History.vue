@@ -7,10 +7,6 @@
         class="event"
         v-for="event in events"
         :key="event.id"
-        :class="{
-          bgwork: event.type === 'work',
-          bggraduation: event.type === 'graduation',
-        }"
       >
         <p class="date">
           {{ $func.formatDate(new Date(event.beginDate), true) }} -
@@ -78,14 +74,11 @@ export default {
   flex-flow: column;
   align-items: center;
 }
-/* (A) TIMELINE CONTAINER */
+
+/* Timeline container */
 .timeline-div {
-  /* (A1) RELATIVE POSITION REQUIRED TO PROPERLY POSITION THE TIMELINE */
   position: relative;
-
-  /* (A2) RESERVE MORE SPACE TO THE LEFT FOR THE TIMELINE */
   padding: 10px 10px 10px 50px;
-
   width: 80vw;
   display: flex;
   flex-direction: column;
@@ -97,21 +90,21 @@ export default {
   box-sizing: border-box;
 }
 
-/* (B) DRAW VERTICAL LINE USING ::BEFORE */
+/* Vertical line using ::before */
 .timeline-div::before {
   /* Vertical line */
   content: "";
   width: 5px;
-  background-color: var(--color-primary);
+  background-color: var(--color-background-reverse);
 
-  /* (B2) POSITION TO THE LEFT */
+  /* Line position */
   position: absolute;
   top: 40px;
   bottom: 30px;
   left: 15px;
 }
 
-/* (C) COSMETICS FOR EVENTS */
+/* Style for events */
 div.event {
   padding: 20px 30px;
   position: relative;
@@ -124,14 +117,14 @@ div.event {
 }
 
 div.event:hover {
-  background-color: var(--color-background-hover);
+  background-color: var(--color-background);
   border: 2px solid var(--color-primary);
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
 }
 
-/* (D) COSMETICS FOR EVENT DATE & TEXT */
+/* Style for dates and description */
 p.date {
-  font-size: 1.1em;
+  font-size: clamp(12px, 14px, 1.1em);
   font-weight: 700;
   color: var(--color-background-reverse);
 }
@@ -139,42 +132,20 @@ p.description {
   margin: 10px 0 0 0;
   color: var(--color-background-reverse);
 }
-/* 
-div.event::before {
-  content: "";
-  border: 10px solid transparent;
-  border-right-color: #ffebeb;
-  border-left: 0;
 
-  position: absolute;
-  top: 20%;
-  left: -10px;
-} */
-
-/* (F) CIRCLE ON TIMELINE */
+/* Circle on timeline */
 div.event::after {
-  /* (F1) "MAGIC CIRCLE" */
+  /* Circle */
   content: "";
-  background: var(--color-primary);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px;
-  border: 4px solid var(--color-primary);
-  width: 32px;
-  height: 32px;
+  background: var(--vt-c-white);
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
 
-  /* (F2) POSITION TO THE LEFT */
+  /* Circle position to left */
   position: absolute;
   top: 20%;
-  left: -50px;
+  left: -43.5px;
 }
 
-div.event.bggraduation::after {
-  background-image: url("src/assets/icons/graduation-cap.svg");
-}
-div.event.bgwork::after {
-  background-size: 16px !important;
-  background-image: url("src/assets/icons/briefcase.svg");
-}
 </style>

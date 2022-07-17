@@ -2,8 +2,10 @@
 
 :root {
     --vt-c-white: #ffffff;
-    --vt-c-white-soft: #FFF5EE;
-    --vt-c-grey: #aeaeae;
+    --vt-c-white-soft: #f5f5f5;
+    --vt-c-light: #efefef;
+    --vt-c-grey: #d0d0d0;
+    --vt-c-grey-dark: #aeaeae;
     --vt-c-black: #14151c;
     --vt-c-black-soft: #1d1e27;
     --vt-c-text-light-1: var(--vt-c-indigo);
@@ -16,23 +18,29 @@
 /* semantic color variables for this project */
 
 :root {
-    --color-background: var(--vt-c-white);
+    --color-background: var(--vt-c-light);
+    --color-background-emphasis: var(--vt-c-white);
     --color-background-reverse: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-white-soft);
+    --color-background-soft: var(--vt-c-white);
+    --color-background-dark: var(--vt-c-black);
+    --color-borders: var(--vt-c-grey);
     --color-primary: var(--primary);
     --color-primary-light: var(--indigo);
-    --color-background-project: var(--vt-c-white-soft);
+    --color-background-project: var(--vt-c-white);
     --color-tag-background: #e1eff8;
     --color-tag-text: var(--primary);
     --color-text: var(--vt-c-black-soft);
     --color-text-hover: var(--vt-c-black);
+    --color-grey: var(--vt-c-grey);
     --element-size: 4rem;
 }
 
 :root.dark-theme {
     --color-background: var(--vt-c-black);
-    --color-background-reverse: var(--vt-c-white);
+    --color-background-emphasis: var(--vt-c-black);
+    --color-background-reverse: var(--vt-c-light);
     --color-background-soft: var(--vt-c-black-soft);
+    --color-borders: var(--vt-c-black-soft);
     --color-primary: var(--indigo);
     --color-primary-light: var(--primary);
     --color-background-project: var(--vt-c-white);
@@ -40,6 +48,7 @@
     --color-tag-text: var(--indigo);
     --color-text: var(--vt-c-white-soft);
     --color-text-hover: var(--vt-c-white);
+    --color-grey: var(--vt-c-grey-dark);
 }
 
 *,
@@ -185,30 +194,29 @@ h2.h-center {
 /* Emphasis text */
 
 .emphasis-txt {
-    padding: 0.35em;
+    padding: 0.35em 0.5em 0.35em 0.5em;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     background-color: var(--color-background-soft);
-    border-radius: 2em;
+    border-radius: 1em;
     color: var(--color-text);
 }
 
 .emphasis-txt:hover {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    background-color: var(--color-background-reverse);
-    color: var(--color-background);
+    background-color: var(--color-tag-background);
+    color: var(--color-tag-text);
 }
 
 
 /* Action Button */
 
 .action-btn {
-    background-color: var(--color-background);
-    border: 2px solid var(--color-background-reverse);
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
     border-radius: 20px;
     cursor: pointer;
-    color: var(--color-text);
     font-weight: 600;
     height: fit-content;
     margin: 1.5em 2em 2em 2em;
@@ -216,12 +224,11 @@ h2.h-center {
     padding: 10px 20px;
     text-align: center;
     transition: all 0.2s ease-in-out;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
+    color: var(--vt-c-white);
 }
 
 .action-btn:hover {
-    background-color: var(--color-primary);
-    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
-    border: 2px solid var(--color-primary);
     color: var(--vt-c-white);
     text-decoration: none;
 }

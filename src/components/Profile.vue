@@ -1,30 +1,32 @@
 <template>
   <main>
-    <div v-if="avatar" class="noselect">
-      <img
-        class="profile-img fade-in-top noselect"
-        :src="avatar"
-        alt="Avatar"
-        ref="img"
-      />
-    </div>
-    <div
-      class="profile-text fade-in-top"
-      :class="{ smaller: $i18n.locale === 'ja' }"
-    >
-      <h1>{{ $t("hello") }}</h1>
-      <h1 class="smaller">{{ $t("i_m_brice") }}</h1>
-      <h3 class="emphasis-txt">{{ $t("full_stack_engineer") }}</h3>
-      <ScrollDown />
-    </div>
+      <Particles />
+      <div v-if="avatar" class="noselect">
+        <img
+          class="profile-img fade-in-top noselect"
+          :src="avatar"
+          alt="Avatar"
+          ref="img"
+        />
+      </div>
+      <div
+        class="profile-text fade-in-top"
+        :class="{ smaller: $i18n.locale === 'ja' }"
+      >
+        <h1>{{ $t("hello") }}</h1>
+        <h1 class="smaller">{{ $t("i_m_brice") }}</h1>
+        <h3 class="emphasis-txt">{{ $t("full_stack_engineer") }}</h3>
+        <ScrollDown />
+      </div>
   </main>
 </template>
 
 <script>
+import Particles from "../components/Particles.vue";
 import ScrollDown from "./ScrollDown.vue";
 export default {
   name: "ProfileComponent",
-  components: { ScrollDown },
+  components: { Particles, ScrollDown },
   computed: {
     avatar() {
       return (
@@ -71,6 +73,7 @@ img {
 .profile-img {
   width: 50vh;
   height: 50vh;
+  margin-right: 10vw;
 }
 
 .profile-img:hover {

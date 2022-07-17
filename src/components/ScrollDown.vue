@@ -37,7 +37,7 @@
   top: 0;
   height: 100%;
   width: 51%;
-  background: #fff;
+  background: var(--color-background-reverse);
 }
 
 .chevron:before {

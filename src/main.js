@@ -6,6 +6,7 @@ import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import functions from './plugins/functions.js'
+import Particles from "vue3-particles";
 
 library.add(fas)
 dom.watch();
@@ -13,6 +14,7 @@ dom.watch();
 createApp(App)
     .use(store)
     .use(i18n)
+    .use(Particles)
     .component("font-awesome-icon", FontAwesomeIcon)
     .provide('$func', functions) // Providing to all components during app creation
     .mount("#app");

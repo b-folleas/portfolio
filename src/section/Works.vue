@@ -99,7 +99,8 @@ div {
 .project-div {
   display: inline-flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: baseline;
 }
 
 @media (max-width: 768px) {

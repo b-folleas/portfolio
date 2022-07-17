@@ -67,18 +67,18 @@ export default {
 <style scoped>
 .project-container {
   padding: 2em 2em 2em 2em;
-  margin: 0 2em 2em 2em;
+  margin: 0 0 2em 2em;
   width: 500px;
   min-height: 250px;
   background-color: var(--color-background-soft);
-  border: 2px solid var(--color-background-soft);
+  border: 2px solid var(--color-borders);
   color: var(--color-text);
   border-radius: 20px;
   transition: all 0.2s ease-in-out;
 }
 
 .project-container:hover {
-  background-color: var(--color-background);
+  background-color: var(--color-background-emphasis);
   border: 2px solid var(--color-primary);
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
 }
@@ -96,17 +96,10 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-/* .project-module-date {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-}
-.project-module-date > p {
-  margin: 0;
-} */
+
 .round-btn {
   margin: 0;
-  background-color: var(--color-background);
+  background-color: transparent;
   border: 2px solid var(--color-background-reverse);
   color: var(--color-background-reverse);
   border-radius: 50%;

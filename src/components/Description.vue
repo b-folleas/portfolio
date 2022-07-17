@@ -5,13 +5,13 @@
       <span class="emphasis-txt">{{
         $t("description.vue_symfo_springboot")
       }}</span
-      >.
+      >
     </p>
     <br />
     <p class="mb-0">
       {{ $t("description.paragraph_two") }}
       <span class="emphasis-txt">{{ $t("description.django_and_docker") }}</span
-      >.
+      >
     </p>
     <br />
     <p class="mb-0">
@@ -19,7 +19,7 @@
       <span class="emphasis-txt">{{
         $t("description.yokohama_tokyo_japan")
       }}</span
-      >.
+      >
     </p>
   </article>
 </template>

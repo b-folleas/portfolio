@@ -58,7 +58,7 @@ export default {
 <style scoped>
 .horizontal-divider {
   width: 1px;
-  background-color: var(--color-background-soft);
+  background-color: var(--color-background-reverse);
   height: 30px;
 }
 .find-me-icons-main-container {
@@ -67,14 +67,14 @@ export default {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-background-soft);
+  background-color: var(--color-background-emphasis);
   border-radius: 20px;
-  border: 2px solid var(--color-background-soft);
+  border: 2px solid var(--color-borders);
   transition: all 0.2s ease-in-out;
   min-width: 200px;
 }
 .find-me-icons-main-container:hover {
-  background-color: var(--color-background-hover);
+  background-color: var(--color-background-emphasis);
   border: 2px solid var(--color-primary);
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
 }

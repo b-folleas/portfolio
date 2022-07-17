@@ -22,7 +22,7 @@
       <About name="about" class="small-width-section" />
       <Skills name="skills" class="small-width-section" />
     </div>
-    <History name="history" class="section" />
+    <!-- <History name="history" class="section" /> -->
     <Works name="works" class="section" />
     <Info id="info-section" name="info" class="section" />
     <p class="footer-top-info">{{ $t("realised") }}</p>
@@ -35,7 +35,7 @@ import { mapState, mapActions } from "vuex";
 import Home from "./section/Home.vue";
 import About from "./section/About.vue";
 import Skills from "./section/Skills.vue";
-import History from "./section/History.vue";
+// import History from "./section/History.vue";
 import Works from "./section/Works.vue";
 import Info from "./section/Info.vue";
 import Footer from "./section/Footer.vue";
@@ -44,7 +44,7 @@ import MenuButton from "./components/MenuButton.vue";
 export default {
   name: "App",
   inject: ["$func"],
-  components: { Home, Menu, MenuButton, About, Skills, History, Works, Info, Footer },
+  components: { Home, Menu, MenuButton, About, Skills, Works, Info, Footer }, // History
   data() {
     return {
       showMenu: false,
@@ -135,7 +135,7 @@ body {
 .nav {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 60px;
   position: fixed;
   z-index: 1;
