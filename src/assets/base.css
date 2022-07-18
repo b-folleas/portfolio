@@ -213,10 +213,11 @@ h2.h-center {
 /* Action Button */
 
 .action-btn {
-    background-color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    background-color: var(--color-background);
+    border: 2px solid var(--color-background-reverse);
     border-radius: 20px;
     cursor: pointer;
+    color: var(--color-text);
     font-weight: 600;
     height: fit-content;
     margin: 1.5em 2em 2em 2em;
@@ -224,11 +225,12 @@ h2.h-center {
     padding: 10px 20px;
     text-align: center;
     transition: all 0.2s ease-in-out;
-    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
-    color: var(--vt-c-white);
 }
 
 .action-btn:hover {
+    background-color: var(--color-primary);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--color-primary);
     color: var(--vt-c-white);
     text-decoration: none;
 }
