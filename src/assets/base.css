@@ -194,7 +194,7 @@ h2.h-center {
 /* Emphasis text */
 
 .emphasis-txt {
-    padding: 0.35em 0.5em 0.35em 0.5em;
+    padding: 0.25em 0.5em 0.35em 0.5em;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
     background-color: var(--color-background-soft);
@@ -210,10 +210,24 @@ h2.h-center {
 }
 
 
+/* Icons with grayscale effect */
+
+.icon-img {
+    margin: 2em;
+    height: 30px;
+    filter: grayscale();
+    transition: filter 0.2s ease-in-out;
+}
+
+.icon-img:hover {
+    filter: none;
+}
+
+
 /* Action Button */
 
 .action-btn {
-    background-color: var(--color-background);
+    background-color: var(--color-background-soft);
     border: 2px solid var(--color-background-reverse);
     border-radius: 20px;
     cursor: pointer;

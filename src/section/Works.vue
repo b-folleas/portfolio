@@ -75,7 +75,7 @@ export default {
   },
   methods: {
     async onPageChange(page) {
-      document.getElementById("works").scrollIntoView();
+      document.getElementById("works").scrollIntoView({behavior: "smooth"});
       this.currentPage = page;
       this.currentProjects = this.getProjectsByPage(
         this.currentPage,

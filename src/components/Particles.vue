@@ -113,10 +113,6 @@ export default {
     this.particlesInit = async (engine) => {
       await loadFull(engine);
     };
-
-    this.particlesLoaded = async (container) => {
-      console.log("Particles container loaded", container);
-    };
   },
 };
 </script>

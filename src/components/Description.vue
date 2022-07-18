@@ -2,23 +2,21 @@
   <article>
     <p class="mb-0">
       {{ $t("description.paragraph_one") }}
-      <span class="emphasis-txt">{{
-        $t("description.vue_symfo_springboot")
-      }}</span
+      <span class="emphasis-txt">
+        Vue.js,&nbsp;Symfony&nbsp;&&nbsp;Spring boot.</span
       >
     </p>
     <br />
     <p class="mb-0">
       {{ $t("description.paragraph_two") }}
-      <span class="emphasis-txt">{{ $t("description.django_and_docker") }}</span
-      >
+      <span class="emphasis-txt">Django&nbsp;&&nbsp;Docker</span>
     </p>
     <br />
     <p class="mb-0">
       {{ $t("description.paragraph_three") }}
-      <span class="emphasis-txt">{{
-        $t("description.yokohama_tokyo_japan")
-      }}</span
+      <span class="emphasis-txt">
+        {{ $t("description.yokohama") }}&nbsp;/ {{ $t("description.tokyo") }},
+        {{ $t("description.japan") }}</span
       >
     </p>
   </article>

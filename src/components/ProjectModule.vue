@@ -98,7 +98,7 @@ export default {
 }
 
 .round-btn {
-  margin: 0;
+  margin: 0 1em 0 1em;
   background-color: transparent;
   border: 2px solid var(--color-background-reverse);
   color: var(--color-background-reverse);

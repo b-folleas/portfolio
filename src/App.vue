@@ -25,7 +25,27 @@
     <!-- <History name="history" class="section" /> -->
     <Works name="works" class="section" />
     <Info id="info-section" name="info" class="section" />
-    <p class="footer-top-info">{{ $t("realised") }}</p>
+    <div class="footer-top-info">
+    <h6 class="h-center mb-0">{{ $t("realised") }}</h6>
+    <img
+        class="icon-img"
+        title="Vite JS"
+        src="./assets/icons/vitejs.svg"
+        alt="Vite JS"
+      />
+      <img
+        class="icon-img"
+        title="Travis CI"
+        src="./assets/icons/travis-ci.svg"
+        alt="Travis CI"
+      />
+      <img
+        class="icon-img"
+        title="Freepik"
+        src="./assets/icons/freepik.svg"
+        alt="Freepik"
+      />
+      </div>
     <Footer id="footer" class="footer" :src="assetsSrc.footer" />
   </div>
 </template>
@@ -174,6 +194,10 @@ body {
 
 h1 {
   font-size: 72px;
+}
+
+h6 {
+  font-size: clamp(8px, 12px, 16px);
 }
 
 .footer {

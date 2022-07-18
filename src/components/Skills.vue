@@ -62,15 +62,6 @@ export default {
   justify-content: center;
 }
 
-.icon-img {
-  margin: 2em;
-  height: 30px;
-  filter: grayscale();
-  transition: filter 0.2s ease-in-out;
-}
-.icon-img:hover {
-  filter: none;
-}
 .flex-icons {
   display: inline-flex;
   flex-flow: row wrap;

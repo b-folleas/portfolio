@@ -5,7 +5,7 @@ const host =
 
 export default {
     async getAllProjects() {
-        const res = await fetch(`${host}/users/${username}/repos?sort=updated`);
+        const res = await fetch(`${host}/users/${username}/repos?sort=created`);
         return res.json();
     },
 };
