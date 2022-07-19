@@ -26,8 +26,8 @@
     <Works name="works" class="section" />
     <Info id="info-section" name="info" class="section" />
     <div class="footer-top-info">
-    <h6 class="h-center mb-0">{{ $t("realised") }}</h6>
-    <img
+      <h6 class="h-center mb-0">{{ $t("realised") }}</h6>
+      <img
         class="icon-img small-icon-img"
         title="Vite JS"
         src="./assets/icons/vitejs.svg"
@@ -45,7 +45,7 @@
         src="./assets/icons/freepik.svg"
         alt="Freepik"
       />
-      </div>
+    </div>
     <Footer id="footer" class="footer" :src="assetsSrc.footer" />
   </div>
 </template>
@@ -97,11 +97,16 @@ export default {
   methods: {
     ...mapActions("theme", ["getLocalStorageTheme", "setUserTheme"]),
     scrollToTop() {
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
+      // In case first scroll did not work (for mobile users)
+      window.innerWidth < 768
+        ? document
+            .getElementById("avatar")
+            .scrollIntoView({ behavior: "smooth" })
+        : window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
     },
     toggleMenu() {
       this.showMenu = !this.showMenu;
@@ -166,7 +171,7 @@ body {
   min-height: 60px;
   position: fixed;
   z-index: 1;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   background-color: var(--color-background);
 }
 
@@ -193,7 +198,7 @@ body {
 }
 
 #info-section {
-  min-height: 70vh;
+  min-height: 60vh;
 }
 
 .footer-top-info {

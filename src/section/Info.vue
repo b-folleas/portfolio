@@ -34,10 +34,6 @@ export default {
 </script>
 
 <style scoped>
-h2 {
-  margin-bottom: 0.5rem;
-}
-
 .main-container {
   display: flex;
   flex-flow: column;

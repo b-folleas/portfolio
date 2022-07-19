@@ -124,7 +124,7 @@ export default {
   justify-content: end;
 }
 h3 {
-  font-size: clamp(24px, 3vw, 48px);
+  font-size: clamp(1.2rem, 1.5rem, 2rem);
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out;
   margin: 0;

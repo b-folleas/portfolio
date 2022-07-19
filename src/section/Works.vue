@@ -91,10 +91,6 @@ export default {
 };
 </script>
 <style scoped>
-h2 {
-  margin-bottom: 0;
-  margin-top: 2em;
-}
 
 .project-div {
   display: inline-flex;

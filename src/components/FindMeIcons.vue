@@ -71,7 +71,7 @@ export default {
   border-radius: 20px;
   border: 2px solid var(--color-borders);
   transition: all 0.2s ease-in-out;
-  min-width: 200px;
+  min-width: 250px;
 }
 .find-me-icons-main-container:hover {
   background-color: var(--color-background-emphasis);
@@ -110,5 +110,9 @@ p {
 }
 .find-me-icons-header * {
   margin: 1em;
+}
+
+.find-me-icons-header strong {
+  width: 30px;  
 }
 </style>

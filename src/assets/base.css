@@ -214,6 +214,7 @@ h2.h-center {
 
 .icon-img {
     margin: 2em;
+    width: 30px;
     height: 30px;
     filter: grayscale();
     transition: filter 0.2s ease-in-out;
@@ -268,5 +269,9 @@ h2.h-center {
     .small-icon-img {
         margin: 0.5em;
         height: 20px;
+    }
+    h2.h-center {
+        margin-top: 1.5em;
+        margin-bottom: 0.5rem;
     }
 }

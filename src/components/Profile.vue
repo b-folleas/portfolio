@@ -1,23 +1,24 @@
 <template>
   <main>
-      <Particles />
-      <div v-if="avatar" class="noselect">
-        <img
-          class="profile-img fade-in-top noselect"
-          :src="avatar"
-          alt="Avatar"
-          ref="img"
-        />
-      </div>
-      <div
-        class="profile-text fade-in-top"
-        :class="{ smaller: $i18n.locale === 'ja' }"
-      >
-        <h1>{{ $t("hello") }}</h1>
-        <h1 class="smaller">{{ $t("i_m_brice") }}</h1>
-        <h3 class="emphasis-txt">{{ $t("full_stack_engineer") }}</h3>
-        <ScrollDown />
-      </div>
+    <Particles />
+    <div v-if="avatar" class="noselect">
+      <img
+        id="avatar"
+        class="profile-img fade-in-top noselect"
+        :src="avatar"
+        alt="Avatar"
+        ref="img"
+      />
+    </div>
+    <div
+      class="profile-text fade-in-top"
+      :class="{ smaller: $i18n.locale === 'ja' }"
+    >
+      <h1>{{ $t("hello") }}</h1>
+      <h1 class="smaller">{{ $t("i_m_brice") }}</h1>
+      <h3 class="emphasis-txt">{{ $t("full_stack_engineer") }}</h3>
+      <ScrollDown />
+    </div>
   </main>
 </template>
 
