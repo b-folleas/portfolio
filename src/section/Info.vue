@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 h2 {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
 .main-container {
