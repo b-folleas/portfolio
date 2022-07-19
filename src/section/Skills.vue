@@ -1,5 +1,5 @@
 <template>
-  <div id="skillsDiv">
+  <div id="skillsDiv" class="flex-div">
     <span id="skills" class="mb-60"></span>
     <h2 class="h-center">{{ $t("skills") }}</h2>
     <p class="mb-skills"></p>
@@ -16,12 +16,6 @@ export default {
 </script>
 
 <style scoped>
-div {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
 .mb-skills {
   margin-bottom: 10vh;
 }

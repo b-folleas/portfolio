@@ -26,6 +26,10 @@ export default {
 </script>
 
 <style scoped>
+h3 {
+  font-size: 20px !important;
+}
+
 footer {
   height: 50px;
   width: 100vw;

@@ -265,4 +265,8 @@ h2.h-center {
     .mb-60 {
         margin-bottom: 2vh;
     }
+    .small-icon-img {
+        margin: 0.5em;
+        height: 20px;
+    }
 }

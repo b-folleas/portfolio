@@ -28,19 +28,19 @@
     <div class="footer-top-info">
     <h6 class="h-center mb-0">{{ $t("realised") }}</h6>
     <img
-        class="icon-img"
+        class="icon-img small-icon-img"
         title="Vite JS"
         src="./assets/icons/vitejs.svg"
         alt="Vite JS"
       />
       <img
-        class="icon-img"
+        class="icon-img small-icon-img"
         title="Travis CI"
         src="./assets/icons/travis-ci.svg"
         alt="Travis CI"
       />
       <img
-        class="icon-img"
+        class="icon-img small-icon-img"
         title="Freepik"
         src="./assets/icons/freepik.svg"
         alt="Freepik"
@@ -137,6 +137,13 @@ body {
   color: var(--color-text);
 }
 
+.flex-div {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo,
 .menu {
   width: 30px;
@@ -159,6 +166,7 @@ body {
   min-height: 60px;
   position: fixed;
   z-index: 1;
+  overflow-y: hidden;
   background-color: var(--color-background);
 }
 
@@ -185,7 +193,7 @@ body {
 }
 
 #info-section {
-  min-height: 75vh !important;
+  min-height: 70vh;
 }
 
 .footer-top-info {
@@ -230,10 +238,6 @@ h6 {
 
   .centersection {
     scroll-snap-align: center;
-  }
-
-  .nav {
-    position: absolute;
   }
 }
 </style>

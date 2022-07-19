@@ -1,4 +1,6 @@
 <template>
+<div>
+
   <article>
     <p class="mb-0">
       {{ $t("description.paragraph_one") }}
@@ -20,6 +22,7 @@
       >
     </p>
   </article>
+</div>
 </template>
 
 <script>

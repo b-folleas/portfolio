@@ -165,6 +165,7 @@ p {
   .project-container {
     width: 80vw;
     min-height: 40vw;
+    margin: 0 0 2em 0;
   }
 }
 </style>

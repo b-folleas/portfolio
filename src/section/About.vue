@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex-div">
     <span id="about" class="mb-60"></span>
     <h2 class="h-center">{{ $t("about") }}</h2>
     <Description class="w-80" />
@@ -13,11 +13,3 @@ export default {
   components: { Description },
 };
 </script>
-
-<style scoped>
-div {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-</style>

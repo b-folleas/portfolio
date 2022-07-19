@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="flex-div">
     <span id="works" class="mb-60"></span>
     <h2 class="h-center">{{ $t("works") }}</h2>
-    <div class="mt-3">
+    <div class="mt-3 flex-div">
       <div class="project-div">
         <ProjectModule
           v-for="project in currentProjects"
@@ -71,11 +71,12 @@ export default {
     this.totalPages = this.filteredProjects?.length
       ? Math.floor(this.filteredProjects.length / this.perPage)
       : 0;
-      this.totalPages += (this.filteredProjects.length / this.perPage) !== 0 ? 1 : 0 
+    this.totalPages +=
+      this.filteredProjects.length / this.perPage !== 0 ? 1 : 0;
   },
   methods: {
     async onPageChange(page) {
-      document.getElementById("works").scrollIntoView({behavior: "smooth"});
+      document.getElementById("works").scrollIntoView({ behavior: "smooth" });
       this.currentPage = page;
       this.currentProjects = this.getProjectsByPage(
         this.currentPage,
@@ -90,10 +91,9 @@ export default {
 };
 </script>
 <style scoped>
-div {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+h2 {
+  margin-bottom: 0;
+  margin-top: 2em;
 }
 
 .project-div {
