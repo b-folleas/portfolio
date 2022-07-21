@@ -14,13 +14,24 @@
     "download_resume": "Download Resume",
     "about": "About",
     "skills": "Skills",
-    "history": "History",
-    "history-description": {
-        "fiducial": "Fiducial Staffing",
-        "cpe": "CPE",
-        "conity": "Conity",
-        "dawson": "Dawson College",
-        "iut": "Institute of Technology"
+    "history": {
+        "name": "History",
+        "title": {
+            "fiducial": "Fiducial Staffing",
+            "cpe": "CPE Lyon",
+            "conity": "Conity",
+            "dawson": "Dawson College",
+            "iut": "Institute of Technology"
+        },
+        "description": {
+            "fiducial": "Développeur Full stack au sein de la DSI de Fiducial dans le bureau d'études des Métiers Réglementés.",
+            "fiducial_2": "Affecté au pilotage et développement de projets destinés au réseau d'expertise comptable de la firme.",
+            "cpe": "Informatique et Réseaux de Communication (IRC) - Majeure Systèmes d'Informations (SI)",
+            "conity": "Stage effectué en tant que développeur full-stack et assureur qualité chez Conity, solution numérique de suivi de projet de construction.",
+            "dawson": "Semestre d'échange au Dawson College, effectué en partenariat avec l'IUT Lyon 1",
+            "dawson_2": "Membre du club Dawson College Blues Athletics",
+            "iut": "Spécialisation 2ème année : Mathématiques & Technologies Avancées"
+        }
     },
     "works": "Works on Github",
     "info": "Info",

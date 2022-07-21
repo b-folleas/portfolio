@@ -14,7 +14,24 @@
     "download_resume": "履歴書のダウンロード",
     "about": "About",
     "skills": "Skills",
-    "history": "History",
+    "history": {
+        "name": "History",
+        "title": {
+            "fiducial": "Fiducial Staffing",
+            "cpe": "CPE Lyon",
+            "conity": "Conity",
+            "dawson": "Dawson College",
+            "iut": "Institute of Technology"
+        },
+        "description": {
+            "fiducial": "Développeur Full stack au sein de la DSI de Fiducial dans le bureau d'études des Métiers Réglementés (dont 3 ans d'alternance).",
+            "fiducial_2": "Principalement affecté au pilotage et développement du projet de Suivi des Interlocuteurs et du module d'Élaboration Budgétaire interne. Ai également supervisé l'intégration et le développement de stagiaires et employés en reconversion professionnelle.",
+            "cpe": "CPE",
+            "conity": "Stage effectué en tant que développeur full-stack et assureur qualité chez Conity, solution numérique de suivi de projet de construction.",
+            "dawson": "Dawson College",
+            "iut": "Institute of Technology"
+        }
+    },
     "works": "Works on Github",
     "info": "Info",
     "english": "英語",
