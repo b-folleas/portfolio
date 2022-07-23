@@ -2,6 +2,7 @@
   <ul class="pagination">
     <li class="pagination-item">
       <button
+        name="Go to first page"
         type="button"
         @click="onClickFirstPage"
         :disabled="isInFirstPage"
@@ -13,9 +14,11 @@
 
     <li class="pagination-item">
       <button
+        name="Go to previous page"
         type="button"
         @click="onClickPreviousPage"
         :disabled="isInFirstPage"
+        aria-label="Go to previous page"
       >
         <i class="fa-solid fa-backward-step"></i>
       </button>
@@ -25,6 +28,7 @@
 
     <li v-for="page in pages" class="pagination-item" :key="page.name">
       <button
+        :name="`Go to page number ${page.name}`"
         type="button"
         @click="onClickPage(page.name)"
         :disabled="page.isDisabled"
@@ -38,13 +42,25 @@
     <!-- Visible Buttons End -->
 
     <li class="pagination-item">
-      <button type="button" @click="onClickNextPage" :disabled="isInLastPage">
+      <button
+        name="Go to next page"
+        type="button"
+        @click="onClickNextPage"
+        :disabled="isInLastPage"
+        aria-label="Go to next page"
+      >
         <i class="fa-solid fa-forward-step"></i>
       </button>
     </li>
 
     <li class="pagination-item">
-      <button type="button" @click="onClickLastPage" :disabled="isInLastPage">
+      <button
+        type="button"
+        @click="onClickLastPage"
+        :disabled="isInLastPage"
+        name="Go to last page"
+        aria-label="Go to last page"
+      >
         <i class="fa-solid fa-forward-fast"></i>
       </button>
     </li>
@@ -83,7 +99,11 @@ export default {
       // When on the last page
       if (this.currentPage === this.totalPages) {
         // if totalPages is divisible by currentPage then add 1 else add 2
-        return this.totalPages - this.maxVisibleButtons + (this.totalPages / this.currentPage === 0 ? 1 : 2);
+        return (
+          this.totalPages -
+          this.maxVisibleButtons +
+          (this.totalPages / this.currentPage === 0 ? 1 : 2)
+        );
       }
 
       // When inbetween

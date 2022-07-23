@@ -5,8 +5,8 @@ import "moment/dist/locale/fr";
 import "moment/dist/locale/ja";
 
 export default {
-    getImgUrl: (name) => {
-        return new URL(`/src/assets/${name}.svg`,
+    getImgUrl: (name, ext = 'svg') => {
+        return new URL(`/src/assets/${name}.${ext}`,
             import.meta.url).href;
     },
     getIconImgUrl: (name) => {

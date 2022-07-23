@@ -1,12 +1,13 @@
 <template>
   <main>
     <Particles />
-    <div v-if="avatar" class="noselect">
+    <div class="noselect">
       <img
         id="avatar"
         class="profile-img fade-in-top noselect"
-        :src="avatar"
+        :src="$func.getImgUrl('avatar', 'jpg')"
         alt="Avatar"
+        :title="$t('avatar')"
         ref="img"
       />
     </div>
@@ -27,17 +28,8 @@ import Particles from "../components/Particles.vue";
 import ScrollDown from "./ScrollDown.vue";
 export default {
   name: "ProfileComponent",
+  inject: ['$func'],
   components: { Particles, ScrollDown },
-  computed: {
-    avatar() {
-      return (
-        import.meta.env.VITE_GITHUB_HOST +
-        "/" +
-        import.meta.env.VITE_USERNAME +
-        ".png"
-      );
-    },
-  },
 };
 </script>
 

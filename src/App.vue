@@ -25,27 +25,7 @@
     <History name="history" class="section" />
     <Works name="works" class="section" />
     <Info id="info-section" name="info" class="section" />
-    <div class="footer-top-info">
-      <h6 class="h-center mb-0">{{ $t("realised") }}</h6>
-      <img
-        class="icon-img small-icon-img"
-        title="Vite JS"
-        src="./assets/icons/vitejs.svg"
-        alt="Vite JS"
-      />
-      <img
-        class="icon-img small-icon-img"
-        title="Travis CI"
-        src="./assets/icons/travis-ci.svg"
-        alt="Travis CI"
-      />
-      <img
-        class="icon-img small-icon-img"
-        title="Freepik"
-        src="./assets/icons/freepik.svg"
-        alt="Freepik"
-      />
-    </div>
+    <FooterTopInfo />
     <Footer id="footer" class="footer" :src="assetsSrc.footer" />
   </div>
 </template>
@@ -58,13 +38,14 @@ import Skills from "./section/Skills.vue";
 import History from "./section/History.vue";
 import Works from "./section/Works.vue";
 import Info from "./section/Info.vue";
+import FooterTopInfo from "./components/FooterTopInfo.vue"
 import Footer from "./section/Footer.vue";
 import Menu from "./components/Menu.vue";
 import MenuButton from "./components/MenuButton.vue";
 export default {
   name: "App",
   inject: ["$func"],
-  components: { Home, Menu, MenuButton, About, Skills, History, Works, Info, Footer },
+  components: { Home, Menu, MenuButton, About, Skills, History, Works, Info, FooterTopInfo, Footer },
   data() {
     return {
       showMenu: false,
@@ -154,14 +135,14 @@ body {
   width: 30px;
   cursor: pointer;
   position: absolute;
-  top: 2.5vh;
+  top: 15px;
 }
 
 .logo {
-  left: 2.5vh;
+  left: 15px;
 }
 .menu {
-  right: 2.5vh;
+  right: 15px;
 }
 
 .nav {
@@ -171,7 +152,6 @@ body {
   min-height: 60px;
   position: fixed;
   z-index: 1;
-  /* overflow-y: hidden; */
   background-color: var(--color-background);
 }
 

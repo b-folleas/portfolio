@@ -1,6 +1,7 @@
 <template>
   <button
     type="button"
+    name="Main menu"
     class="menu"
     :class="{ clicked: !!showMenu }"
     @click="clickMenu"

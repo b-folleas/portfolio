@@ -1,7 +1,7 @@
 <template>
   <div class="find-me-icons-main-container" @click="openLink">
     <div class="find-me-icons-header">
-      <img :src="assetsSrc[title]" :alt="title" />
+      <img :src="assetsSrc[title]" :alt="title" loading="lazy" />
       <div class="horizontal-divider"></div>
       <strong> {{ title }} </strong>
     </div>
@@ -47,9 +47,6 @@ export default {
   methods: {
     openLink() {
       window.open(this.link, "_blank", "noopener");
-    },
-    getIconImgUrl(name) {
-      return new URL(`../assets/icons/${name}.svg`, import.meta.url).href
     }
   }
 };
@@ -67,7 +64,7 @@ export default {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-background-emphasis);
+  background-color: var(--color-background-soft);
   border-radius: 20px;
   border: 2px solid var(--color-borders);
   transition: all 0.2s ease-in-out;

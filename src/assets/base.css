@@ -24,6 +24,7 @@
     --color-background-soft: var(--vt-c-white);
     --color-background-dark: var(--vt-c-black);
     --color-borders: var(--vt-c-grey);
+    --color-link-borders: var(--vt-c-grey);
     --color-primary: var(--primary);
     --color-primary-light: var(--indigo);
     --color-primary-background: #e1eff8;
@@ -42,6 +43,7 @@
     --color-background-reverse: var(--vt-c-light);
     --color-background-soft: var(--vt-c-black-soft);
     --color-borders: var(--vt-c-black-soft);
+    --color-link-borders: var(--vt-c-grey);
     --color-primary: var(--indigo);
     --color-primary-light: var(--primary);
     --color-primary-background: #343646;
@@ -265,7 +267,6 @@ h2.h-center {
 }
 
 .snip1135 {
-    font-family: 'Raleway', Arial, sans-serif;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;

@@ -83,6 +83,8 @@ export default {
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
 }
 .project-container:hover p,
+.project-container:hover a,
+
 .project-container:hover em,
 .project-container:hover h3 {
   opacity: 0.9;
@@ -100,11 +102,12 @@ export default {
 .round-btn {
   margin: 0 1em 0 1em;
   background-color: transparent;
-  border: 2px solid var(--color-background-reverse);
+  border: 2px solid var(--color-link-borders);
   color: var(--color-background-reverse);
   border-radius: 50%;
   cursor: pointer;
   font-weight: 600;
+  opacity: 0.5;
   outline: none;
   padding: 5px 10px;
   transition: all 0.2s ease-in-out;

@@ -33,6 +33,8 @@ ul {
   list-style-type: none;
   display: flex;
   flex-flow: row;
+  height: 60px;
+  align-items: center;
   margin: 0 auto;
   padding: 1em;
 }
@@ -53,7 +55,6 @@ li {
 
 /* Adapted from www.littlesnippets.net - All rights reserved */
 .snip1217 {
-  font-family: "Roboto", Arial, sans-serif;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -103,10 +104,10 @@ li {
 .snip1217 .current a:after {
   width: 100%;
 }
-
+/* 
 #themeBtn, #selectBtn {
   align-self: center;
-}
+} */
 
 /* Responsive layout - makes a one column layout for menu items */
 @media (max-width: 768px) {

@@ -7,20 +7,25 @@
         @click="setActiveTab(event)"
         :class="{ active: activeEvent === event }"
       >
-        <a>{{ $t('history.title.' + event.title) }}</a>
+        <a>{{ $t("history.title." + event.title) }}</a>
       </li>
     </ul>
     <article v-if="activeEvent" class="event-container">
-        <div class="project-module-title">
-          <h3>{{ $t('history.title.' + activeEvent.title) }}</h3>
-        </div>
+      <div class="project-module-title">
+        <h3>{{ $t("history.title." + activeEvent.title) }}</h3>
+      </div>
       <p>
         {{ $func.formatDate(activeEvent.beginDate) }} -
         {{ $func.formatDate(activeEvent.endDate) }}
       </p>
-      <br>
-      <p>{{ $t('history.description.' + activeEvent.title) }}</p>
-      <p class="mt-2" v-if="isThereHistoryDescriptionPart2(activeEvent.title + '_2')">{{ $t('history.description.' + activeEvent.title + '_2') }}</p>
+      <br />
+      <p>{{ $t("history.description." + activeEvent.title) }}</p>
+      <p
+        class="mt-2"
+        v-if="isThereHistoryDescriptionPart2(activeEvent.title + '_2')"
+      >
+        {{ $t("history.description." + activeEvent.title + "_2") }}
+      </p>
     </article>
   </div>
 </template>
@@ -43,14 +48,27 @@ export default {
     setActiveTab(item) {
       this.activeEvent = item;
     },
-    isThereHistoryDescriptionPart2 (searchedKey) {
-      return !!this.$i18n.messages.en.history.description[searchedKey]
-    }
+    isThereHistoryDescriptionPart2(searchedKey) {
+      return !!this.$i18n.messages.en.history.description[searchedKey];
+    },
   },
 };
 </script>
 
 <style scoped>
+h3 {
+  font-size: clamp(1.2rem, 2vw, 4vw);
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+  margin: 0;
+}
+
+p {
+  font-size: clamp(8px, 10px, 24px);
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
 .history-tabs {
   display: flex;
   width: 80vw;
@@ -84,6 +102,7 @@ export default {
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease-in-out;
+  border: 2px solid var(--color-background-emphasis);
 }
 
 .event-selector li:first-child {
@@ -95,6 +114,8 @@ export default {
 }
 .event-selector li:hover {
   cursor: pointer;
+  border: 2px solid var(--color-primary) !important;
+  background-color: var(--color-background-emphasis);
 }
 
 .event-selector li.active {
@@ -138,19 +159,6 @@ export default {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-}
-
-h3 {
-  font-size: clamp(1.2rem, 2vw, 4vw);
-  opacity: 0.5;
-  transition: opacity 0.2s ease-in-out;
-  margin: 0;
-}
-
-p {
-  font-size: clamp(10px, 12px, 24px);
-  opacity: 0.5;
-  transition: opacity 0.2s ease-in-out;
 }
 
 @media (max-width: 768px) {
