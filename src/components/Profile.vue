@@ -5,7 +5,7 @@
       <img
         id="avatar"
         class="profile-img fade-in-top noselect"
-        :src="$func.getImgUrl('avatar', 'jpg')"
+        src="../assets/avatar.jpg"
         alt="Avatar"
         :title="$t('avatar')"
         ref="img"
@@ -37,7 +37,7 @@ export default {
 main {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   margin: 5em;
   width: 100%;
 }
@@ -64,8 +64,8 @@ img {
 }
 
 .profile-img {
-  width: 50vh;
-  height: 50vh;
+  width: 500px;
+  height: 500px;
   margin-right: 10vw;
 }
 
@@ -77,15 +77,15 @@ img {
   text-align: end;
 }
 
-/* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 768px) {
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
   main {
     flex-direction: column;
   }
 
   .profile-img {
-    width: 40vh;
-    height: 40vh;
+    width: 250px;
+    height: 250px;
     margin: 25px 0;
   }
 
@@ -99,4 +99,12 @@ img {
     font-size: clamp(20px, 3vw, 38px);
   }
 }
+
+@media (min-width: 780px) and (max-width: 1440px) {
+  .profile-img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
 </style>
