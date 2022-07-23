@@ -286,22 +286,22 @@ h2.h-center {
     padding: 0;
 }
 
-.snip1135 a {
+.snip1135 .link {
     padding: 0.5em 0;
     position: relative;
     letter-spacing: 1px;
     text-decoration: none;
 }
 
-.snip1135 a:before,
-.snip1135 a:after {
+.snip1135 .link:before,
+.snip1135 .link:after {
     /* Underline effect */
     position: absolute;
     -webkit-transition: all 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
 }
 
-.snip1135 a:before {
+.snip1135 .link:before {
     bottom: 0;
     display: block;
     height: 3px;
@@ -310,7 +310,7 @@ h2.h-center {
     background-color: var(--color-primary);
 }
 
-.snip1135 a:after {
+.snip1135 .link:after {
     left: 0;
     top: 0;
     padding: 0.5em 0;
@@ -322,14 +322,14 @@ h2.h-center {
     overflow: hidden;
 }
 
-.snip1135 a:hover:before,
-.snip1135 .active a:before {
+.snip1135 .link:hover:before,
+.snip1135 .active .link:before {
     opacity: 1;
     width: 100%;
 }
 
-.snip1135 a:hover:after,
-.snip1135 .active a:after {
+.snip1135 .link:hover:after,
+.snip1135 .active .link:after {
     max-width: 100%;
 }
 

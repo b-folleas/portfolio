@@ -5,7 +5,7 @@
       :key="language.key"
       :class="{ active: currentLanguage === language.key }"
     >
-      <a v-on:click="$i18n.locale = language.key">{{ $t(language.name) }}</a>
+      <a class="link" v-on:click="$i18n.locale = language.key">{{ $t(language.name) }}</a>
     </li>
   </ul>
 </template>

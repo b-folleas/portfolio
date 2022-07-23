@@ -7,7 +7,7 @@
         @click="setActiveTab(event)"
         :class="{ active: activeEvent === event }"
       >
-        <a>{{ $t("history.title." + event.title) }}</a>
+        <p class="link">{{ $t("history.title." + event.title) }}</p>
       </li>
     </ul>
     <article v-if="activeEvent" class="event-container">
@@ -58,14 +58,14 @@ export default {
 <style scoped>
 h3 {
   font-size: clamp(1.2rem, 2vw, 4vw);
-  opacity: 0.5;
+  opacity: 0.9;
   transition: opacity 0.2s ease-in-out;
   margin: 0;
 }
 
 p {
   font-size: clamp(8px, 10px, 24px);
-  opacity: 0.5;
+  opacity: 0.9;
   transition: opacity 0.2s ease-in-out;
 }
 
