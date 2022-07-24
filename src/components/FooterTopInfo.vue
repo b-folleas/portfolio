@@ -1,6 +1,6 @@
 <template>
   <div class="footer-top-info">
-    <h6 class="h-center mb-0">{{ $t("realised") }}</h6>
+    <p class="h-center mb-0">{{ $t("realised") }}</p>
     <img
       v-for="tech in techImages"
       :key="tech.title"
