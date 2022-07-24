@@ -3,6 +3,8 @@
     <Particles />
     <div class="noselect">
       <img
+        srcset="../assets/avatar-250.jpg 250w, ../assets/avatar-350.jpg 350w, ../assets/avatar.jpg 512w"
+        sizes="(max-width: 768px) 250px, (min-width: 768px) and (max-width: 2000px) 512px, (min-width: 2000px) 512px"
         id="avatar"
         class="profile-img fade-in-top noselect"
         src="../assets/avatar.jpg"
@@ -110,7 +112,7 @@ img {
   }
 }
 
-@media (min-width: 780px) and (max-width: 1440px) {
+@media (min-width: 780px) and (max-width: 2000px) {
   .profile-img {
     width: 350px;
     height: 350px;
