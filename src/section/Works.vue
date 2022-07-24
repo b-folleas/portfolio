@@ -98,10 +98,4 @@ export default {
   justify-content: center;
   align-items: baseline;
 }
-
-@media (max-width: 768px) {
-  .pagination {
-    margin-bottom: 20vh;
-  }
-}
 </style>
