@@ -30,7 +30,7 @@
     --color-primary-background: #e1eff8;
     --color-background-project: var(--vt-c-white);
     --color-tag-background: #e1eff8;
-    --color-tag-text: var(--primary);
+    --color-tag-text: #02366e;
     --color-text: var(--vt-c-black-soft);
     --color-text-hover: var(--vt-c-black);
     --color-grey: var(--vt-c-grey);
@@ -49,7 +49,7 @@
     --color-primary-background: #343646;
     --color-background-project: var(--vt-c-white);
     --color-tag-background: #ffe7fa;
-    --color-tag-text: var(--indigo);
+    --color-tag-text: #26055b;
     --color-text: var(--vt-c-white-soft);
     --color-text-hover: var(--vt-c-white);
     --color-grey: var(--vt-c-grey-dark);

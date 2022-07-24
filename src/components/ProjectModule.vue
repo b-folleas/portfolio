@@ -3,9 +3,14 @@
     <div class="project-module-header">
       <div class="project-module-title">
         <h3>{{ name }}</h3>
-        <a :href="url" class="round-btn">
+        <button 
+        class="round-btn"
+        type="button"
+        :name="`Link to project ${name}`"
+        @click="goToProject(url)"
+        aria-label="Link to project">
           <i class="fa fa-bold fa-arrow-up-right-from-square"></i>
-        </a>
+        </button>
       </div>
       <em v-if="language"> <i class="fa fa-code"></i> {{ language }}</em>
     </div>
@@ -59,6 +64,11 @@ export default {
       } else {
         return this.$func.getIconImgUrl("github-dark");
       }
+    }
+  },
+  methods: {
+    goToProject (url) {
+      window.location.href = url
     }
   },
 };
@@ -118,6 +128,7 @@ export default {
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
   border: 2px solid var(--color-primary);
   color: var(--vt-c-white);
+  opacity: 0.9;
   text-decoration: none;
 }
 

@@ -17,7 +17,7 @@
     >
       <h1>{{ $t("hello") }}</h1>
       <h1 class="smaller">{{ $t("i_m_brice") }}</h1>
-      <h3 class="emphasis-txt">{{ $t("full_stack_engineer") }}</h3>
+      <p class="emphasis-txt big-emphasis">{{ $t("full_stack_engineer") }}</p>
       <ScrollDown />
     </div>
   </main>
@@ -28,7 +28,7 @@ import Particles from "../components/Particles.vue";
 import ScrollDown from "./ScrollDown.vue";
 export default {
   name: "ProfileComponent",
-  inject: ['$func'],
+  inject: ["$func"],
   components: { Particles, ScrollDown },
 };
 </script>
@@ -77,6 +77,16 @@ img {
   text-align: end;
 }
 
+.big-emphasis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: clamp(24px, 3vw, 48px);
+  margin: 0;
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
   /* Responsive layout - makes a one column layout instead of a two-column layout */
   main {
@@ -106,5 +116,4 @@ img {
     height: 350px;
   }
 }
-
 </style>
