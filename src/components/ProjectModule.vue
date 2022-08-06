@@ -97,7 +97,7 @@ export default {
 .project-container:hover {
   background-color: var(--color-background-emphasis);
   border: 2px solid var(--color-primary);
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.4);
 }
 .project-container:hover p,
 .project-container:hover a,
@@ -132,7 +132,7 @@ export default {
 
 .round-btn:hover {
   background-color: var(--color-primary);
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.4);
   border: 2px solid var(--color-primary);
   color: var(--vt-c-white);
   opacity: 0.9;

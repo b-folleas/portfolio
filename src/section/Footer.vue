@@ -48,7 +48,6 @@ footer > div {
 }
 .main-footer > * {
   width: 48px;
-  height: 48px;
   color: var(--color-background);
 }
 .vertical-divider {
@@ -59,7 +58,9 @@ footer > div {
 }
 img {
   width: 48px;
+  height: 48px;
 }
+
 h3 {
   color: var(--color-text);
   margin: 0;

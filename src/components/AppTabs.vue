@@ -144,7 +144,7 @@ p {
 
 .event-container:hover {
   background-color: var(--color-background-emphasis);
-  box-shadow: 0px 14px px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 0 0 rgba(0, 0, 0, 0.4);
   border: 2px solid var(--color-primary);
 }
 

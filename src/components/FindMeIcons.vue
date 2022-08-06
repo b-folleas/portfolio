@@ -73,7 +73,7 @@ export default {
 .find-me-icons-main-container:hover {
   background-color: var(--color-background-emphasis);
   border: 2px solid var(--color-primary);
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.4);
 }
 .find-me-icons-main-container:hover img {
   opacity: 0.9;

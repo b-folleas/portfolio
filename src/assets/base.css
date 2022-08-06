@@ -1,7 +1,7 @@
 /* color palette from <https://github.com/vuejs/theme> */
 
 :root {
-    --vt-c-white: #ffffff;
+    --vt-c-white: #fff;
     --vt-c-white-soft: #f5f5f5;
     --vt-c-light: #efefef;
     --vt-c-grey: #d0d0d0;
@@ -61,7 +61,7 @@
     box-sizing: border-box;
     margin: 0;
     position: relative;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 body {
@@ -115,7 +115,7 @@ h2.h-center {
     }
     to {
         opacity: 1;
-        top: 0px;
+        top: 0;
     }
 }
 
@@ -129,7 +129,7 @@ h2.h-center {
     }
     to {
         opacity: 1;
-        top: 0px;
+        top: 0;
     }
 }
 
@@ -143,7 +143,7 @@ h2.h-center {
     }
     to {
         opacity: 1;
-        top: 0px;
+        top: 0;
     }
 }
 
@@ -157,7 +157,7 @@ h2.h-center {
     }
     to {
         opacity: 1;
-        top: 0px;
+        top: 0;
     }
 }
 
@@ -171,7 +171,7 @@ h2.h-center {
     }
     to {
         opacity: 1;
-        top: 0px;
+        top: 0;
     }
 }
 
@@ -240,7 +240,7 @@ h2.h-center {
     font-weight: 600;
     height: fit-content;
     margin: 1.5em 2em 2em 2em;
-    outline: none;
+    outline: 0;
     padding: 10px 20px;
     text-align: center;
     transition: all 0.2s ease-in-out;
@@ -248,7 +248,7 @@ h2.h-center {
 
 .action-btn:hover {
     background-color: var(--color-primary);
-    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.4);
     border: 2px solid var(--color-primary);
     color: var(--vt-c-white);
     text-decoration: none;
@@ -257,7 +257,6 @@ h2.h-center {
 .action-link {
     cursor: pointer;
     color: var(--color-text);
-    /* outline: none; */
     transition: all 0.2s ease-in-out;
 }
 
@@ -316,7 +315,7 @@ h2.h-center {
     padding: 0.5em 0;
     position: absolute;
     content: attr(data-hover);
-    color: #ffffff;
+    color: var(--vt-c-white);
     white-space: nowrap;
     max-width: 0%;
     overflow: hidden;
