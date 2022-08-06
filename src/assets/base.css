@@ -333,6 +333,11 @@ h2.h-center {
     max-width: 100%;
 }
 
+.inline-icon {
+    margin: 0 !important;
+    margin-right: 1em !important;
+}
+
 @media (max-width:768px) {
     .mb-60 {
         margin-bottom: 2vh;

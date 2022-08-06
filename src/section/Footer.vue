@@ -48,6 +48,7 @@ footer > div {
 }
 .main-footer > * {
   width: 48px;
+  height: 48px;
   color: var(--color-background);
 }
 .vertical-divider {

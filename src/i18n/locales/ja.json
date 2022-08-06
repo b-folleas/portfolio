@@ -3,7 +3,8 @@
     "i_m_brice": "ブライスです。",
     "brice": "ブライス",
     "full_stack_engineer": "フルスタックエンジニア",
-    "avatar": "Avatar by catalyststuff / freepik",
+    "avatar": "アバター by catalyststuff / freepik",
+    "now": "今日",
     "description": {
         "paragraph_one": "Last year student in internship as a Full Stack developer, based in Lyon, France. Through my studies, my three years work experience and personal projects, I deepened my skills in creating websites using frameworks such as",
         "paragraph_two": "In my free time, I try to discover new technologies. Currently, I'm working on a personal project using ",
@@ -20,9 +21,9 @@
         "title": {
             "fiducial": "Fiducial Staffing",
             "cpe": "CPE Lyon",
-            "conity": "Conity",
-            "dawson": "Dawson College",
-            "iut": "Institute of Technology"
+            "conity": "コニチ",
+            "dawson": "ドーソンカレッジ",
+            "iut": "リヨン工業高等専門学校"
         },
         "description": {
             "fiducial": "Développeur Full stack au sein de la DSI de Fiducial dans le bureau d'études des Métiers Réglementés (dont 3 ans d'alternance).",

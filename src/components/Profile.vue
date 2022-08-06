@@ -49,7 +49,6 @@ h1 {
   font-size: clamp(42px, 5vw, 60px);
 }
 h1.smaller {
-  margin: 0;
   font-size: clamp(52px, 8vw, 100px);
   font-weight: 900;
 }

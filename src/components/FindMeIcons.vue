@@ -86,6 +86,7 @@ export default {
 }
 img {
   width: clamp(35px, 2vw, 2vw);
+  height: clamp(35px, 2vw, 2vw);
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out;
 }

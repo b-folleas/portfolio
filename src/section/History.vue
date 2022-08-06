@@ -20,7 +20,7 @@ export default {
           id: 1,
           title: "fiducial",
           beginDate: new Date(2019, 9),
-          endDate: new Date(),
+          endDate: "now",
           type: "work"
         },
         {

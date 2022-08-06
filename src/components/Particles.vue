@@ -77,7 +77,7 @@
             enable: true,
             value_area: 800,
           },
-          value: isSmallScreen ? 30 : 60,
+          value: isSmallScreen ? 10 : 30,
         },
         opacity: {
           value: 0.6,

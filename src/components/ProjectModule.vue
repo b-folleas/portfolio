@@ -3,16 +3,25 @@
     <div class="project-module-header">
       <div class="project-module-title">
         <h3>{{ name }}</h3>
-        <button 
-        class="round-btn"
-        type="button"
-        :name="`Link to project ${name}`"
-        @click="goToProject(url)"
-        aria-label="Link to project">
-          <i class="fa fa-bold fa-arrow-up-right-from-square"></i>
+        <button
+          class="round-btn"
+          type="button"
+          :name="`Link to project ${name}`"
+          title="Explore the GitHub repository !  "
+          @click="goToProject(url)"
+          aria-label="Link to project"
+        >
+          <img :src="assetsSrc['link']" :alt="language" loading="lazy" />
         </button>
       </div>
-      <em v-if="language"> <i class="fa fa-code"></i> {{ language }}</em>
+      <em v-if="language">
+        <img
+          class="icon-img inline-icon"
+          :src="assetsSrc['code']"
+          :alt="language"
+          loading="lazy"
+        />{{ language }}
+      </em>
     </div>
     <p>{{ $func.formatDate(date) }}</p>
     <p>{{ description }}</p>
@@ -59,17 +68,15 @@ export default {
   computed: {
     ...mapState("theme", ["userTheme"]),
     assetsSrc() {
-      if (this.userTheme == "dark-theme") {
-        return this.$func.getIconImgUrl("github");
-      } else {
-        return this.$func.getIconImgUrl("github-dark");
-      }
-    }
+      return this.userTheme == "dark-theme"
+       ? {link: this.$func.getIconImgUrl("rocket"), code: this.$func.getIconImgUrl("code")}
+       : {link: this.$func.getIconImgUrl("rocket-dark"), code: this.$func.getIconImgUrl("code-dark")}
+    },
   },
   methods: {
-    goToProject (url) {
-      window.location.href = url
-    }
+    goToProject(url) {
+      window.location.href = url;
+    },
   },
 };
 </script>
@@ -94,7 +101,6 @@ export default {
 }
 .project-container:hover p,
 .project-container:hover a,
-
 .project-container:hover em,
 .project-container:hover h3 {
   opacity: 0.9;
@@ -110,7 +116,7 @@ export default {
 }
 
 .round-btn {
-  margin: 0 1em 0 1em;
+  margin-left: 1em;
   background-color: transparent;
   border: 2px solid var(--color-link-borders);
   color: var(--color-background-reverse);
@@ -119,7 +125,8 @@ export default {
   font-weight: 600;
   opacity: 0.5;
   outline: none;
-  padding: 5px 10px;
+  width: 40px;
+  height: 40px;
   transition: all 0.2s ease-in-out;
 }
 

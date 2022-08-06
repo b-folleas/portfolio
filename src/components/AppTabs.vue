@@ -15,8 +15,15 @@
         <h3>{{ $t("history.title." + activeEvent.title) }}</h3>
       </div>
       <p>
-        {{ $func.formatDate(activeEvent.beginDate) }} -
+        <span>
+          {{ $func.formatDate(activeEvent.beginDate) }}&nbsp;-&nbsp;
+        </span>
+        <span v-if="activeEvent.endDate === 'now'">
+          {{ $t('now') }}
+        </span>
+        <span v-else>
         {{ $func.formatDate(activeEvent.endDate) }}
+        </span>
       </p>
       <br />
       <p>{{ $t("history.description." + activeEvent.title) }}</p>
