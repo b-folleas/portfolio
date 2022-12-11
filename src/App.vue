@@ -24,9 +24,7 @@
     </div>
     <History name="history" class="section" />
     <Works name="works" class="section" />
-    <Info id="info-section" name="info" class="section" />
-    <FooterTopInfo />
-    <Footer id="footer" class="footer" :src="assetsSrc.footer" />
+    <Footer id="footer" class="section" :src="assetsSrc.footer" />
   </div>
 </template>
 
@@ -37,15 +35,13 @@ import About from "./section/About.vue";
 import Skills from "./section/Skills.vue";
 import History from "./section/History.vue";
 import Works from "./section/Works.vue";
-import Info from "./section/Info.vue";
-import FooterTopInfo from "./components/FooterTopInfo.vue"
 import Footer from "./section/Footer.vue";
 import Menu from "./components/Menu.vue";
 import MenuButton from "./components/MenuButton.vue";
 export default {
   name: "App",
   inject: ["$func"],
-  components: { Home, Menu, MenuButton, About, Skills, History, Works, Info, FooterTopInfo, Footer },
+  components: { Home, Menu, MenuButton, About, Skills, History, Works, Footer },
   data() {
     return {
       showMenu: false,
@@ -176,25 +172,20 @@ body {
   display: none;
 }
 
-#info-section {
-  min-height: 60vh;
-}
-
-.footer-top-info {
-  text-align: center;
-}
-
 h1 {
-  font-size: 72px;
+  font-size: clamp(48px, 72px, 96px);
+}
+
+h3 {
+  font-size: clamp(16rem, 20px, 28px);
+}
+
+h4 {
+  font-size: clamp(10px, 14px, 18px);
 }
 
 h6 {
   font-size: clamp(8px, 12px, 16px);
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
 }
 
 @media (max-width: 426px) {

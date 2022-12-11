@@ -1,8 +1,8 @@
 <template>
   <main>
     <Particles />
-    <div class="noselect">
-      <img
+    <div id="profileDiv" class="noselect">
+      <!-- <img
         srcset="../assets/avatar-250.jpg 250w, ../assets/avatar-350.jpg 350w, ../assets/avatar.jpg 512w"
         sizes="(max-width: 768px) 250px, (min-width: 768px) and (max-width: 2000px) 512px, (min-width: 2000px) 512px"
         id="avatar"
@@ -11,13 +11,26 @@
         alt="Avatar"
         :title="$t('avatar')"
         ref="img"
-      />
+      /> -->
+      <picture>
+        <source srcset="../assets/avatar.jpg" media="(min-width: 2000px)" />
+        <source srcset="../assets/avatar-350.jpg" media="(min-width: 768px)" />
+        <img
+          src="../assets/avatar-250.jpg"
+          id="avatar"
+          alt="Avatar"
+          class="profile-img fade-in-top noselect"
+          :title="$t('avatar')"
+          ref="img"
+        />
+      </picture>
     </div>
     <div
       class="profile-text fade-in-top"
       :class="{ smaller: $i18n.locale === 'ja' }"
     >
       <h1>{{ $t("hello") }}</h1>
+      <!-- TODO : rename -->
       <h1 class="smaller">{{ $t("i_m_brice") }}</h1>
       <p class="emphasis-txt big-emphasis">{{ $t("full_stack_engineer") }}</p>
       <ScrollDown />
@@ -49,6 +62,7 @@ h1 {
   font-size: clamp(42px, 5vw, 60px);
 }
 h1.smaller {
+  /* TODO : rename */
   font-size: clamp(52px, 8vw, 100px);
   font-weight: 900;
 }
@@ -65,8 +79,8 @@ img {
 }
 
 .profile-img {
-  width: 500px;
-  height: 500px;
+  width: 350px;
+  height: 350px;
   margin-right: 10vw;
 }
 
@@ -95,9 +109,13 @@ img {
   }
 
   .profile-img {
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    height: 450px;
     margin: 25px 0;
+  }
+
+  #profileDiv {
+    margin: auto;
   }
 
   .smaller h1 {
@@ -113,8 +131,15 @@ img {
 
 @media (min-width: 780px) and (max-width: 2000px) {
   .profile-img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 780px) {
+  .profile-img {
+    width: 250px;
+    height: 250px;
   }
 }
 </style>

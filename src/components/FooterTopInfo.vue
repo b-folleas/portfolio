@@ -1,15 +1,17 @@
 <template>
-  <div class="footer-top-info">
-    <p class="h-center mb-0">{{ $t("realised") }}</p>
-    <img
-      v-for="tech in techImages"
-      :key="tech.title"
-      :title="tech.title"
-      class="icon-img small-icon-img"
-      loading="lazy"
-      :src="$func.getIconImgUrl(tech.src)"
-      :alt="tech.title"
-    />
+  <div class="mb-auto">
+    <p class="h-center mt-5 mb-0">{{ $t("realised") }}</p>
+    <div class="techs-img">
+      <img
+        v-for="tech in techImages"
+        :key="tech.title"
+        :title="tech.title"
+        class="icon-img small-icon-img"
+        loading="lazy"
+        :src="$func.getIconImgUrl(tech.src)"
+        :alt="tech.title"
+      />
+    </div>
   </div>
 </template>
 
@@ -28,3 +30,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.techs-img {
+  display: flex;
+  justify-content: center;
+}
+</style>

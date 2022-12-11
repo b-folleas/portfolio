@@ -7,11 +7,16 @@
           class="round-btn"
           type="button"
           :name="`Link to project ${name}`"
-          title="Explore the GitHub repository !  "
+          title="Explore the GitHub repository ! "
           @click="goToProject(url)"
           aria-label="Link to project"
         >
-          <img :src="assetsSrc['link']" :alt="language" loading="lazy" />
+          <img
+            class="small-img"
+            :src="assetsSrc['code']"
+            :alt="language"
+            loading="lazy"
+          />
         </button>
       </div>
       <em v-if="language">
@@ -69,8 +74,14 @@ export default {
     ...mapState("theme", ["userTheme"]),
     assetsSrc() {
       return this.userTheme == "dark-theme"
-       ? {link: this.$func.getIconImgUrl("rocket"), code: this.$func.getIconImgUrl("code")}
-       : {link: this.$func.getIconImgUrl("rocket-dark"), code: this.$func.getIconImgUrl("code-dark")}
+        ? {
+            github: this.$func.getIconImgUrl("github"),
+            code: this.$func.getIconImgUrl("code"),
+          }
+        : {
+            github: this.$func.getIconImgUrl("github-dark"),
+            code: this.$func.getIconImgUrl("code-dark"),
+          };
     },
   },
   methods: {

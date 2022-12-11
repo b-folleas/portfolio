@@ -1,60 +1,56 @@
 <template>
-  <div>
-    <footer>
-      <div class="main-footer">
-        <img :src="src" alt="logo" />
-        <div class="vertical-divider noselect"></div>
-        <h3>{{ $t("brice") }}</h3>
-      </div>
-      <div>
-        <h4 class="mt-1 bg-color">© 2022</h4>
-      </div>
-    </footer>
+  <div class="flex-div">
+    <span id="info" class="mb-60"></span>
+    <h2 class="h-center">{{ $t("info") }}</h2>
+    <div class="flex-container">
+      <FindMeIcons
+        title="email"
+        content="brice.folleas@gmail.com"
+        link="mailto:brice.folleas@gmail.com"
+      />
+      <FindMeIcons
+        title="linkedin"
+        content="brice-folléas"
+        link="https://www.linkedin.com/in/brice-folléas/"
+      />
+      <FindMeIcons
+        title="github"
+        content="b-folleas"
+        link="https://github.com/b-folleas"
+      />
+    </div>
+    <FooterTopInfo />
   </div>
 </template>
 
 <script>
+import FooterTopInfo from "../components/FooterTopInfo.vue";
+import FindMeIcons from "../components/FindMeIcons.vue";
 export default {
   name: "FooterSection",
+  components: { FooterTopInfo, FindMeIcons },
   props: {
     src: {
       type: String,
-      required: true
+      required: true,
     },
-  }
+  },
 };
 </script>
 
 <style scoped>
-h3 {
-  font-size: 20px !important;
-}
-
 footer {
   height: 50px;
   width: 100vw;
   display: flex;
   flex-flow: row wrap;
+  background-color: var(--color-background-reverse);
 }
 footer > div {
   flex: 1 0 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-background-reverse);
-}
-.main-footer {
-  padding-top: 1em;
-}
-.main-footer > * {
-  width: 48px;
-  color: var(--color-background);
-}
-.vertical-divider {
-  height: 48px;
-  width: 2px;
-  margin: 0 2em 0 2em;
-  background-color: var(--color-background);
 }
 img {
   width: 48px;
@@ -66,12 +62,20 @@ h3 {
   margin: 0;
   font-size: clamp(24px, 3vw, 48px);
 }
-h4 {
-  color: var(--color-text);
-  font-size: clamp(8px, 1.5vw, 14px);
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background: none;
 }
-
-.bg-color {
-  color: var(--color-background);
+.flex-container > * {
+  flex-basis: 100%;
+  margin: 0 2em 2em 2em;
+}
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
 </style>

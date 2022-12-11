@@ -56,6 +56,7 @@ export default {
 .horizontal-divider {
   width: 1px;
   background-color: var(--color-background-reverse);
+  opacity: 0.5;
   height: 30px;
 }
 .find-me-icons-main-container {
@@ -75,15 +76,12 @@ export default {
   border: 2px solid var(--color-primary);
   box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.4);
 }
-.find-me-icons-main-container:hover img {
+
+.find-me-icons-main-container:hover *
+{
   opacity: 0.9;
 }
-.find-me-icons-main-container:hover strong {
-  opacity: 0.9;
-}
-.find-me-icons-main-container:hover p {
-  opacity: 0.9;
-}
+
 img {
   width: clamp(35px, 2vw, 2vw);
   height: clamp(35px, 2vw, 2vw);

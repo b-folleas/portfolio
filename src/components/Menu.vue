@@ -71,6 +71,7 @@ li {
   padding: 0;
 }
 .snip1217 a {
+  font-size: clamp(16px, 1.2vw, 1.2vw);
   padding: 0.3em 0;
   color: var(--color-text);
   position: relative;
@@ -104,10 +105,6 @@ li {
 .snip1217 .current a:after {
   width: 100%;
 }
-/* 
-#themeBtn, #selectBtn {
-  align-self: center;
-} */
 
 /* Responsive layout - makes a one column layout for menu items */
 @media (max-width: 768px) {

@@ -70,7 +70,7 @@ body {
     background: var(--color-background);
     transition: color 0.2s, background-color 0.5s;
     line-height: 1.6;
-    font-family: Inter, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     font-size: 15px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -268,7 +268,6 @@ h2.h-center {
 .snip1135 {
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 1px;
     padding: 0;
 }
 
@@ -288,7 +287,6 @@ h2.h-center {
 .snip1135 .link {
     padding: 0.5em 0;
     position: relative;
-    letter-spacing: 1px;
     text-decoration: none;
 }
 
@@ -337,7 +335,7 @@ h2.h-center {
     margin-right: 1em !important;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
     .mb-60 {
         margin-bottom: 2vh;
     }

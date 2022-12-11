@@ -19,10 +19,10 @@
           {{ $func.formatDate(activeEvent.beginDate) }}&nbsp;-&nbsp;
         </span>
         <span v-if="activeEvent.endDate === 'now'">
-          {{ $t('now') }}
+          {{ $t("now") }}
         </span>
         <span v-else>
-        {{ $func.formatDate(activeEvent.endDate) }}
+          {{ $func.formatDate(activeEvent.endDate) }}
         </span>
       </p>
       <br />
@@ -144,7 +144,6 @@ p {
 
 .event-container:hover {
   background-color: var(--color-background-emphasis);
-  box-shadow: 0 14px 0 0 rgba(0, 0, 0, 0.4);
   border: 2px solid var(--color-primary);
 }
 

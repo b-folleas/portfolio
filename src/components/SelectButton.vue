@@ -5,7 +5,9 @@
       :key="language.key"
       :class="{ active: currentLanguage === language.key }"
     >
-      <a class="link" v-on:click="$i18n.locale = language.key">{{ $t(language.name) }}</a>
+      <a class="link" v-on:click="$i18n.locale = language.key">{{
+        $t(language.name)
+      }}</a>
     </li>
   </ul>
 </template>
@@ -29,11 +31,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* Add specific font family for this component */
-
-ul {
-  font-family: "Raleway", Arial, sans-serif;
-}
-</style>
