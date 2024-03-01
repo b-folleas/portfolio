@@ -13,10 +13,6 @@
       interactivity: {
         detectsOn: 'window',
         events: {
-          onClick: {
-            enable: true,
-            mode: 'push',
-          },
           onHover: {
             enable: true,
             mode: 'repulse',
