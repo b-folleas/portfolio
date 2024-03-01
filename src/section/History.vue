@@ -1,7 +1,7 @@
 <template>
   <div class="flex-div">
-  <h2 class="h-center">{{ $t("history.name") }}</h2>
-  <AppTabs :eventList="events" />
+    <h2 class="h-center">{{ $t("history.name") }}</h2>
+    <AppTabs :eventList="events" />
   </div>
 </template>
 
@@ -18,38 +18,57 @@ export default {
       events: [
         {
           id: 1,
-          title: "fiducial",
-          beginDate: new Date(2019, 9),
+          title: "japan",
+          beginDate: new Date(2023, 10),
           endDate: "now",
-          type: "work"
+          type: "work",
+          city: "Kawasaki",
+          country: "japan",
         },
         {
           id: 2,
+          title: "fiducial",
+          beginDate: new Date(2019, 9),
+          endDate: new Date(2023, 10),
+          type: "work",
+          city: "Lyon",
+          country: "France",
+        },
+        {
+          id: 3,
           title: "cpe",
           beginDate: new Date(2019, 9),
           endDate: new Date(2022, 7),
-          type: "graduation"
-        },
-        {
-          id: 3,
-          title: "conity",
-          beginDate: new Date(2019, 4),
-          endDate: new Date(2019, 9),
-          type: "work"
-        },
-        {
-          id: 3,
-          title: "dawson",
-          beginDate: new Date(2019, 1),
-          endDate: new Date(2019, 4),
-          type: "graduation"
+          type: "graduation",
+          city: "Lyon",
+          country: "France",
         },
         {
           id: 4,
+          title: "conity",
+          beginDate: new Date(2019, 4),
+          endDate: new Date(2019, 9),
+          type: "work",
+          city: "Lyon",
+          country: "France",
+        },
+        {
+          id: 5,
+          title: "dawson",
+          beginDate: new Date(2019, 1),
+          endDate: new Date(2019, 4),
+          type: "graduation",
+          city: "Westmount",
+          country: "Canada",
+        },
+        {
+          id: 6,
           title: "iut",
           beginDate: new Date(2017, 9),
           endDate: new Date(2019, 1),
-          type: "graduation"
+          type: "graduation",
+          city: "Lyon",
+          country: "France",
         },
       ],
     };
