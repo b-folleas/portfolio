@@ -11,21 +11,12 @@
           @click="goToProject(url)"
           aria-label="Link to project"
         >
-          <img
-            class="small-img"
-            :src="assetsSrc['code']"
-            :alt="language"
-            loading="lazy"
-          />
+          <i class="fa fa-external-link" aria-hidden="true"></i>
         </button>
       </div>
       <em v-if="language">
-        <img
-          class="icon-img inline-icon"
-          :src="assetsSrc['code']"
-          :alt="language"
-          loading="lazy"
-        />{{ language }}
+        <i class="fa fa-code" aria-hidden="true"></i>
+        {{ language }}
       </em>
     </div>
     <p>{{ $func.formatDate(date) }}</p>
@@ -72,21 +63,10 @@ export default {
   },
   computed: {
     ...mapState("theme", ["userTheme"]),
-    assetsSrc() {
-      return this.userTheme == "dark-theme"
-        ? {
-            github: this.$func.getIconImgUrl("github"),
-            code: this.$func.getIconImgUrl("code"),
-          }
-        : {
-            github: this.$func.getIconImgUrl("github-dark"),
-            code: this.$func.getIconImgUrl("code-dark"),
-          };
-    },
   },
   methods: {
     goToProject(url) {
-      window.location.href = url;
+      window.open(url, "_blank").focus();
     },
   },
 };
