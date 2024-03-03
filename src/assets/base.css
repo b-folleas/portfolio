@@ -113,6 +113,7 @@ h2.h-center {
         opacity: 0;
         top: -20px;
     }
+
     to {
         opacity: 1;
         top: 0;
@@ -127,6 +128,7 @@ h2.h-center {
         opacity: 0;
         top: -20px;
     }
+
     to {
         opacity: 1;
         top: 0;
@@ -141,6 +143,7 @@ h2.h-center {
         opacity: 0;
         top: -20px;
     }
+
     to {
         opacity: 1;
         top: 0;
@@ -155,6 +158,7 @@ h2.h-center {
         opacity: 0;
         top: -20px;
     }
+
     to {
         opacity: 1;
         top: 0;
@@ -169,6 +173,7 @@ h2.h-center {
         opacity: 0;
         top: -20px;
     }
+
     to {
         opacity: 1;
         top: 0;
@@ -265,6 +270,8 @@ h2.h-center {
     text-decoration: none;
 }
 
+/* Snip 1135 */
+
 .snip1135 {
     text-align: center;
     text-transform: uppercase;
@@ -282,6 +289,15 @@ h2.h-center {
     list-style: outside none none;
     margin: 0 0.5em;
     padding: 0;
+}
+
+
+.snip1135 a {
+    font-size: clamp(16px, 1.2vw, 1.2vw);
+    padding: 0.3em 0;
+    color: var(--color-text);
+    position: relative;
+    text-decoration: none;
 }
 
 .snip1135 .link {
@@ -339,10 +355,12 @@ h2.h-center {
     .mb-60 {
         margin-bottom: 2vh;
     }
+
     .small-icon-img {
         margin: 0.5em;
         height: 20px;
     }
+
     h2.h-center {
         margin-top: 1.5em;
         margin-bottom: 0.5rem;

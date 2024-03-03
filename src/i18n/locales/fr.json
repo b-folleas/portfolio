@@ -28,16 +28,20 @@
     "experience": {
         "name": "Parcours",
         "title": {
+            "japan": "Japon",
             "fiducial": "Fiducial Staffing",
             "cpe": "CPE Lyon",
             "conity": "Conity",
             "dawson": "Dawson College",
-            "iut": "Institute Universitaire de Technologie Technology"
+            "iut": "Institute Universitaire de Technologie"
         },
         "description": {
+            "japan": "",
             "fiducial": "Fiducial Staffing - Ingénieur Fullstack",
+            "fiducial_2": "Affecté au pilotage et développement de projets destinés au réseau d'expertise comptable de la firme.",
             "cpe": "CPE Lyon - Ingénieur en informatique",
             "conity": "Conity - Développeur & Assureur Qualité Web",
+            "dawson_2": "Membre du club Dawson College Blues Athletics",
             "dawson": "Dawson College",
             "iut": "IUT Lyon 1 - Spécialité Mathématiques"
         }

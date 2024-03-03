@@ -28,6 +28,7 @@
     "experience": {
         "name": "Experience",
         "title": {
+            "japan": "Japan",
             "fiducial": "Fiducial Staffing",
             "cpe": "CPE Lyon",
             "conity": "Conity",
@@ -35,12 +36,13 @@
             "iut": "Institute of Technology"
         },
         "description": {
+            "japan": "",
             "fiducial": "Fiducial Staffing - Full stack engineer",
-            "fiducial_2": "Affecté au pilotage et développement de projets destinés au réseau d'expertise comptable de la firme.",
+            "fiducial_2": "Assigned to managing and developing projects for the firm's accounting network.",
             "cpe": "CPE Lyon - Software Engineer Graduate",
             "conity": "Conity - Software Developer & Quality Assurance",
             "dawson": "Dawson College - Software Developer Graduate",
-            "dawson_2": "Membre du club Dawson College Blues Athletics",
+            "dawson_2": "Member of Dawson College Blues Athletics",
             "iut": "IUT Lyon 1 - Software Developer Graduate (specialization : Mathematics)"
         }
     },
