@@ -9,30 +9,21 @@
         class="profile-img fade-in-top noselect"
         src="../assets/avatar.jpg"
         alt="Avatar"
-        :title="$t('avatar')"
+        :title="$t('hero.avatar')"
         ref="img"
       /> -->
       <picture>
         <source srcset="../assets/avatar.jpg" media="(min-width: 2000px)" />
         <source srcset="../assets/avatar-350.jpg" media="(min-width: 768px)" />
-        <img
-          src="../assets/avatar-250.jpg"
-          id="avatar"
-          alt="Avatar"
-          class="profile-img fade-in-top noselect"
-          :title="$t('avatar')"
-          ref="img"
-        />
+        <img src="../assets/avatar-250.jpg" id="avatar" alt="Avatar" class="profile-img fade-in-top noselect"
+          :title="$t('hero.avatar')" ref="img" />
       </picture>
     </div>
-    <div
-      class="profile-text fade-in-top"
-      :class="{ smaller: $i18n.locale === 'ja' }"
-    >
-      <h1>{{ $t("hello") }}</h1>
+    <div class="profile-text fade-in-top" :class="{ smaller: $i18n.locale === 'ja' }">
+      <h1>{{ $t("hero.hello") }}</h1>
       <!-- TODO : rename -->
-      <h1 class="smaller">{{ $t("i_m_brice") }}</h1>
-      <p class="emphasis-txt big-emphasis">{{ $t("full_stack_engineer") }}</p>
+      <h1 class="smaller">{{ $t("hero.i_m_brice") }}</h1>
+      <p class="emphasis-txt big-emphasis">{{ $t("hero.full_stack_engineer") }}</p>
       <ScrollDown />
     </div>
   </main>
@@ -56,22 +47,26 @@ main {
   margin: 5em;
   width: 100%;
 }
+
 h1 {
   margin: 0;
   font-weight: 300;
   font-size: clamp(42px, 5vw, 60px);
 }
+
 h1.smaller {
   /* TODO : rename */
   font-size: clamp(52px, 8vw, 100px);
   font-weight: 900;
 }
+
 h3 {
   text-align: center;
   font-size: clamp(24px, 3vw, 48px);
   margin: 0;
   font-weight: 700;
 }
+
 img {
   border: 6px solid var(--color-background-reverse);
   border-radius: 50%;
@@ -103,6 +98,7 @@ img {
 }
 
 @media (max-width: 768px) {
+
   /* Responsive layout - makes a one column layout instead of a two-column layout */
   main {
     flex-direction: column;
@@ -121,9 +117,11 @@ img {
   .smaller h1 {
     font-size: clamp(36px, 4vw, 48px);
   }
+
   .smaller h1.smaller {
     font-size: clamp(44px, 7vw, 60px);
   }
+
   .smaller h3 {
     font-size: clamp(20px, 3vw, 38px);
   }

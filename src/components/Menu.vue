@@ -1,16 +1,16 @@
 <template>
   <ul class="snip1217">
     <li>
-      <a @click="$emit('close')" href="#about">{{ $t("about") }}</a>
+      <a @click="$emit('close')" href="#about">{{ $t("navigation.about") }}</a>
     </li>
     <li>
-      <a @click="$emit('close')" href="#experience">{{ $t("experience.name") }}</a>
+      <a @click="$emit('close')" href="#experience">{{ $t("navigation.experience") }}</a>
     </li>
     <li>
-      <a @click="$emit('close')" href="#works">{{ $t("works") }}</a>
+      <a @click="$emit('close')" href="#works">{{ $t("navigation.works") }}</a>
     </li>
     <li>
-      <a @click="$emit('close')" href="#info">{{ $t("info") }}</a>
+      <a @click="$emit('close')" href="#info">{{ $t("navigation.info") }}</a>
     </li>
     <li id="themeBtn">
       <ThemeButton />

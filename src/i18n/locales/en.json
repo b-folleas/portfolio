@@ -1,21 +1,30 @@
 {
-    "hello": "Hello",
-    "i_m_brice": "I'm Brice",
-    "brice": "Brice",
-    "full_stack_engineer": "Full Stack Engineer",
-    "avatar": "Avatar by catalyststuff / freepik",
-    "now": "Now",
-    "description": {
-        "paragraph_one": "Last year student in internship as a Full Stack developer, based in Lyon, France. Through my studies, my three years work experience and personal projects, I deepened my skills in creating websites using frameworks such as",
-        "paragraph_two": "In my free time, I try to discover new technologies. Currently, I'm working on a personal project using ",
-        "paragraph_three": "I'm looking for a new job oppotunity in ",
-        "yokohama": "Yokohama",
-        "tokyo": "Tokyo",
-        "japan": "Japan"
+    "navigation": {
+        "about": "About",
+        "experience": "Experience",
+        "works": "Projects",
+        "info": "Infos"
     },
-    "download_resume": "Download Resume",
-    "about": "About",
-    "skills": "Skills",
+    "hero": {
+        "avatar": "Avatar created by catalyststuff / freepik",
+        "brice": "Brice",
+        "full_stack_engineer": "Full Stack Engineer",
+        "hello": "Hi, I'm ",
+        "i_m_brice": "Brice"
+    },
+    "about": {
+        "name": "About",
+        "description": {
+            "paragraph_one": "Hey, I'm Brice, a fullstack engineer originally from Lyon but now living in Tokyo, with over 4 years' experience in web development. Through my professional and academic experiences, as well as personal projects, I've been able to deepen my skills in website creation using a number of frameworks such as ",
+            "paragraph_two": "I'm constantly looking for new challenges and discovering new technologies. At the moment, I'm working on a personal project using the following technologies ",
+            "paragraph_three": "I'm looking for a new job oppotunity in ",
+            "yokohama": "Yokohama",
+            "tokyo": "Tokyo",
+            "japan": "Japan"
+        },
+        "download_resume": "Download Resume",
+        "skills": "Skills"
+    },
     "experience": {
         "name": "Experience",
         "title": {
@@ -26,21 +35,29 @@
             "iut": "Institute of Technology"
         },
         "description": {
-            "fiducial": "Développeur Full stack au sein de la DSI de Fiducial dans le bureau d'études des Métiers Réglementés.",
+            "fiducial": "Fiducial Staffing - Full stack engineer",
             "fiducial_2": "Affecté au pilotage et développement de projets destinés au réseau d'expertise comptable de la firme.",
-            "cpe": "Informatique et Réseaux de Communication (IRC) - Majeure Systèmes d'Informations (SI)",
-            "conity": "Stage effectué en tant que développeur full-stack et assureur qualité chez Conity, solution numérique de suivi de projet de construction.",
-            "dawson": "Semestre d'échange au Dawson College, effectué en partenariat avec l'IUT Lyon 1",
+            "cpe": "CPE Lyon - Software Engineer Graduate",
+            "conity": "Conity - Software Developer & Quality Assurance",
+            "dawson": "Dawson College - Software Developer Graduate",
             "dawson_2": "Membre du club Dawson College Blues Athletics",
-            "iut": "Spécialisation 2ème année : Mathématiques & Technologies Avancées"
+            "iut": "IUT Lyon 1 - Software Developer Graduate (specialization : Mathematics)"
         }
     },
-    "works": "Works",
-    "info": "Info",
-    "english": "EN",
-    "french": "FR",
-    "japanese": "JA",
-    "read_more": "Read More",
-    "projects": "projects",
-    "realised": "Realised with Vite.js, Travis CI & Freepik images"
+    "info": {
+        "name": "Informations"
+    },
+    "works": {
+        "name": "Works",
+        "projects": "projects"
+    },
+    "footer": {
+        "realised": "Realised with Vite.js, Travis CI & Freepik images"
+    },
+    "languages": {
+        "english": "EN",
+        "french": "FR",
+        "japanese": "JA"
+    },
+    "now": "Now"
 }

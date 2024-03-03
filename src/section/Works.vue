@@ -1,34 +1,19 @@
 <template>
   <div class="flex-div">
     <span id="works" class="mb-60"></span>
-    <h2 class="h-center">{{ $t("works") }}</h2>
+    <h2 class="h-center">{{ $t("works.name") }}</h2>
     <div class="mt-3 flex-div">
       <div class="project-div">
-        <ProjectModule
-          v-for="project in currentProjects"
-          :key="project.id"
-          :name="project.name"
-          :description="project.description"
-          :url="project.svn_url"
-          :language="project.language"
-          :topics="project.topics"
-          :date="project.updated_at"
-          class="module"
-          :class="{ centersection: project !== currentProjects[0] }"
-        />
+        <ProjectModule v-for="project in currentProjects" :key="project.id" :name="project.name"
+          :description="project.description" :url="project.svn_url" :language="project.language"
+          :topics="project.topics" :date="project.updated_at" class="module"
+          :class="{ centersection: project !== currentProjects[0] }" />
       </div>
-      <span
-        >{{ projectsNumbers }} / {{ filteredProjects.length }}
-        {{ $t("projects") }}</span
-      >
+      <span>{{ projectsNumbers }} / {{ filteredProjects.length }}
+        {{ $t("works.projects") }}</span>
       <br />
-      <pagination
-        class="pagination"
-        :totalPages="totalPages"
-        :perPage="perPage"
-        :currentPage="currentPage"
-        @pagechanged="onPageChange"
-      />
+      <pagination class="pagination" :totalPages="totalPages" :perPage="perPage" :currentPage="currentPage"
+        @pagechanged="onPageChange" />
     </div>
   </div>
 </template>
@@ -90,8 +75,8 @@ export default {
   },
 };
 </script>
-<style scoped>
 
+<style scoped>
 .project-div {
   display: inline-flex;
   flex-flow: row wrap;

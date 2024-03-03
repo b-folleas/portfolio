@@ -1,13 +1,9 @@
 <template>
   <ul class="snip1135">
-    <li
-      v-for="language in languages"
-      :key="language.key"
-      :class="{ active: currentLanguage === language.key }"
-    >
+    <li v-for="language in LANGUAGES" :key="language.key" :class="{ active: currentLanguage === language.key }">
       <a class="link" v-on:click="$i18n.locale = language.key">{{
-        $t(language.name)
-      }}</a>
+      $t("languages." + language.name)
+    }}</a>
     </li>
   </ul>
 </template>
@@ -17,7 +13,7 @@ export default {
   name: "SelectButtonComponent",
   data() {
     return {
-      languages: [
+      LANGUAGES: [
         { key: "fr", name: "french" },
         { key: "en", name: "english" },
         { key: "ja", name: "japanese" },

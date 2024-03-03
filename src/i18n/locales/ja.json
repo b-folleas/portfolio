@@ -1,45 +1,63 @@
 {
-    "hello": "こんにちは",
-    "i_m_brice": "ブライスです。",
-    "brice": "ブライス",
-    "full_stack_engineer": "フルスタックエンジニア",
-    "avatar": "アバター by catalyststuff / freepik",
-    "now": "今日",
-    "description": {
-        "paragraph_one": "Last year student in internship as a Full Stack developer, based in Lyon, France. Through my studies, my three years work experience and personal projects, I deepened my skills in creating websites using frameworks such as",
-        "paragraph_two": "In my free time, I try to discover new technologies. Currently, I'm working on a personal project using ",
-        "paragraph_three": "I'm looking for a new job oppotunity in ",
-        "yokohama": "Yokohama",
-        "tokyo": "Tokyo",
-        "japan": "Japan"
+    "navigation": {
+        "about": "アバウト",
+        "experience": "経験",
+        "works": "プロジェクト",
+        "info": "インフォメーション"
     },
-    "download_resume": "履歴書のダウンロード",
-    "about": "About",
-    "skills": "Skills",
+    "hero": {
+        "avatar": "アバター by catalyststuff / freepik",
+        "brice": "ブライス",
+        "full_stack_engineer": "フルスタックエンジニア",
+        "hello": "こんにちは",
+        "i_m_brice": "ブライスです。"
+    },
+    "about": {
+        "name": "アバウト",
+        "description": {
+            "paragraph_one": "リヨン出身、東京在住のフルスタックエンジニア、ブリスです。仕事と大学での経験、そして個人的なプロジェクトを通して、以下のようなフレームワークを使ったウェブサイト制作のスキルを深めることができました。",
+            "paragraph_two": "私は常に新しい挑戦を求め、新しい技術を発見しています。現在は、以下のテクノロジーを使った個人的なプロジェクトに取り組んでいます。",
+            "paragraph_three": "私は、次のような新しい仕事の機会を探している。",
+            "yokohama": "横浜",
+            "tokyo": "東京",
+            "japan": "日本"
+        },
+        "download_resume": "履歴書のダウンロード",
+        "skills": "スキル"
+    },
     "experience": {
-        "name": "Experience",
+        "name": "経験",
         "title": {
-            "fiducial": "Fiducial Staffing",
-            "cpe": "CPE Lyon",
-            "conity": "コニチ",
+            "fiducial": "フィデューシャル・スタッフィング",
+            "cpe": "CPE リヨン",
+            "conity": "コニティ",
             "dawson": "ドーソンカレッジ",
             "iut": "リヨン工業高等専門学校"
         },
         "description": {
-            "fiducial": "Développeur Full stack au sein de la DSI de Fiducial dans le bureau d'études des Métiers Réglementés (dont 3 ans d'alternance).",
-            "fiducial_2": "Principalement affecté au pilotage et développement du projet de Suivi des Interlocuteurs et du module d'Élaboration Budgétaire interne. Ai également supervisé l'intégration et le développement de stagiaires et employés en reconversion professionnelle.",
-            "cpe": "CPE",
-            "conity": "Stage effectué en tant que développeur full-stack et assureur qualité chez Conity, solution numérique de suivi de projet de construction.",
-            "dawson": "Dawson College",
-            "iut": "Institute of Technology"
+            "fiducial": "フィデューシャル・スタッフィング - フルスタックエンジニア",
+            "fiducial_2": "当事務所の会計事務所ネットワークのプロジェクト管理・開発を担当。",
+            "cpe": "CPE リヨン - ソフトウェア・エンジニア",
+            "conity": "コニティ - ソフトウェア開発・品質保証",
+            "dawson": "ドーソンカレッジ - ソフトウェア開発者",
+            "dawson_2": "ドーソン・カレッジ・ブルース・アスレチックスのメンバー",
+            "iut": "リヨン工業高等専門学校 - ソフトウェア開発者（専門：数学）"
         }
     },
-    "works": "Works",
-    "info": "Info",
-    "english": "英語",
-    "french": "フランス語",
-    "japanese": "日本語",
-    "read_more": "Read More",
-    "projects": "projects",
-    "realised": "Realised with Vite.js, Travis CI & Freepik images"
+    "info": {
+        "name": "インフォメーション"
+    },
+    "works": {
+        "name": "プロジェクト",
+        "projects": "プロジェクト"
+    },
+    "footer": {
+        "realised": "Vite.js、Travis CI、Freepik画像で実現"
+    },
+    "languages": {
+        "english": "英語",
+        "french": "フランス語",
+        "japanese": "日本語"
+    },
+    "now": "今日"
 }

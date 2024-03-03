@@ -1,7 +1,8 @@
 <template>
   <div class="flex-div">
+    <span id="experience" class="mb-60"></span>
     <h2 class="h-center">{{ $t("experience.name") }}</h2>
-    <AppTabs :eventList="events" />
+    <AppTabs :eventList="EVENTS" />
   </div>
 </template>
 
@@ -15,7 +16,7 @@ export default {
   },
   data() {
     return {
-      events: [
+      EVENTS: [
         {
           id: 1,
           title: "japan",

@@ -1,21 +1,30 @@
 {
-    "hello": "Bonjour, je suis",
-    "i_m_brice": "Brice",
-    "brice": "Brice",
-    "full_stack_engineer": "Ingénieur Full Stack",
-    "avatar": "Avatar créé par catalyststuff / freepik",
-    "now": "Aujourd'hui",
-    "description": {
-        "paragraph_one": "Étudiant en dernière année d'alternance en tant qu'ingénieur Full Stack, situé à Lyon, France. Au travers de mes études et de mes trois années d'expérience en entreprise ainsi que sur des projets personnels, j'ai pu approfondir mes compétences dans la création de site web en utilisant des frameworks tels que ",
-        "paragraph_two": "Durant mon temps libre, je cherche à découvrir de nouvelles technologies. Actuellement, je travaille sur un projet personnel en utilisant les technologies ",
-        "paragraph_three": "Je suis à la recherche d'une opportunité professionnelle à ",
-        "yokohama": "Yokohama",
-        "tokyo": "Yokohama",
-        "japan": "Japon."
+    "navigation": {
+        "about": "À propos",
+        "experience": "Expérience",
+        "works": "Projets",
+        "info": "Infos"
     },
-    "download_resume": "Télécharger mon CV",
-    "about": "À propos",
-    "skills": "Compétences",
+    "hero": {
+        "avatar": "Avatar créé par catalyststuff / freepik",
+        "brice": "Brice",
+        "full_stack_engineer": "Ingénieur Full Stack",
+        "hello": "Bonjour, je suis",
+        "i_m_brice": "Brice"
+    },
+    "about": {
+        "name": "À propos",
+        "description": {
+            "paragraph_one": "Hey, Je suis Brice, un ingénieur fullstack originaire de Lyon mais vivant à aujorud'hui à Tokyo, ayant plus de 4 années d'expérience dans le développement web. J'ai pu, au travers de mon expériences professionnelle et mon parcours universitaire ainsi que sur des projets personnels, approfondir mes compétences dans la création de sites web en utilisant de nombreux frameworks tels que ",
+            "paragraph_two": "Je suis constamment à la recherche de nouveaux défis et à découvrir de nouvelles technologies. Actuellement, je travaille sur un projet personnel en utilisant les technologies ",
+            "paragraph_three": "Je suis à la recherche d'une opportunité professionnelle à ",
+            "yokohama": "Yokohama",
+            "tokyo": "Yokohama",
+            "japan": "Japon"
+        },
+        "download_resume": "Télécharger mon CV",
+        "skills": "Compétences"
+    },
     "experience": {
         "name": "Parcours",
         "title": {
@@ -23,7 +32,7 @@
             "cpe": "CPE Lyon",
             "conity": "Conity",
             "dawson": "Dawson College",
-            "iut": "Institute of Technology"
+            "iut": "Institute Universitaire de Technologie Technology"
         },
         "description": {
             "fiducial": "Fiducial Staffing - Ingénieur Fullstack",
@@ -33,12 +42,20 @@
             "iut": "IUT Lyon 1 - Spécialité Mathématiques"
         }
     },
-    "works": "Projets",
-    "info": "Infos",
-    "english": "EN",
-    "french": "FR",
-    "japanese": "JA",
-    "read_more": "Voir plus",
-    "projects": "projets",
-    "realised": "Réalisé avec Vite.js, Travis CI & les images Freepik"
+    "info": {
+        "name": "Informations"
+    },
+    "works": {
+        "name": "Projets",
+        "projects": "projets"
+    },
+    "footer": {
+        "realised": "Réalisé avec Vite.js, Travis CI & les images Freepik"
+    },
+    "languages": {
+        "english": "EN",
+        "french": "FR",
+        "japanese": "JA"
+    },
+    "now": "Aujourd'hui"
 }

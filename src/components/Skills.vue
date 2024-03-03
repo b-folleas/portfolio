@@ -1,18 +1,11 @@
 <template>
   <div class="skills-container">
     <div class="flex-icons w-80">
-      <img
-        v-for="skill in skillImages"
-        :key="skill.title"
-        class="icon-img"
-        loading="lazy"
-        :title="skill.title"
-        :src="$func.getIconImgUrl(skill.src)"
-        :alt="skill.title"
-      />
+      <img v-for="skill in skillImages" :key="skill.title" class="icon-img" loading="lazy" :title="skill.title"
+        :src="$func.getIconImgUrl(skill.src)" :alt="skill.title" />
       <a class="action-btn" :href="cvUrl" download="cv-folleas-brice.pdf">
         <i class="mr-1 fa fa-download"></i>
-        {{ $t("download_resume") }}
+        {{ $t("about.download_resume") }}
       </a>
     </div>
   </div>
