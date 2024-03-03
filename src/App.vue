@@ -22,7 +22,7 @@
       <About name="about" class="small-width-section" />
       <Skills name="skills" class="small-width-section" />
     </div>
-    <History name="history" class="section" />
+    <Experience name="experience" class="section" />
     <Works name="works" class="section" />
     <Footer id="footer" class="section" :src="assetsSrc.footer" />
   </div>
@@ -33,7 +33,7 @@ import { mapState, mapActions } from "vuex";
 import Home from "./section/Home.vue";
 import About from "./section/About.vue";
 import Skills from "./section/Skills.vue";
-import History from "./section/History.vue";
+import Experience from "./section/Experience.vue";
 import Works from "./section/Works.vue";
 import Footer from "./section/Footer.vue";
 import Menu from "./components/Menu.vue";
@@ -41,7 +41,16 @@ import MenuButton from "./components/MenuButton.vue";
 export default {
   name: "App",
   inject: ["$func"],
-  components: { Home, Menu, MenuButton, About, Skills, History, Works, Footer },
+  components: {
+    Home,
+    Menu,
+    MenuButton,
+    About,
+    Skills,
+    Experience,
+    Works,
+    Footer,
+  },
   data() {
     return {
       showMenu: false,

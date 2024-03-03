@@ -1,6 +1,6 @@
 <template>
   <div class="flex-div">
-    <h2 class="h-center">{{ $t("history.name") }}</h2>
+    <h2 class="h-center">{{ $t("experience.name") }}</h2>
     <AppTabs :eventList="events" />
   </div>
 </template>

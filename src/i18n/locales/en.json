@@ -16,8 +16,8 @@
     "download_resume": "Download Resume",
     "about": "About",
     "skills": "Skills",
-    "history": {
-        "name": "History",
+    "experience": {
+        "name": "Experience",
         "title": {
             "fiducial": "Fiducial Staffing",
             "cpe": "CPE Lyon",
@@ -35,7 +35,7 @@
             "iut": "Spécialisation 2ème année : Mathématiques & Technologies Avancées"
         }
     },
-    "works": "Works on Github",
+    "works": "Works",
     "info": "Info",
     "english": "EN",
     "french": "FR",

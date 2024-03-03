@@ -1,5 +1,5 @@
 <template>
-  <div class="history-tabs">
+  <div class="experience-tabs">
     <ul class="event-selector snip1135">
       <li
         v-for="event in eventList"
@@ -7,12 +7,12 @@
         @click="setActiveTab(event)"
         :class="{ active: activeEvent === event }"
       >
-        <p class="link">{{ $t("history.title." + event.title) }}</p>
+        <p class="link">{{ $t("experience.title." + event.title) }}</p>
       </li>
     </ul>
     <article v-if="activeEvent" class="event-container">
       <div class="project-module-title">
-        <h3>{{ $t("history.title." + activeEvent.title) }}</h3>
+        <h3>{{ $t("experience.title." + activeEvent.title) }}</h3>
       </div>
       <p>
         <span>
@@ -26,12 +26,12 @@
         </span>
       </p>
       <br />
-      <p>{{ $t("history.description." + activeEvent.title) }}</p>
+      <p>{{ $t("experience.description." + activeEvent.title) }}</p>
       <p
         class="mt-2"
         v-if="isThereHistoryDescriptionPart2(activeEvent.title + '_2')"
       >
-        {{ $t("history.description." + activeEvent.title + "_2") }}
+        {{ $t("experience.description." + activeEvent.title + "_2") }}
       </p>
     </article>
   </div>
@@ -56,7 +56,7 @@ export default {
       this.activeEvent = item;
     },
     isThereHistoryDescriptionPart2(searchedKey) {
-      return !!this.$i18n.messages.en.history.description[searchedKey];
+      return !!this.$i18n.messages.en.experience.description[searchedKey];
     },
   },
 };
@@ -76,7 +76,7 @@ p {
   transition: opacity 0.2s ease-in-out;
 }
 
-.history-tabs {
+.experience-tabs {
   display: flex;
   width: 80vw;
 }
@@ -176,7 +176,7 @@ p {
     opacity: 0.9;
   }
 
-  .history-tabs {
+  .experience-tabs {
     margin: 5vw;
   }
 }

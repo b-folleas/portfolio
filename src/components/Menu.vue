@@ -4,6 +4,9 @@
       <a @click="$emit('close')" href="#about">{{ $t("about") }}</a>
     </li>
     <li>
+      <a @click="$emit('close')" href="#experience">{{ $t("experience.name") }}</a>
+    </li>
+    <li>
       <a @click="$emit('close')" href="#works">{{ $t("works") }}</a>
     </li>
     <li>
@@ -24,7 +27,7 @@ import SelectButton from "../components/SelectButton.vue";
 export default {
   name: "MenuComponent",
   components: { ThemeButton, SelectButton },
-  emits: ["close"],
+  emits: ["close"]
 };
 </script>
 
@@ -59,10 +62,12 @@ li {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 .snip1217 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .snip1217 li {
   display: inline-block;
   list-style: outside none none;
@@ -70,6 +75,7 @@ li {
   margin-right: 1.5em;
   padding: 0;
 }
+
 .snip1217 a {
   font-size: clamp(16px, 1.2vw, 1.2vw);
   padding: 0.3em 0;
@@ -77,6 +83,7 @@ li {
   position: relative;
   text-decoration: none;
 }
+
 .snip1217 a:before,
 .snip1217 a:after {
   height: 3px;
@@ -87,18 +94,22 @@ li {
   background-color: var(--color-primary);
   width: 0;
 }
+
 .snip1217 a:before {
   top: 0;
   left: 0;
 }
+
 .snip1217 a:after {
   bottom: 0;
   right: 0;
 }
+
 .snip1217 a:hover,
 .snip1217 .current a {
   color: var(--color-text-hover);
 }
+
 .snip1217 a:hover:before,
 .snip1217 .current a:before,
 .snip1217 a:hover:after,
@@ -112,6 +123,7 @@ li {
     flex-flow: column nowrap;
     height: 100vh;
   }
+
   .snip1217 * {
     margin: auto;
   }
