@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="nav noselect">
+    <nav class="nav noselect" :class="showNav ? 'nav-shown' : 'nav-hidden'">
       <img id="appLogo" class="logo noselect" :src="assetsSrc.logo" alt="logo" @click="scrollToTop" />
       <Transition>
         <Menu v-if="showMenu" v-on:close="toggleMenu" />
@@ -48,6 +48,8 @@ export default {
     return {
       showMenu: false,
       initUserTheme: "",
+      lastScrollPosition: 0,
+      showNav: true // When first arriving on app nav is displayed
     };
   },
   computed: {
@@ -72,6 +74,10 @@ export default {
     document.documentElement.className = initUserTheme;
     this.setUserTheme(initUserTheme);
     // Here call ThemeButton component method setTheme for initUserTheme
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
     ...mapActions("theme", ["getLocalStorageTheme", "setUserTheme"]),
@@ -87,7 +93,10 @@ export default {
           behavior: "smooth",
         });
     },
-    toggleMenu() {
+    closeMenu() { // Called by scroll down event handler
+      this.showMenu = false;
+    },
+    toggleMenu() { // Called on menu btn click
       this.showMenu = !this.showMenu;
     },
     getMediaPreference() {
@@ -100,6 +109,16 @@ export default {
         return "light-theme";
       }
     },
+    handleScroll() {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > this.lastScrollPosition) {
+        this.closeMenu()
+        this.showNav = false;
+      } else {
+        this.showNav = true;
+      }
+      this.lastScrollPosition = currentScrollY;
+    }
   },
 };
 </script>
@@ -190,6 +209,16 @@ h4 {
 
 h6 {
   font-size: clamp(8px, 12px, 16px);
+}
+
+.nav-shown {
+  transform: translateY(0%);
+  transition: transform 0.3s ease;
+}
+
+.nav-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 426px) {
