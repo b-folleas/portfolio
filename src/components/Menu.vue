@@ -1,16 +1,7 @@
 <template>
   <ul class="snip1135">
-    <li>
-      <a class="link" @click="$emit('close')" href="#about">{{ $t("navigation.about") }}</a>
-    </li>
-    <li>
-      <a class="link" @click="$emit('close')" href="#experience">{{ $t("navigation.experience") }}</a>
-    </li>
-    <li>
-      <a class="link" @click="$emit('close')" href="#works">{{ $t("navigation.works") }}</a>
-    </li>
-    <li>
-      <a class="link" @click="$emit('close')" href="#info">{{ $t("navigation.info") }}</a>
+    <li v-for="item in MENU_ITEMS" :key="item.id">
+      <a class="link" @click="$emit('close')" :href="item.href">{{ item.label }}</a>
     </li>
     <li id="themeBtn">
       <ThemeButton />
@@ -27,7 +18,17 @@ import SelectButton from "../components/SelectButton.vue";
 export default {
   name: "MenuComponent",
   components: { ThemeButton, SelectButton },
-  emits: ["close"]
+  emits: ["close"],
+  data() {
+    return {
+      MENU_ITEMS: [
+        { id: 1, label: this.$t("navigation.about"), href: "#about" },
+        { id: 2, label: this.$t("navigation.experience"), href: "#experience" },
+        { id: 3, label: this.$t("navigation.works"), href: "#works" },
+        { id: 4, label: this.$t("navigation.info"), href: "#info" }
+      ]
+    };
+  }
 };
 </script>
 
