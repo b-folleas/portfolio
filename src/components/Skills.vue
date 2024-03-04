@@ -1,9 +1,9 @@
 <template>
   <div class="skills-container">
     <div class="flex-icons w-80">
-      <img v-for="skill in skillImages" :key="skill.title" class="icon-img" loading="lazy" :title="skill.title"
+      <img v-for="skill in SKILL_IMAGES" :key="skill.title" class="icon-img" loading="lazy" :title="skill.title"
         :src="$func.getIconImgUrl(skill.src)" :alt="skill.title" />
-      <a class="action-btn" :href="cvUrl" download="cv-folleas-brice.pdf">
+      <a class="action-btn" :href="cvInfo.url" :download="cvInfo.name">
         <i class="mr-1 fa fa-download"></i>
         {{ $t("about.download_resume") }}
       </a>
@@ -17,7 +17,7 @@ export default {
   inject: ["$func"],
   data() {
     return {
-      skillImages: [
+      SKILL_IMAGES: [
         { title: "JavaScript", src: "js" },
         { title: "Vue.js", src: "vue" },
         { title: "Symfony Framework", src: "symfony" },
@@ -28,9 +28,24 @@ export default {
     };
   },
   computed: {
-    cvUrl() {
-      return new URL("../assets/cv.pdf", import.meta.url).href;
-    },
+    cvInfo() {
+      let url, name
+      switch (this.$i18n.locale) {
+        case 'fr':
+          url = "../assets/cv-fr.pdf"
+          name = "CV_Brice_FOLLEAS.pdf"
+          break;
+        case 'ja':
+          url = "../assets/cv-ja.pdf"
+          name = "履歴書フォレア・ブライス.pdf"
+          break;
+        default:
+          url = "../assets/cv-en.pdf"
+          name = "Resume_Brice_FOLLEAS.pdf"
+          break;
+      }
+      return { url: new URL(url, import.meta.url).href, name };
+    }
   },
 };
 </script>
