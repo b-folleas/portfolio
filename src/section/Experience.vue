@@ -9,7 +9,7 @@
 <script>
 import AppTabs from "../components/AppTabs.vue";
 export default {
-  name: "HistorySection",
+  name: "ExperienceSection",
   inject: ["$func"],
   components: {
     AppTabs,

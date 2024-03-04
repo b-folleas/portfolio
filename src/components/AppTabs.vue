@@ -1,12 +1,8 @@
 <template>
   <div class="experience-tabs">
     <ul class="event-selector snip1135">
-      <li
-        v-for="event in eventList"
-        :key="event.id"
-        @click="setActiveTab(event)"
-        :class="{ active: activeEvent === event }"
-      >
+      <li v-for="event in eventList" :key="event.id" @click="setActiveTab(event)"
+        :class="{ active: activeEvent === event }">
         <p class="link">{{ $t("experience.title." + event.title) }}</p>
       </li>
     </ul>
@@ -27,10 +23,7 @@
       </p>
       <br />
       <p>{{ $t("experience.description." + activeEvent.title) }}</p>
-      <p
-        class="mt-2"
-        v-if="isThereHistoryDescriptionPart2(activeEvent.title + '_2')"
-      >
+      <p class="mt-2" v-if="isThereExperienceDescriptionPart2(activeEvent.title + '_2')">
         {{ $t("experience.description." + activeEvent.title + "_2") }}
       </p>
     </article>
@@ -55,7 +48,7 @@ export default {
     setActiveTab(item) {
       this.activeEvent = item;
     },
-    isThereHistoryDescriptionPart2(searchedKey) {
+    isThereExperienceDescriptionPart2(searchedKey) {
       return !!this.$i18n.messages.en.experience.description[searchedKey];
     },
   },
@@ -80,6 +73,7 @@ p {
   display: flex;
   width: 80vw;
 }
+
 .event-container {
   padding: 1em;
   width: 70vw;
@@ -119,6 +113,7 @@ p {
 .event-selector li:last-child {
   border-bottom-left-radius: 20px;
 }
+
 .event-selector li:hover {
   cursor: pointer;
   border: 2px solid var(--color-primary) !important;
@@ -157,9 +152,11 @@ p {
 .event-container:hover h3 {
   opacity: 0.9;
 }
+
 .project-module-header {
   margin-bottom: 1em;
 }
+
 .project-module-title {
   display: flex;
   flex-flow: row nowrap;
