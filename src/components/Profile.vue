@@ -12,8 +12,8 @@
     <div class="profile-text fade-in-top" :class="{ smaller: $i18n.locale === 'ja' }">
       <h1>{{ $t("hero.hello") }}</h1>
       <!-- TODO : rename -->
-      <h1 class="smaller">{{ $t("hero.i_m_brice") }}</h1>
-      <p class="emphasis-txt big-emphasis">{{ $t("hero.full_stack_engineer") }}</p>
+      <h1 class="smaller no-wrap">{{ $t("hero.i_m_brice") }}</h1>
+      <p class="emphasis-txt big-emphasis no-wrap">{{ $t("hero.full_stack_engineer") }}</p>
       <ScrollDown />
     </div>
   </main>
@@ -78,7 +78,6 @@ img {
 }
 
 .big-emphasis {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
