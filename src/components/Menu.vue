@@ -1,6 +1,6 @@
 <template>
   <ul class="snip1135">
-    <li v-for="item in MENU_ITEMS" :key="item.id">
+    <li v-for="item in menuItems" :key="item.id">
       <a class="link" @click="$emit('close')" :href="item.href">{{ item.label }}</a>
     </li>
     <li id="themeBtn">
@@ -19,15 +19,15 @@ export default {
   name: "MenuComponent",
   components: { ThemeButton, SelectButton },
   emits: ["close"],
-  data() {
-    return {
-      MENU_ITEMS: [
+  computed: {
+    menuItems() {
+      return [
         { id: 1, label: this.$t("navigation.about"), href: "#about" },
         { id: 2, label: this.$t("navigation.experience"), href: "#experience" },
         { id: 3, label: this.$t("navigation.works"), href: "#works" },
         { id: 4, label: this.$t("navigation.info"), href: "#info" }
       ]
-    };
+    }
   }
 };
 </script>
