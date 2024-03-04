@@ -12,13 +12,13 @@
       </div>
       <p>
         <span>
-          {{ $func.formatDate(activeEvent.beginDate) }}&nbsp;-&nbsp;
+          {{ $func.formatDate(activeEvent.beginDate, true) }}&nbsp;-&nbsp;
         </span>
         <span v-if="activeEvent.endDate === 'now'">
           {{ $t("now") }}
         </span>
         <span v-else>
-          {{ $func.formatDate(activeEvent.endDate) }}
+          {{ $func.formatDate(activeEvent.endDate, true) }}
         </span>
       </p>
       <br />

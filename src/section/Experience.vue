@@ -20,7 +20,7 @@ export default {
         {
           id: 1,
           title: "japan",
-          beginDate: new Date(2023, 10),
+          beginDate: new Date(2023, 9),
           endDate: "now",
           type: "work",
           city: "Kawasaki",
@@ -29,8 +29,8 @@ export default {
         {
           id: 2,
           title: "fiducial",
-          beginDate: new Date(2019, 9),
-          endDate: new Date(2023, 10),
+          beginDate: new Date(2019, 8),
+          endDate: new Date(2024, 3),
           type: "work",
           city: "Lyon",
           country: "France",
@@ -38,8 +38,8 @@ export default {
         {
           id: 3,
           title: "cpe",
-          beginDate: new Date(2019, 9),
-          endDate: new Date(2022, 7),
+          beginDate: new Date(2019, 8),
+          endDate: new Date(2022, 6),
           type: "graduation",
           city: "Lyon",
           country: "France",
@@ -47,8 +47,8 @@ export default {
         {
           id: 4,
           title: "conity",
-          beginDate: new Date(2019, 4),
-          endDate: new Date(2019, 9),
+          beginDate: new Date(2019, 3),
+          endDate: new Date(2019, 8),
           type: "work",
           city: "Lyon",
           country: "France",
@@ -56,8 +56,8 @@ export default {
         {
           id: 5,
           title: "dawson",
-          beginDate: new Date(2019, 1),
-          endDate: new Date(2019, 4),
+          beginDate: new Date(2019, 0),
+          endDate: new Date(2019, 3),
           type: "graduation",
           city: "Westmount",
           country: "Canada",
@@ -65,8 +65,8 @@ export default {
         {
           id: 6,
           title: "iut",
-          beginDate: new Date(2017, 9),
-          endDate: new Date(2019, 1),
+          beginDate: new Date(2017, 8),
+          endDate: new Date(2019, 0),
           type: "graduation",
           city: "Lyon",
           country: "France",
