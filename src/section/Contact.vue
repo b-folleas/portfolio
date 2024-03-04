@@ -21,6 +21,7 @@
 
 <script>
 export default {
+    name: "ContactSection",
     data() {
         return {
             senderEmail: '',
