@@ -49,6 +49,13 @@
     "info": {
         "name": "インフォメーション"
     },
+    "contact": {
+        "name": "連絡先",
+        "sender": "送信者のメール",
+        "topic": "トピック",
+        "content": "内容",
+        "send": "送る"
+    },
     "works": {
         "name": "プロジェクト",
         "projects": "プロジェクト"

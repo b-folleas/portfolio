@@ -49,6 +49,13 @@
     "info": {
         "name": "Informations"
     },
+    "contact": {
+        "name": "Contact",
+        "sender": "Email expéditeur",
+        "topic": "Sujet",
+        "content": "Contenu du mail",
+        "send": "Envoyer"
+    },
     "works": {
         "name": "Projets",
         "projects": "projets"

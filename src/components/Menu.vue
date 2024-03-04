@@ -64,7 +64,7 @@ li {
   }
 
   ul li {
-    margin: 5vh;
+    margin: 4vh;
   }
 }
 </style>

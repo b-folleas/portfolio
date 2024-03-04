@@ -1,21 +1,11 @@
 <template>
   <div id="app">
     <nav class="nav noselect">
-      <img
-        id="appLogo"
-        class="logo noselect"
-        :src="assetsSrc.logo"
-        alt="logo"
-        @click="scrollToTop"
-      />
+      <img id="appLogo" class="logo noselect" :src="assetsSrc.logo" alt="logo" @click="scrollToTop" />
       <Transition>
         <Menu v-if="showMenu" v-on:close="toggleMenu" />
       </Transition>
-      <MenuButton
-        class="noselect"
-        :show-menu="showMenu"
-        @toggle-menu="toggleMenu"
-      />
+      <MenuButton class="noselect" :show-menu="showMenu" @toggle-menu="toggleMenu" />
     </nav>
     <Home name="home" class="section" />
     <div id="about-skills" class="large-width-section">
@@ -24,6 +14,7 @@
     </div>
     <Experience name="experience" class="section" />
     <Works name="works" class="section" />
+    <Contact name="contact" class="section" />
     <Footer id="footer" class="section" :src="assetsSrc.footer" />
   </div>
 </template>
@@ -35,6 +26,7 @@ import About from "./section/About.vue";
 import Skills from "./section/Skills.vue";
 import Experience from "./section/Experience.vue";
 import Works from "./section/Works.vue";
+import Contact from "./section/Contact.vue";
 import Footer from "./section/Footer.vue";
 import Menu from "./components/Menu.vue";
 import MenuButton from "./components/MenuButton.vue";
@@ -49,6 +41,7 @@ export default {
     Skills,
     Experience,
     Works,
+    Contact,
     Footer,
   },
   data() {
@@ -86,13 +79,13 @@ export default {
       // In case first scroll did not work (for mobile users)
       window.innerWidth < 768
         ? document
-            .getElementById("avatar")
-            .scrollIntoView({ behavior: "smooth" })
+          .getElementById("avatar")
+          .scrollIntoView({ behavior: "smooth" })
         : window.scroll({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-          });
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
     },
     toggleMenu() {
       this.showMenu = !this.showMenu;
@@ -113,6 +106,7 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
 html {
   scroll-behavior: smooth !important;
 }
@@ -145,6 +139,7 @@ body {
 .logo {
   left: 15px;
 }
+
 .menu {
   right: 15px;
 }
@@ -198,6 +193,7 @@ h6 {
 }
 
 @media (max-width: 426px) {
+
   /* Smooth scrolling */
   #app {
     height: 100vh;
