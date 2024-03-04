@@ -17,7 +17,7 @@
 
 /* semantic color variables for this project */
 
-:root {
+:root.light-theme {
     --color-background: var(--vt-c-light);
     --color-background-emphasis: var(--vt-c-white);
     --color-background-reverse: var(--vt-c-black);

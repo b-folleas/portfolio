@@ -57,5 +57,14 @@ li {
 }
 
 /* Responsive layout - makes a one column layout for menu items */
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  ul {
+    flex-flow: column nowrap !important;
+    height: 100vh;
+  }
+
+  ul li {
+    margin: 5vh;
+  }
+}
 </style>

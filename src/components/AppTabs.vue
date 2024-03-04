@@ -116,7 +116,6 @@ p {
 
 .event-selector li:hover {
   cursor: pointer;
-  border: 2px solid var(--color-primary) !important;
   background-color: var(--color-background-emphasis);
 }
 

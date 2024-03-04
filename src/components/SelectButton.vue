@@ -27,3 +27,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* Responsive layout - makes a one column layout for menu items */
+@media (max-width: 768px) {
+  ul li {
+    margin: 1vh;
+  }
+}
+</style>
