@@ -15,7 +15,7 @@
       <br />
       <p class="mb-0">
         {{ $t("about.description.paragraph_three") }}
-        <span class="emphasis-txt">{{ $t("about.description.yokohama") }}&nbsp;/&nbsp;{{ $t("about.description.tokyo")
+        <span class="emphasis-txt">{{ $t("about.description.kawasaki") }}&nbsp;/&nbsp;{{ $t("about.description.tokyo")
           }},&nbsp;{{ $t("about.description.japan") }}</span>
       </p>
     </article>

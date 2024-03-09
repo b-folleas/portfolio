@@ -1,22 +1,15 @@
 <template>
   <div class="flex-div">
     <span id="info" class="mb-60"></span>
-    <h2 class="h-center">{{ $t("info.name") }}</h2>
-    <div class="flex-container">
-      <FindMeIcons title="email" content="brice.folleas@gmail.com" link="mailto:brice.folleas@gmail.com" />
-      <FindMeIcons title="linkedin" content="brice-folléas" link="https://www.linkedin.com/in/brice-folléas/" />
-      <FindMeIcons title="github" content="b-folleas" link="https://github.com/b-folleas" />
-    </div>
     <FooterTopInfo />
   </div>
 </template>
 
 <script>
 import FooterTopInfo from "../components/FooterTopInfo.vue";
-import FindMeIcons from "../components/FindMeIcons.vue";
 export default {
   name: "FooterSection",
-  components: { FooterTopInfo, FindMeIcons },
+  components: { FooterTopInfo },
   props: {
     src: {
       type: String,
