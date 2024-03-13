@@ -5,10 +5,10 @@
     type="checkbox"
     class="switch-checkbox"
   />
-  <label for="checkbox" class="switch-label noselect">
-    <span class="noselect">🌙</span>
-    <span class="noselect">&nbsp;</span>
-    <span class="noselect">☀️</span>
+  <label for="checkbox" class="switch-label no-select">
+    <span class="no-select">🌙</span>
+    <span class="no-select">&nbsp;</span>
+    <span class="no-select">☀️</span>
     <div
       class="switch-toggle"
       :class="{ 'switch-toggle-checked': userTheme === 'dark-theme' }"

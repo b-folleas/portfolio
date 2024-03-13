@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <nav class="nav noselect" :class="showNav ? 'nav-shown' : 'nav-hidden'">
-      <img id="appLogo" class="logo noselect" :src="assetsSrc.logo" alt="logo" @click="scrollToTop" />
+    <nav class="nav no-select" :class="showNav ? 'nav-shown' : 'nav-hidden'">
+      <img id="appLogo" class="logo no-select" :src="assetsSrc.logo" alt="logo" @click="scrollToTop" />
       <Transition>
         <Menu v-if="showMenu" v-on:close="toggleMenu" />
       </Transition>
-      <MenuButton class="noselect" :show-menu="showMenu" @toggle-menu="toggleMenu" />
+      <MenuButton class="no-select" :show-menu="showMenu" @toggle-menu="toggleMenu" />
     </nav>
     <Home name="home" class="section" />
     <div id="about-skills" class="large-width-section">

@@ -1,0 +1,79 @@
+/* Fade in top animation */
+.fade-in-top {
+    -webkit-animation: fadeintop 3s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeintop 3s;
+    /* Firefox < 16 */
+    -ms-animation: fadeintop 3s;
+    /* Internet Explorer */
+    -o-animation: fadeintop 3s;
+    /* Opera < 12.1 */
+    animation: fadeintop 3s;
+}
+
+
+@keyframes fadeintop {
+    from {
+        opacity: 0;
+        top: -20px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+/* Firefox < 16 */
+@-moz-keyframes fadeintop {
+    from {
+        opacity: 0;
+        top: -20px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeintop {
+    from {
+        opacity: 0;
+        top: -20px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeintop {
+    from {
+        opacity: 0;
+        top: -20px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeintop {
+    from {
+        opacity: 0;
+        top: -20px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}

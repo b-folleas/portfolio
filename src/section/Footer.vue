@@ -1,6 +1,8 @@
 <template>
   <div class="flex-div">
     <span id="info" class="mb-60"></span>
+    <h2 class="h-center">{{ $t("info.name") }}</h2>
+    Work in progress
     <FooterTopInfo />
   </div>
 </template>

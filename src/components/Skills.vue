@@ -32,15 +32,15 @@ export default {
       let url, name
       switch (this.$i18n.locale) {
         case 'fr':
-          url = "../assets/cv-fr.pdf"
+          url = "../assets/cv/cv-fr.pdf"
           name = "CV_Brice_FOLLEAS.pdf"
           break;
         case 'ja':
-          url = "../assets/cv-ja.pdf"
+          url = "../assets/cv/cv-ja.pdf"
           name = "履歴書フォレア・ブライス.pdf"
           break;
         default:
-          url = "../assets/cv-en.pdf"
+          url = "../assets/cv/cv-en.pdf"
           name = "Resume_Brice_FOLLEAS.pdf"
           break;
       }

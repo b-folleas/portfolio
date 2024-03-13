@@ -1,11 +1,11 @@
 <template>
   <main>
     <Particles />
-    <div id="profileDiv" class="noselect">
+    <div id="profileDiv" class="no-select">
       <picture>
-        <source srcset="../assets/avatar.jpg" media="(min-width: 2000px)" />
-        <source srcset="../assets/avatar-350.jpg" media="(min-width: 768px)" />
-        <img src="../assets/avatar-250.jpg" id="avatar" alt="Avatar" class="profile-img fade-in-top noselect"
+        <source srcset="../assets/img/avatar.jpg" media="(min-width: 2000px)" />
+        <source srcset="../assets/img/avatar-350.jpg" media="(min-width: 768px)" />
+        <img src="../assets/img/avatar-250.jpg" id="avatar" alt="Avatar" class="profile-img fade-in-top no-select"
           :title="$t('profile.avatar')" ref="img" />
       </picture>
     </div>
