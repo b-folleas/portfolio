@@ -1,11 +1,12 @@
 <template>
   <main>
     <Particles />
-    <div id="profileDiv" class="no-select">
+    <div class="picture-div">
       <picture>
         <source srcset="../assets/img/avatar.jpg" media="(min-width: 2000px)" />
         <source srcset="../assets/img/avatar-350.jpg" media="(min-width: 768px)" />
-        <img src="../assets/img/avatar-250.jpg" id="avatar" alt="Avatar" class="profile-img fade-in-top no-select"
+        <source srcset="../assets/img/avatar-250.jpg" media="(min-width: 425px)" />
+        <img src="../assets/img/avatar-200.jpg" id="avatar" alt="Avatar" class="profile-img fade-in-top no-select"
           :title="$t('profile.avatar')" ref="img" />
       </picture>
     </div>
@@ -51,7 +52,6 @@ export default {
         result.linkedin = this.$func.getIconImgUrl("linkedin-dark");
         result.github = this.$func.getIconImgUrl("github-dark");
       }
-      console.log('result', result)
       return result;
     }
   }
@@ -89,7 +89,6 @@ h3 {
 .profile-img {
   width: 350px;
   height: 350px;
-  margin-right: 10vw;
   border: 6px solid var(--color-background-reverse);
   border-radius: 50%;
   transition: transform 0.2s;
@@ -99,9 +98,7 @@ h3 {
   transform: scale(1.1);
 }
 
-.profile-text {
-  text-align: end;
-}
+
 
 .big-emphasis {
   overflow: hidden;
@@ -111,23 +108,36 @@ h3 {
   margin: 0;
   font-weight: 700;
 }
+/* Big screen */
+@media (min-width: 768px) {
+  .profile-img {
+    justify-content: end;
+  }
+  .picture-div {
+    margin-right: 10vw;
+  }
+}
 
+/* Small screen */
 @media (max-width: 768px) {
-
   /* Responsive layout - makes a one column layout instead of a two-column layout */
   main {
     flex-direction: column;
   }
 
-  .profile-img {
-    width: 450px;
-    height: 450px;
-    margin: 25px 0;
-  }
-
-  #profileDiv {
+  picture {
     margin: auto;
   }
+
+  .profile-img {
+    margin: auto;
+    justify-content: center;
+    margin-right: auto;
+  }
+
+  .profile-text {
+  text-align: end;
+}
 
   .smaller h1 {
     font-size: clamp(36px, 4vw, 48px);
@@ -142,17 +152,20 @@ h3 {
   }
 }
 
-@media (min-width: 780px) and (max-width: 2000px) {
-  .profile-img {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-@media (max-width: 780px) {
+/* Tablet */
+@media (min-width: 425px) and (max-width: 780px) {
   .profile-img {
     width: 250px;
     height: 250px;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 425px) {
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10vh;
   }
 }
 </style>
