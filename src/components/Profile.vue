@@ -98,8 +98,6 @@ h3 {
   transform: scale(1.1);
 }
 
-
-
 .big-emphasis {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -108,6 +106,7 @@ h3 {
   margin: 0;
   font-weight: 700;
 }
+
 /* Big screen */
 @media (min-width: 768px) {
   .profile-img {

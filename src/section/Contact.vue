@@ -67,7 +67,7 @@ textarea {
     width: 100%;
     padding: 10px;
     border: 2px solid var(--color-borders);
-    border-radius: 5px;
+    border-radius: 1em;
     background-color: var(--color-background-soft);
     color: var(--color-text);
 }
