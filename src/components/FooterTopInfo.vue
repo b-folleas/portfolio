@@ -15,9 +15,7 @@ export default {
   data() {
     return {
       TECHS: [
-        { title: "Vite JS", src: "vitejs" },
-        { title: "Travis CI", src: "travis-ci" },
-        { title: "Freepik", src: "freepik" },
+        { title: "Vite JS", src: "vitejs" }
       ],
     };
   },

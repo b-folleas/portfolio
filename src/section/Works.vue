@@ -1,7 +1,7 @@
 <template>
   <div class="flex-div">
     <span id="works" class="mb-60"></span>
-    <h2 class="h-center">{{ $t("works.name") }}</h2>
+    <h2 class="h-center">{{ $t("works.name") }} (GitHub)</h2>
     <div class="mt-3 flex-div">
       <div class="project-div">
         <ProjectModule v-for="project in currentProjects" :key="project.id" :name="project.name"
@@ -20,8 +20,8 @@
 
 <script>
 import API from "@/api";
-import ProjectModule from "../components/ProjectModule.vue";
-import Pagination from "../components/Pagination.vue";
+import ProjectModule from "@/components/ProjectModule.vue";
+import Pagination from "@/components/Pagination.vue";
 export default {
   name: "WorksSection",
   components: {
@@ -53,8 +53,8 @@ export default {
       this.currentPage,
       this.perPage
     );
-    this.totalPages = this.filteredProjects?.length
-      ? Math.floor(this.filteredProjects.length / this.perPage)
+    this.totalPages = this.filteredProjects?.length - 1
+      ? Math.floor((this.filteredProjects.length - 1) / this.perPage)
       : 0;
     this.totalPages +=
       this.filteredProjects.length / this.perPage !== 0 ? 1 : 0;

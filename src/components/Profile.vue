@@ -24,7 +24,7 @@
 
 <script>
 import { mapState } from "vuex";
-import Particles from "../components/Particles.vue";
+import Particles from "@/components/Particles.vue";
 import ScrollDown from "./ScrollDown.vue";
 export default {
   name: "ProfileComponent",

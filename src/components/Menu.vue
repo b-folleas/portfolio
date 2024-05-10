@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import ThemeButton from "../components/ThemeButton.vue";
-import SelectButton from "../components/SelectButton.vue";
+import ThemeButton from "@/components/ThemeButton.vue";
+import SelectButton from "@/components/SelectButton.vue";
 export default {
   name: "MenuComponent",
   components: { ThemeButton, SelectButton },

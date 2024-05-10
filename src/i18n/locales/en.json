@@ -6,7 +6,7 @@
         "info": "Infos"
     },
     "profile": {
-        "avatar": "Avatar created by catalyststuff / freepik",
+        "avatar": "Brice FOLLEAS",
         "brice": "Brice",
         "full_stack_engineer": "Full Stack Engineer",
         "hello": "Hi, I'm ",
@@ -27,6 +27,14 @@
     },
     "experience": {
         "name": "Experience",
+        "tab": {
+            "japan": "Arriving in Japan",
+            "fiducial": "Fiducial Staffing",
+            "cpe": "CPE Lyon",
+            "conity": "Conity",
+            "dawson": "Dawson College",
+            "iut": "Institute of Technology"
+        },
         "title": {
             "japan": "Japan",
             "fiducial": "Fiducial Staffing",
@@ -36,14 +44,42 @@
             "iut": "Institute of Technology"
         },
         "description": {
-            "japan": "",
-            "fiducial": "Fiducial Staffing - Full stack engineer",
-            "fiducial_2": "Assigned to managing and developing projects for the firm's accounting network.",
-            "cpe": "CPE Lyon - Software Engineer Graduate",
-            "conity": "Conity - Software Developer & Quality Assurance",
-            "dawson": "Dawson College - Software Developer Graduate",
-            "dawson_2": "Member of Dawson College Blues Athletics",
-            "iut": "IUT Lyon 1 - Software Developer Graduate (specialization : Mathematics)"
+            "japan": "Arriving in Kawasaki, Japan, in October 2023, I'd like to settle in this magnificent country, where I'm amazed by its culture and wealth.",
+            "japan_2": "When I left for Japan, I was able to continue working for 6 months, in full remote, with my former employer Fiducial, in order to pursue certain projects before my final departure. This experience enabled me to discover a new working environment, as being in full remote, a new organization had to be set up in order to continue working efficiently with the rest of the team in France.",
+            "fiducial": "Research engineer in the IT department of Fiducial in the research in the Regulated Trades IT department.",
+            "fiducial_2": "Mainly assigned to the management and development of projects related to the global process of internal management the Contact Person Monitoring project as well as the module of the Budget Development intern application.",
+            "cpe": "Software Engineer Graduate at the Ecole Supérieure de Chimie, Physique et Électronique de Lyon (CPE Lyon).",
+            "cpe_2": "This course consolidated all my knowledge of IT development, design, data management and algorithms, and introduced me to the field of Machine Learning, which is where I'd like to focus my career.",
+            "conity": "Internship as a Full Stack developer and tester at Conity, a web solution for home builders.",
+            "conity_2": "As my first internship in the IT industry it was a great opportunity to develop my skills in web development with PHP / Symfony, creation of automated tests using Behat library and the integration and deployment using Dcoker and Gitlab CI.",
+            "dawson": "University exchange at Dawson College, an English-speaking CEGEP in Quebec, in partnership with IUT Lyon 1.",
+            "dawson_2": "In addition to an exchange semester specializing in web development in Java and system administration with Windows Enterprise, I also had the pleasure of joining the Dawson College Blues Athletics club.",
+            "iut": "Graduate of the Lyon 1 University Institute of Technology (IUT Lyon 1). Specialization in Mathematics.",
+            "iut_2": "This first course in higher education was the cornerstone of my career in IT development. In particular, it was through this training that I was able to familiarize myself with the main areas of computer science, including a marked interest in algorithms."
+        },
+        "tags": {
+            "big_data": "Big Data",
+            "ci_cd": "CI/CD",
+            "conception": "Conception",
+            "database": "Database",
+            "docker": "Docker",
+            "english": "English",
+            "fullstack": "Fullstack",
+            "java": "Java",
+            "js": "JavaScript",
+            "machine_learning": "Machine Learning",
+            "maths": "Maths",
+            "networks": "Networks",
+            "php": "PHP",
+            "postgres": "PostgreSQL",
+            "remote": "Remote",
+            "springboot": "Springboot",
+            "symfony": "Symfony",
+            "travel": "Travel",
+            "ui_ux": "UI/UX",
+            "vue": "Vue.js",
+            "web_dev": "Web Development",
+            "windows": "Windows"
         }
     },
     "info": {
@@ -61,7 +97,7 @@
         "projects": "projects"
     },
     "footer": {
-        "realised": "Realised with Vite.js, Travis CI & Freepik images"
+        "realised": "Realised with Vite.js and Vuetify"
     },
     "languages": {
         "english": "EN",

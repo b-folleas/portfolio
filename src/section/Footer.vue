@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import FooterTopInfo from "../components/FooterTopInfo.vue";
+import FooterTopInfo from "@/components/FooterTopInfo.vue";
 export default {
   name: "FooterSection",
   components: { FooterTopInfo },

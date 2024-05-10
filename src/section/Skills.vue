@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Skills from "../components/Skills.vue";
+import Skills from "@/components/Skills.vue";
 export default {
   name: "SkillsSection",
   components: { Skills },

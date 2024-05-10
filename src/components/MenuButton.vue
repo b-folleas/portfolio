@@ -46,6 +46,7 @@ export default {
 
 .menu:focus {
   outline: none;
+  box-shadow: none;
 }
 
 .line {

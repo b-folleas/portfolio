@@ -6,7 +6,7 @@
         "info": "Infos"
     },
     "profile": {
-        "avatar": "Avatar créé par catalyststuff / freepik",
+        "avatar": "Brice FOLLEAS",
         "brice": "Brice",
         "full_stack_engineer": "Ingénieur Full Stack",
         "hello": "Bonjour, je suis",
@@ -27,23 +27,59 @@
     },
     "experience": {
         "name": "Parcours",
-        "title": {
-            "japan": "Japon",
+        "tab": {
+            "japan": "Arrivée au Japon",
             "fiducial": "Fiducial Staffing",
             "cpe": "CPE Lyon",
             "conity": "Conity",
             "dawson": "Dawson College",
-            "iut": "Institute Universitaire de Technologie"
+            "iut": "Institut Universitaire de Technologie"
+        },
+        "title": {
+            "japan": "Arrivée au Japon !",
+            "fiducial": "Ingénieur Fullstack chez Fiducial Staffing",
+            "cpe": "Diplôme d'ingénieur informatique à CPE Lyon",
+            "conity": "Développeur & Assureur Qualité Web chez Conity (stage)",
+            "dawson": "Échange Universitaire au Dawson College",
+            "iut": "Diplôme d'Institut Universitaire de Technologie"
         },
         "description": {
-            "japan": "",
-            "fiducial": "Fiducial Staffing - Ingénieur Fullstack",
-            "fiducial_2": "Affecté au pilotage et développement de projets destinés au réseau d'expertise comptable de la firme.",
-            "cpe": "CPE Lyon - Ingénieur en informatique",
-            "conity": "Conity - Développeur & Assureur Qualité Web",
-            "dawson_2": "Membre du club Dawson College Blues Athletics",
-            "dawson": "Dawson College",
-            "iut": "IUT Lyon 1 - Spécialité Mathématiques"
+            "japan": "Arrivé à Kawasaki au Japon en octobre 2023, je souhaite m'installer dans ce magnifique pays où la culture et richesse m'émerveille.",
+            "japan_2": "Lors de mon départ au Japon, j'ai pu continuer de travailler pendant 6 mois, en full remote, avec mon ancien employeur Fiducial afin de poursuivre certains projets avant mon départ définitif. Cette expérience m'a permis de découvrir un nouvel environnement de travail car étant en full remote, une nouvelle organisation à du être mise en place afin de continuer à travailler efficacement avec le reste de l'équipe en France.",
+            "fiducial": "Ingénieur d'études au sein de la DSI de Fiducial dans le bureau d'études des Métiers Réglementés",
+            "fiducial_2": "Principalement affecté au pilotage et développement de projets s'inscrivant dans le processus global de refonte de la gestion interne. Parmi les principaux projets sur lesquels j'ai pu travailler sur l'ensemble du cycle de vie des projets de gestion budgétaire et gestion des documents clients.",
+            "cpe": "Ingénieur en informatique à l'École Supérieure de Chimie, Physique et Électronique de Lyon (CPE Lyon). Spécialisation en Systèmes Informatiques et Développement.",
+            "cpe_2": "Cette formation a permis de consolider toutes mes connaissances en développement informatique, conception, gestion de données, algorithmie et m'a permis de découvrir le domaine du Machine Learning dans lequel j'aimerais orienter ma carrière.",
+            "conity": "Développeur & Assureur Qualité Web chez Conity (stage).",
+            "conity_2": "En tant que premier stage en informatique, ce fut une bonne occasion de développer le développement web en utilisant PHP / Symfony, de créer des tests automatisés en utilisant la bibliothèque Behat et de développer des compétences d'intégration et de déploiement en utilisant Dcoker et Gitlab CI.",
+            "dawson": "Échange universitaire au Dawson College, un CÉGEP anglophone situé au Québec, en partenariat avec l'IUT Lyon 1.",
+            "dawson_2": "En plus d'un semestre d'échange spécialisé dans le développement web en Java et l'adminstration système avec Windows Enterprise, j'ai également eu le plaisir de rejoindre le club sportif Dawson College Blues Athletics.",
+            "iut": "Diplômé de l'Institut Universitaire de Technologie de Lyon 1 (IUT Lyon 1). Spécialité en Mathématiques.",
+            "iut_2": "Cette première formation dans le supérieur a été la pierre fondatrice de ma carrière dans le développement informatique. Ce fut notamment au travers de cette formation que j'ai pu me familiariser avec les principaux domaines de l'informatique dont notamment un intérêt marqué pour l'algorithmique."
+        },
+        "tags": {
+            "big_data": "Big Data",
+            "ci_cd": "CI/CD",
+            "conception": "Conception",
+            "database": "Base de données",
+            "docker": "Docker",
+            "english": "Anglais",
+            "fullstack": "Fullstack",
+            "java": "Java",
+            "js": "JavaScript",
+            "machine_learning": "Machine Learning",
+            "maths": "Mathématiques",
+            "networks": "Networks",
+            "php": "PHP",
+            "postgres": "PostgreSQL",
+            "remote": "Distanciel",
+            "springboot": "Springboot",
+            "symfony": "Symfony",
+            "travel": "Voyage",
+            "ui_ux": "UI/UX",
+            "vue": "Vue.js",
+            "web_dev": "Développement Web",
+            "windows": "Windows"
         }
     },
     "info": {
@@ -61,7 +97,7 @@
         "projects": "projets"
     },
     "footer": {
-        "realised": "Réalisé avec Vite.js, Travis CI & les images Freepik"
+        "realised": "Réalisé avec Vite.js et Vuetify"
     },
     "languages": {
         "english": "EN",
