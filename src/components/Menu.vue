@@ -1,13 +1,7 @@
 <template>
-  <ul class="snip1217">
-    <li>
-      <a @click="$emit('close')" href="#about">{{ $t("about") }}</a>
-    </li>
-    <li>
-      <a @click="$emit('close')" href="#works">{{ $t("works") }}</a>
-    </li>
-    <li>
-      <a @click="$emit('close')" href="#info">{{ $t("info") }}</a>
+  <ul class="snip1135">
+    <li v-for="item in menuItems" :key="item.id">
+      <a class="link" @click="$emit('close')" :href="item.href">{{ item.label }}</a>
     </li>
     <li id="themeBtn">
       <ThemeButton />
@@ -19,12 +13,22 @@
 </template>
 
 <script>
-import ThemeButton from "../components/ThemeButton.vue";
-import SelectButton from "../components/SelectButton.vue";
+import ThemeButton from "@/components/ThemeButton.vue";
+import SelectButton from "@/components/SelectButton.vue";
 export default {
   name: "MenuComponent",
   components: { ThemeButton, SelectButton },
   emits: ["close"],
+  computed: {
+    menuItems() {
+      return [
+        { id: 1, label: this.$t("navigation.about"), href: "#about" },
+        { id: 2, label: this.$t("navigation.experience"), href: "#experience" },
+        { id: 3, label: this.$t("navigation.works"), href: "#works" },
+        { id: 4, label: this.$t("navigation.info"), href: "#info" }
+      ]
+    }
+  }
 };
 </script>
 
@@ -53,67 +57,15 @@ li {
   z-index: 1;
 }
 
-/* Adapted from www.littlesnippets.net - All rights reserved */
-.snip1217 {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.snip1217 * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.snip1217 li {
-  display: inline-block;
-  list-style: outside none none;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-  padding: 0;
-}
-.snip1217 a {
-  font-size: clamp(16px, 1.2vw, 1.2vw);
-  padding: 0.3em 0;
-  color: var(--color-text);
-  position: relative;
-  text-decoration: none;
-}
-.snip1217 a:before,
-.snip1217 a:after {
-  height: 3px;
-  position: absolute;
-  content: "";
-  -webkit-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
-  background-color: var(--color-primary);
-  width: 0;
-}
-.snip1217 a:before {
-  top: 0;
-  left: 0;
-}
-.snip1217 a:after {
-  bottom: 0;
-  right: 0;
-}
-.snip1217 a:hover,
-.snip1217 .current a {
-  color: var(--color-text-hover);
-}
-.snip1217 a:hover:before,
-.snip1217 .current a:before,
-.snip1217 a:hover:after,
-.snip1217 .current a:after {
-  width: 100%;
-}
-
 /* Responsive layout - makes a one column layout for menu items */
 @media (max-width: 768px) {
-  .snip1217 {
-    flex-flow: column nowrap;
+  ul {
+    flex-flow: column nowrap !important;
     height: 100vh;
   }
-  .snip1217 * {
-    margin: auto;
+
+  ul li {
+    margin: 4vh;
   }
 }
 </style>

@@ -1,24 +1,42 @@
 {
-    "hello": "Hello",
-    "i_m_brice": "I'm Brice",
-    "brice": "Brice",
-    "full_stack_engineer": "Full Stack Engineer",
-    "avatar": "Avatar by catalyststuff / freepik",
-    "now": "Now",
-    "description": {
-        "paragraph_one": "Last year student in internship as a Full Stack developer, based in Lyon, France. Through my studies, my three years work experience and personal projects, I deepened my skills in creating websites using frameworks such as",
-        "paragraph_two": "In my free time, I try to discover new technologies. Currently, I'm working on a personal project using ",
-        "paragraph_three": "I'm looking for a new job oppotunity in ",
-        "yokohama": "Yokohama",
-        "tokyo": "Tokyo",
-        "japan": "Japan"
+    "navigation": {
+        "about": "About",
+        "experience": "Experience",
+        "works": "Projects",
+        "info": "Infos"
     },
-    "download_resume": "Download Resume",
-    "about": "About",
-    "skills": "Skills",
-    "history": {
-        "name": "History",
+    "profile": {
+        "avatar": "Brice FOLLEAS",
+        "brice": "Brice",
+        "full_stack_engineer": "Full Stack Engineer",
+        "hello": "Hi, I'm ",
+        "i_m_brice": "Brice"
+    },
+    "about": {
+        "name": "About",
+        "description": {
+            "paragraph_one": "Hey, I'm Brice, a fullstack engineer originally from Lyon but now living in Tokyo, with over 4 years' experience in web development. Through my professional and academic experiences, as well as personal projects, I've been able to deepen my skills in website creation using a number of frameworks such as ",
+            "paragraph_two": "I'm constantly looking for new challenges and discovering new technologies. At the moment, I'm working on a personal project using the following technologies ",
+            "paragraph_three": "I'm looking for a new job oppotunity in ",
+            "kawasaki": "Kawasaki",
+            "tokyo": "Tokyo",
+            "japan": "Japan"
+        },
+        "download_resume": "Download Resume",
+        "skills": "Skills"
+    },
+    "experience": {
+        "name": "Experience",
+        "tab": {
+            "japan": "Arriving in Japan",
+            "fiducial": "Fiducial Staffing",
+            "cpe": "CPE Lyon",
+            "conity": "Conity",
+            "dawson": "Dawson College",
+            "iut": "Institute of Technology"
+        },
         "title": {
+            "japan": "Japan",
             "fiducial": "Fiducial Staffing",
             "cpe": "CPE Lyon",
             "conity": "Conity",
@@ -26,21 +44,65 @@
             "iut": "Institute of Technology"
         },
         "description": {
-            "fiducial": "Développeur Full stack au sein de la DSI de Fiducial dans le bureau d'études des Métiers Réglementés.",
-            "fiducial_2": "Affecté au pilotage et développement de projets destinés au réseau d'expertise comptable de la firme.",
-            "cpe": "Informatique et Réseaux de Communication (IRC) - Majeure Systèmes d'Informations (SI)",
-            "conity": "Stage effectué en tant que développeur full-stack et assureur qualité chez Conity, solution numérique de suivi de projet de construction.",
-            "dawson": "Semestre d'échange au Dawson College, effectué en partenariat avec l'IUT Lyon 1",
-            "dawson_2": "Membre du club Dawson College Blues Athletics",
-            "iut": "Spécialisation 2ème année : Mathématiques & Technologies Avancées"
+            "japan": "Arriving in Kawasaki, Japan, in October 2023, I'd like to settle in this magnificent country, where I'm amazed by its culture and wealth.",
+            "japan_2": "When I left for Japan, I was able to continue working for 6 months, in full remote, with my former employer Fiducial, in order to pursue certain projects before my final departure. This experience enabled me to discover a new working environment, as being in full remote, a new organization had to be set up in order to continue working efficiently with the rest of the team in France.",
+            "fiducial": "Research engineer in the IT department of Fiducial in the research in the Regulated Trades IT department.",
+            "fiducial_2": "Mainly assigned to the management and development of projects related to the global process of internal management the Contact Person Monitoring project as well as the module of the Budget Development intern application.",
+            "cpe": "Software Engineer Graduate at the Ecole Supérieure de Chimie, Physique et Électronique de Lyon (CPE Lyon).",
+            "cpe_2": "This course consolidated all my knowledge of IT development, design, data management and algorithms, and introduced me to the field of Machine Learning, which is where I'd like to focus my career.",
+            "conity": "Internship as a Full Stack developer and tester at Conity, a web solution for home builders.",
+            "conity_2": "As my first internship in the IT industry it was a great opportunity to develop my skills in web development with PHP / Symfony, creation of automated tests using Behat library and the integration and deployment using Dcoker and Gitlab CI.",
+            "dawson": "University exchange at Dawson College, an English-speaking CEGEP in Quebec, in partnership with IUT Lyon 1.",
+            "dawson_2": "In addition to an exchange semester specializing in web development in Java and system administration with Windows Enterprise, I also had the pleasure of joining the Dawson College Blues Athletics club.",
+            "iut": "Graduate of the Lyon 1 University Institute of Technology (IUT Lyon 1). Specialization in Mathematics.",
+            "iut_2": "This first course in higher education was the cornerstone of my career in IT development. In particular, it was through this training that I was able to familiarize myself with the main areas of computer science, including a marked interest in algorithms."
+        },
+        "tags": {
+            "big_data": "Big Data",
+            "ci_cd": "CI/CD",
+            "conception": "Conception",
+            "database": "Database",
+            "docker": "Docker",
+            "english": "English",
+            "fullstack": "Fullstack",
+            "java": "Java",
+            "js": "JavaScript",
+            "machine_learning": "Machine Learning",
+            "maths": "Maths",
+            "networks": "Networks",
+            "php": "PHP",
+            "postgres": "PostgreSQL",
+            "remote": "Remote",
+            "springboot": "Springboot",
+            "symfony": "Symfony",
+            "travel": "Travel",
+            "ui_ux": "UI/UX",
+            "vue": "Vue.js",
+            "web_dev": "Web Development",
+            "windows": "Windows"
         }
     },
-    "works": "Works on Github",
-    "info": "Info",
-    "english": "EN",
-    "french": "FR",
-    "japanese": "JA",
-    "read_more": "Read More",
-    "projects": "projects",
-    "realised": "Realised with Vite.js, Travis CI & Freepik images"
+    "info": {
+        "name": "Informations"
+    },
+    "contact": {
+        "name": "Contact",
+        "sender": "Sender's mail",
+        "topic": "Topic",
+        "content": "Content",
+        "send": "Send"
+    },
+    "works": {
+        "name": "Works",
+        "projects": "projects"
+    },
+    "footer": {
+        "realised": "Realised with Vite.js and Vuetify"
+    },
+    "languages": {
+        "english": "EN",
+        "french": "FR",
+        "japanese": "JA"
+    },
+    "now": "Now"
 }

@@ -1,30 +1,21 @@
 <template>
   <div id="app">
-    <nav class="nav noselect">
-      <img
-        id="appLogo"
-        class="logo noselect"
-        :src="assetsSrc.logo"
-        alt="logo"
-        @click="scrollToTop"
-      />
+    <nav class="nav no-select" :class="showNav ? 'nav-shown' : 'nav-hidden'">
+      <img id="appLogo" class="logo no-select" :src="assetsSrc.logo" alt="logo" @click="scrollToTop" />
       <Transition>
         <Menu v-if="showMenu" v-on:close="toggleMenu" />
       </Transition>
-      <MenuButton
-        class="noselect"
-        :show-menu="showMenu"
-        @toggle-menu="toggleMenu"
-      />
+      <MenuButton class="no-select" :show-menu="showMenu" @toggle-menu="toggleMenu" />
     </nav>
     <Home name="home" class="section" />
     <div id="about-skills" class="large-width-section">
       <About name="about" class="small-width-section" />
       <Skills name="skills" class="small-width-section" />
     </div>
-    <History name="history" class="section" />
+    <Experience name="experience" class="section" />
     <Works name="works" class="section" />
-    <Footer id="footer" class="section" :src="assetsSrc.footer" />
+    <Contact name="contact" class="section" />
+    <!-- <Footer id="footer" class="section" :src="assetsSrc.footer" /> -->
   </div>
 </template>
 
@@ -33,19 +24,32 @@ import { mapState, mapActions } from "vuex";
 import Home from "./section/Home.vue";
 import About from "./section/About.vue";
 import Skills from "./section/Skills.vue";
-import History from "./section/History.vue";
+import Experience from "./section/Experience.vue";
 import Works from "./section/Works.vue";
-import Footer from "./section/Footer.vue";
+import Contact from "./section/Contact.vue";
+// import Footer from "./section/Footer.vue";
 import Menu from "./components/Menu.vue";
 import MenuButton from "./components/MenuButton.vue";
 export default {
   name: "App",
   inject: ["$func"],
-  components: { Home, Menu, MenuButton, About, Skills, History, Works, Footer },
+  components: {
+    Home,
+    Menu,
+    MenuButton,
+    About,
+    Skills,
+    Experience,
+    Works,
+    Contact
+    // Footer,
+  },
   data() {
     return {
       showMenu: false,
       initUserTheme: "",
+      lastScrollPosition: 0,
+      showNav: true // When first arriving on app nav is displayed
     };
   },
   computed: {
@@ -70,6 +74,10 @@ export default {
     document.documentElement.className = initUserTheme;
     this.setUserTheme(initUserTheme);
     // Here call ThemeButton component method setTheme for initUserTheme
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
     ...mapActions("theme", ["getLocalStorageTheme", "setUserTheme"]),
@@ -77,15 +85,18 @@ export default {
       // In case first scroll did not work (for mobile users)
       window.innerWidth < 768
         ? document
-            .getElementById("avatar")
-            .scrollIntoView({ behavior: "smooth" })
+          .getElementById("avatar")
+          .scrollIntoView({ behavior: "smooth" })
         : window.scroll({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-          });
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
     },
-    toggleMenu() {
+    closeMenu() { // Called by scroll down event handler
+      this.showMenu = false;
+    },
+    toggleMenu() { // Called on menu btn click
       this.showMenu = !this.showMenu;
     },
     getMediaPreference() {
@@ -98,124 +109,19 @@ export default {
         return "light-theme";
       }
     },
+    handleScroll() {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > this.lastScrollPosition) {
+        this.closeMenu()
+        this.showNav = false;
+      } else {
+        this.showNav = true;
+      }
+      this.lastScrollPosition = currentScrollY;
+    }
   },
 };
 </script>
-
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-html {
-  scroll-behavior: smooth !important;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  color: var(--color-text);
-}
-
-.flex-div {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo,
-.menu {
-  width: 30px;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-}
-
-.logo {
-  left: 15px;
-}
-.menu {
-  right: 15px;
-}
-
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  min-height: 60px;
-  position: fixed;
-  z-index: 1;
-  background-color: var(--color-background);
-}
-
-.section {
-  min-height: 100vh;
-  width: 100%;
-}
-
-.large-width-section {
-  min-height: 100vh;
-  width: 100%;
-  scroll-snap-align: start;
-}
-
-.small-width-section {
-  min-height: auto;
-  width: auto;
-  scroll-snap-align: none;
-}
-
-#skillsDiv span,
-#skillsDiv h2 {
-  display: none;
-}
-
-h1 {
-  font-size: clamp(48px, 72px, 96px);
-}
-
-h3 {
-  font-size: clamp(16rem, 20px, 28px);
-}
-
-h4 {
-  font-size: clamp(10px, 14px, 18px);
-}
-
-h6 {
-  font-size: clamp(8px, 12px, 16px);
-}
-
-@media (max-width: 426px) {
-  /* Smooth scrolling */
-  #app {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-  }
-
-  .section {
-    scroll-snap-align: start;
-  }
-
-  .small-width-section {
-    min-height: 100vh;
-    width: 100%;
-    scroll-snap-align: start;
-  }
-
-  #skillsDiv span,
-  #skillsDiv h2 {
-    display: block;
-  }
-
-  .centersection {
-    scroll-snap-align: center;
-  }
-}
-</style>
 
 <style scoped>
 /* Menu transition */

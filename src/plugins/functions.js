@@ -10,8 +10,7 @@ export default {
             import.meta.url).href;
     },
     getIconImgUrl: (name) => {
-        return new URL(`/src/assets/icons/${name}.svg`,
-            import.meta.url).href;
+        return new URL(`/src/assets/icons/${name}.svg`, import.meta.url).href;
     },
     formatDate: (date, noDayformat) => {
         moment.locale(i18n.global.locale);
@@ -22,5 +21,8 @@ export default {
         } else {
             return i18n.global.locale === "en" ? moment(date).format("MMM Do YY") : moment(date).format("ll")
         }
+    },
+    openLink: (link, target) => {
+        window.open(link, target);
     }
 }

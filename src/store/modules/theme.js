@@ -3,6 +3,9 @@ export default {
   state: {
     userTheme: "light-theme"
   },
+  getters: {
+    isDarkTheme: (state) => state.userTheme === "dark-theme"
+  },
   mutations: {
     setUserTheme(state, payload) {
       state.userTheme = payload
