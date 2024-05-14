@@ -15,7 +15,7 @@
     <Experience name="experience" class="section" />
     <Works name="works" class="section" />
     <Contact name="contact" class="section" />
-    <Footer id="footer" class="section" :src="assetsSrc.footer" />
+    <!-- <Footer id="footer" class="section" :src="assetsSrc.footer" /> -->
   </div>
 </template>
 
@@ -27,7 +27,7 @@ import Skills from "./section/Skills.vue";
 import Experience from "./section/Experience.vue";
 import Works from "./section/Works.vue";
 import Contact from "./section/Contact.vue";
-import Footer from "./section/Footer.vue";
+// import Footer from "./section/Footer.vue";
 import Menu from "./components/Menu.vue";
 import MenuButton from "./components/MenuButton.vue";
 export default {
@@ -41,8 +41,8 @@ export default {
     Skills,
     Experience,
     Works,
-    Contact,
-    Footer,
+    Contact
+    // Footer,
   },
   data() {
     return {

@@ -14,7 +14,6 @@
 }
 
 .chevron {
-  position: absolute;
   width: 28px;
   height: 8px;
   opacity: 0;

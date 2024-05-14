@@ -15,7 +15,8 @@ export default {
   data() {
     return {
       TECHS: [
-        { title: "Vite JS", src: "vitejs" }
+        { title: "Vite JS", src: "vitejs" },
+        { title: "Vuetify", src: "vuetify" }
       ],
     };
   },

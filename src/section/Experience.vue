@@ -3,7 +3,8 @@
   <span id="experience" class="mb-60"></span>
   <h2 class="h-center">{{ $t("experience.name") }}</h2>
   <v-card class="experience-tabs">
-    <v-tabs v-model="tab" :bg-color="isDarkTheme ? '#14151c' : 'white'"
+    <v-tabs v-model="tab"
+      :bg-color="isDarkTheme ? '#14151c' : 'white'"
       :color="isDarkTheme ? 'deep-purple-accent-4' : 'primary'">
       <v-tab v-for="event in EVENTS" :key="event.id" :value="event.title">
         {{ $t("experience.tab." + event.title) }}
@@ -31,7 +32,7 @@
           <p class="mt-2" v-if="isThereExperienceDescriptionPart2(event.title + '_2')">
             {{ $t("experience.description." + event.title + "_2") }}
           </p>
-          <v-chip v-for="tag in event.tags" :key="tag" class="mr-2">
+          <v-chip v-for="tag in event.tags" :key="tag" class="mr-2 chip">
             {{ $t("experience.tags." + tag) }}
           </v-chip>
         </v-tabs-window-item>
@@ -141,5 +142,11 @@ export default {
 .v-btn:focus {
   outline: none;
   box-shadow: none;
+}
+
+.chip {
+  margin-top: 5px;
+  color: var(--color-tag-text);
+  background-color: var(--color-tag-background);
 }
 </style>

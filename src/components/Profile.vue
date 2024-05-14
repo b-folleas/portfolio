@@ -17,7 +17,7 @@
       <img v-for="media in MEDIA" :key="media.id" class="icon-img small-icon-img icon-link" loading="lazy"
         :src="assetsSrc[media.title]" :alt="media.title" :title="media.title"
         @click="$func.openLink(media.link, '_blank')" />
-      <ScrollDown />
+      <!-- <ScrollDown /> -->
     </div>
   </main>
 </template>
