@@ -6,11 +6,11 @@ import "moment/dist/locale/ja";
 
 export default {
     getImgUrl: (name, ext = 'svg') => {
-        return new URL(`/src/assets/${name}.${ext}`,
+        return new URL(`../assets/${name}.${ext}`,
             import.meta.url).href;
     },
     getIconImgUrl: (name) => {
-        return new URL(`/src/assets/icons/${name}.svg`, import.meta.url).href;
+        return new URL(`../assets/icons/${name}.svg`, import.meta.url).href;
     },
     formatDate: (date, noDayformat) => {
         moment.locale(i18n.global.locale);
