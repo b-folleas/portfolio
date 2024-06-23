@@ -1,16 +1,11 @@
 /* Color palette from <https://github.com/vuejs/theme> */
 :root {
     --vt-c-white: #fff;
-    --vt-c-white-soft: #f5f5f5;
     --vt-c-light: #efefef;
     --vt-c-grey: #d0d0d0;
     --vt-c-grey-dark: #aeaeae;
     --vt-c-black: #14151c;
     --vt-c-black-soft: #1d1e27;
-    --vt-c-text-light-1: var(--vt-c-indigo);
-    --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-    --vt-c-text-dark-1: var(--vt-c-white);
-    --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
 }
 
 /* Semantic color variables for this project */
@@ -47,7 +42,7 @@
     --color-background-project: var(--vt-c-white);
     --color-tag-background: #ffe7fa;
     --color-tag-text: #26055b;
-    --color-text: var(--vt-c-white-soft);
+    --color-text: var(--vt-c-light);
     --color-text-hover: var(--vt-c-white);
     --color-grey: var(--vt-c-grey-dark);
 }

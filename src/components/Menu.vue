@@ -25,7 +25,7 @@ export default {
         { id: 1, label: this.$t("navigation.about"), href: "#about" },
         { id: 2, label: this.$t("navigation.experience"), href: "#experience" },
         { id: 3, label: this.$t("navigation.works"), href: "#works" },
-        { id: 4, label: this.$t("navigation.info"), href: "#info" }
+        { id: 4, label: this.$t("navigation.contact"), href: "#contact" }
       ]
     }
   }
