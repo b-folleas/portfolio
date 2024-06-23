@@ -44,7 +44,14 @@ export default {
           name = "Resume_Brice_FOLLEAS.pdf"
           break;
       }
-      return { url: new URL(url, import.meta.url).href, name };
+      try {
+        url = new URL(url, import.meta.url).href;
+      } catch (e) {
+          url = 'https://github.com/b-folleas/portfolio/blob/master/src/assets/cv/cv-en.pdf'
+      }
+      console.log(url)
+      console.log(import.meta.url)
+      return { url, name };
     }
   },
 };
