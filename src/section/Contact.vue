@@ -1,6 +1,6 @@
 <template>
-    <span id="contact" class="mb-60"></span>
     <div class="flex-div contact-form">
+        <span id="contact" class="mb-60"></span>
         <h2 class="h-center">{{ $t('contact.name') }}</h2>
         <form @submit.prevent="submitForm">
             <div class="form-group">
