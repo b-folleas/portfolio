@@ -5,7 +5,8 @@
   <v-card class="experience-tabs">
     <v-tabs v-model="tab"
       :bg-color="isDarkTheme ? '#14151c' : 'white'"
-      :color="isDarkTheme ? 'deep-purple-accent-4' : 'primary'">
+      :color="isDarkTheme ? 'deep-purple-accent-4' : 'primary'"
+      >
       <v-tab v-for="event in EVENTS" :key="event.id" :value="event.title">
         {{ $t("experience.tab." + event.title) }}
       </v-tab>
